@@ -5,8 +5,11 @@ import Features from "@/components/Features";
 import Activities from "@/components/Activities";
 import Equipment from "@/components/Equipment";
 import Contact from "@/components/Contact";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const Index = () => {
+  useScrollToTop();
+  
   return (
     <div className="min-h-screen">
       <Header />

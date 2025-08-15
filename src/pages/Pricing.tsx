@@ -1,69 +1,120 @@
 import Header from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import { Star, Calendar, Users } from "lucide-react";
 
 const Pricing = () => {
+  useScrollToTop();
+  
   const pricingData = [
-    { period: "12.04 - 31.05", price: "300" },
-    { period: "01.06 - 15.06", price: "350" },
-    { period: "16.06 - 06.07", price: "400" },
-    { period: "07.07 - 12.07", price: "570" },
-    { period: "07.07 - 17.08", price: "650" },
-    { period: "18.08 - 31.08", price: "520" },
-    { period: "01.09 - 19.10", price: "350" },
+    { period: "12.04 - 31.05", price: "300", season: "Wiosna", popular: false },
+    { period: "01.06 - 15.06", price: "350", season: "Początek lata", popular: false },
+    { period: "16.06 - 06.07", price: "400", season: "Czerwiec", popular: false },
+    { period: "07.07 - 12.07", price: "570", season: "Lipiec", popular: true },
+    { period: "07.07 - 17.08", price: "650", season: "Sezon letni", popular: true },
+    { period: "18.08 - 31.08", price: "520", season: "Sierpień", popular: false },
+    { period: "01.09 - 19.10", price: "350", season: "Jesień", popular: false },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-enter">
       <Header />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold text-center mb-8 gradient-text">Cennik</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold text-center mb-8 gradient-text">Cennik</h1>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
             Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie.
           </p>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {pricingData.map((item, index) => (
-                <Card key={index} className="feature-card text-center">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{item.period}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold text-primary mb-2">
-                      {item.price}zł
+                <div key={index} className={`pricing-card ${item.popular ? 'ring-2 ring-primary' : ''}`}>
+                  {item.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <Badge className="bg-primary text-primary-foreground px-4 py-1 rounded-full">
+                        <Star className="w-3 h-3 mr-1" />
+                        Najpopularniejszy
+                      </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">za dobę</p>
-                  </CardContent>
-                </Card>
+                  )}
+                  <div className="text-center">
+                    <h3 className="text-sm font-medium text-muted-foreground mb-2">{item.season}</h3>
+                    <div className="flex items-center justify-center mb-4">
+                      <Calendar className="w-4 h-4 mr-2 text-primary" />
+                      <span className="text-lg font-semibold">{item.period}</span>
+                    </div>
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-primary">{item.price}</span>
+                      <span className="text-lg text-muted-foreground">zł</span>
+                      <p className="text-sm text-muted-foreground mt-1">za dobę</p>
+                    </div>
+                    <div className="flex items-center justify-center text-sm text-muted-foreground">
+                      <Users className="w-4 h-4 mr-1" />
+                      Do 5 osób
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
             
-            <Card className="glass-card">
-              <CardHeader>
-                <CardTitle>Informacje dodatkowe</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-semibold mb-2">Warunki rezerwacji:</h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Minimalne wynajęcie: 3 doby</li>
-                    <li>• Zameldowanie: od 15:00</li>
-                    <li>• Wymeldowanie: do 11:00</li>
-                    <li>• Zwierzęta: mile widziane (dodatkowa opłata 20zł/dobę)</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">W cenie:</h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Pościel i ręczniki</li>
-                    <li>• WiFi</li>
-                    <li>• Miejsce parkingowe</li>
-                    <li>• Korzystanie z grilla</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <Card className="glass-card">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-primary" />
+                    Warunki rezerwacji
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Minimalne wynajęcie</h4>
+                      <p className="text-muted-foreground">3 doby</p>
+                    </div>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Zameldowanie</h4>
+                      <p className="text-muted-foreground">od 15:00</p>
+                    </div>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Wymeldowanie</h4>
+                      <p className="text-muted-foreground">do 11:00</p>
+                    </div>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Zwierzęta</h4>
+                      <p className="text-muted-foreground">+20zł/dobę</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="glass-card">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Star className="w-5 h-5 text-primary" />
+                    W cenie
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      "Pościel i ręczniki",
+                      "WiFi",
+                      "Miejsce parkingowe",
+                      "Korzystanie z grilla",
+                      "Sprzątanie końcowe",
+                      "Dostęp do plaży"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </main>

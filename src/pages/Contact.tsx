@@ -4,34 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import Map from "@/components/Map";
 
 const Contact = () => {
+  useScrollToTop();
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-enter">
       <Header />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4 gradient-text">Lokalizacja</h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Znajdź nas w malowniczym Rusinowie nad Bałtykiem
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto mb-16">
-            <Map />
-          </div>
-
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
-              Skontaktuj się z nami
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Masz pytania? Chcesz dokonać rezerwacji? Skontaktuj się z nami już dziś!
-            </p>
-          </div>
+          <h1 className="text-5xl font-bold text-center mb-8 gradient-text">Kontakt</h1>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
+            Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek.
+          </p>
 
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -137,6 +125,14 @@ const Contact = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+          
+          {/* Map at the end */}
+          <div className="max-w-6xl mx-auto mt-16">
+            <h2 className="text-3xl font-bold text-center mb-8 gradient-text">Nasza lokalizacja</h2>
+            <div className="feature-card p-6">
+              <Map />
+            </div>
           </div>
         </div>
       </main>

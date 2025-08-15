@@ -1,9 +1,13 @@
 import Header from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, MapPin, Phone, Mail } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import { ExternalLink, MapPin, Phone, Mail, Star, Waves } from "lucide-react";
 
 const OurCenters = () => {
+  useScrollToTop();
+  
   const centers = [
     {
       name: "Biała Perła",
@@ -26,7 +30,7 @@ const OurCenters = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-enter">
       <Header />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-12">

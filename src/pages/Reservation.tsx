@@ -1,98 +1,75 @@
 import Header from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Calendar, Users, Phone, Mail } from "lucide-react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import { Users, Phone, Mail } from "lucide-react";
 
 const Reservation = () => {
+  useScrollToTop();
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-enter">
       <Header />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold text-center mb-8 gradient-text">Rezerwacja</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold text-center mb-8 gradient-text">Rezerwacja</h1>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
             Zarezerwuj swój pobyt w domkach letniskowych Biały Szafir już dziś!
           </p>
           
-          <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="feature-card">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  Formularz rezerwacji
-                </CardTitle>
-                <CardDescription>
-                  Wypełnij formularz, a my skontaktujemy się z Tobą w celu potwierdzenia rezerwacji
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="checkin">Data przyjazdu</Label>
-                    <Input type="date" id="checkin" />
-                  </div>
-                  <div>
-                    <Label htmlFor="checkout">Data wyjazdu</Label>
-                    <Input type="date" id="checkout" />
-                  </div>
-                </div>
-                
-                <div>
-                  <Label htmlFor="guests">Liczba osób</Label>
-                  <Input type="number" id="guests" min="1" max="5" defaultValue="2" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="name">Imię i nazwisko</Label>
-                  <Input type="text" id="name" placeholder="Jan Kowalski" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input type="email" id="email" placeholder="jan@example.com" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="phone">Telefon</Label>
-                  <Input type="tel" id="phone" placeholder="+48 123 456 789" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="message">Dodatkowe informacje</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Czy planujesz przyjazd z psem? Masz jakieś specjalne życzenia?"
-                    className="min-h-[100px]"
+          <div className="max-w-6xl mx-auto space-y-8">
+            {/* Reservation Engine */}
+            <div className="w-full">
+              <Card className="feature-card border-primary/20">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl">System rezerwacji online</CardTitle>
+                  <CardDescription>
+                    Sprawdź dostępność i zarezerwuj swój pobyt w kilku krokach
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <iframe 
+                    id="ra-reservation-form-v2-751544ca6f8eba6df4c409e0ed8e5fe4" 
+                    style={{
+                      width: '100%', 
+                      height: '100px', 
+                      border: 'none', 
+                      padding: 0,
+                      borderRadius: '12px'
+                    }} 
+                    src="https://roomadmin.pl/widget/reservation-v2/start?fh=3f055f5738d635391c4937700ced3d1e9d603395&style=%7B%22color_accent%22%3A%22%230088cc%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%223%22%7D&filter=%7B%22room_type_id_in%22%3A%5B%223%22%5D%7D&lang=pl"
                   />
-                </div>
-                
-                <Button className="w-full glow-effect">
-                  Wyślij zapytanie o rezerwację
-                </Button>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
             
-            <div className="space-y-6">
+            {/* Two columns below */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-primary" />
+                  <CardTitle className="flex items-center gap-2 text-xl">
+                    <Phone className="h-6 w-6 text-primary" />
                     Kontakt bezpośredni
                   </CardTitle>
+                  <CardDescription>
+                    Potrzebujesz pomocy? Skontaktuj się z nami bezpośrednio
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h3 className="font-semibold mb-2">Zadzwoń do nas:</h3>
-                    <p className="text-lg font-mono">+48 123 456 789</p>
+                <CardContent className="space-y-6">
+                  <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
+                    <h3 className="font-semibold mb-2 flex items-center gap-2">
+                      <Phone className="h-4 w-4" />
+                      Zadzwoń do nas
+                    </h3>
+                    <p className="text-xl font-mono text-primary">+48 123 456 789</p>
                     <p className="text-sm text-muted-foreground">Dostępni codziennie 8:00 - 20:00</p>
                   </div>
                   
-                  <div>
-                    <h3 className="font-semibold mb-2">Napisz do nas:</h3>
-                    <p className="text-lg">info@szafirrusinowo.pl</p>
+                  <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
+                    <h3 className="font-semibold mb-2 flex items-center gap-2">
+                      <Mail className="h-4 w-4" />
+                      Napisz do nas
+                    </h3>
+                    <p className="text-lg text-primary">info@szafirrusinowo.pl</p>
                     <p className="text-sm text-muted-foreground">Odpowiadamy w ciągu 24h</p>
                   </div>
                 </CardContent>
@@ -100,30 +77,32 @@ const Reservation = () => {
               
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-primary" />
+                  <CardTitle className="flex items-center gap-2 text-xl">
+                    <Users className="h-6 w-6 text-primary" />
                     Informacje o rezerwacji
                   </CardTitle>
+                  <CardDescription>
+                    Ważne informacje dotyczące rezerwacji i pobytu
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="text-sm">
-                    <h4 className="font-semibold">Minimalne wynajęcie:</h4>
-                    <p className="text-muted-foreground">3 doby</p>
-                  </div>
-                  
-                  <div className="text-sm">
-                    <h4 className="font-semibold">Zadatek:</h4>
-                    <p className="text-muted-foreground">30% wartości rezerwacji</p>
-                  </div>
-                  
-                  <div className="text-sm">
-                    <h4 className="font-semibold">Anulowanie:</h4>
-                    <p className="text-muted-foreground">Bezpłatne do 14 dni przed przyjazdem</p>
-                  </div>
-                  
-                  <div className="text-sm">
-                    <h4 className="font-semibold">Przyjazd z psem:</h4>
-                    <p className="text-muted-foreground">Dodatkowa opłata 20zł/dobę</p>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Minimalne wynajęcie</h4>
+                      <p className="text-muted-foreground">3 doby</p>
+                    </div>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Zadatek</h4>
+                      <p className="text-muted-foreground">30% wartości</p>
+                    </div>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Anulowanie</h4>
+                      <p className="text-muted-foreground">Bezpłatne do 14 dni</p>
+                    </div>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <h4 className="font-semibold text-sm">Przyjazd z psem</h4>
+                      <p className="text-muted-foreground">+20zł/dobę</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -131,6 +110,60 @@ const Reservation = () => {
           </div>
         </div>
       </main>
+      
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          try {
+            (function () {
+              var iframe = window.document.getElementById('ra-reservation-form-v2-751544ca6f8eba6df4c409e0ed8e5fe4');
+              function raMessageReceiver(event) {
+                if (iframe) {
+                  if (!event.data.sender || "reservation-form-751544ca6f8eba6df4c409e0ed8e5fe4" !== event.data.sender) {
+                    return;
+                  }
+                  if (event.data.height) {
+                    iframe.style.height = (event.data.height + 10) + "px";
+                  }
+                  if (event.data.event && event.data.event.name === "widget.scrollup.requested") {
+                    try {
+                      iframe.scrollIntoView({behavior: "smooth", block: "start"});
+                    } catch (e) { }
+                  }
+                  if (event.data.event && event.data.event.name === "reservation.submit.success") {
+                    console.log("reservation.submit.success", event.data.event.data.reservation);
+                    var moneyTotal = event.data.event.data.reservation.moneyTotal;
+                    var id = event.data.event.data.reservation.id;
+                    window.gtag||(console.log("no gtag -- trying fallback "),window.dataLayer=window.dataLayer||[],window.gtag=function(){dataLayer.push(arguments)},Array.from(document.scripts).forEach(function(a){if(a.src.startsWith("https://www.googletagmanager.com/gtag/js")||a.src.startsWith("http://www.googletagmanager.com/gtag/js")){var g=new URL(a.src).searchParams.get("id");console.log("gtag found: "+g),gtag("js",new Date),gtag("config",g)}}));
+                    gtag("event", "purchase", { transaction_id: id, value: moneyTotal / 100, currency: "PLN" });
+                    console.log("purchase event sent")
+                  }
+                  if (event.data.event && event.data.event.name === "reservation.variant-search.start") {
+                  }
+                  if (event.data.event && event.data.event.name) {
+                    console.log(event.data.event.name, event.data.event);
+                  }
+                }
+              }
+              window.addEventListener("message", raMessageReceiver, false);
+              function setup() {
+                try {
+                  iframe.contentWindow.postMessage({ 
+                    location: window.location.toString(), 
+                    setup: { 
+                      autoHeight: true, 
+                      senderName: "reservation-form-751544ca6f8eba6df4c409e0ed8e5fe4" 
+                    } 
+                  }, "*");
+                } catch (e) { }
+              }
+              setInterval(setup, 1000);
+              iframe.addEventListener("load", setup);
+            })();
+          } catch (e) {
+            console.error(e);
+          }
+        `
+      }} />
     </div>
   );
 };
