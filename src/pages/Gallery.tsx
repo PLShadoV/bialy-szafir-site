@@ -82,21 +82,13 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen page-enter">
+   <div className="min-h-screen page-enter">
       <Header />
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-5xl font-bold text-center mb-8 gradient-text">Galeria</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
-            Zobacz nasze piękne domki letniskowe w malowniczym otoczeniu Rusinowa nad Bałtykiem.
-          </p>
-
-          {/* Hero Section */}
-          <section className="relative h-96 flex items-center justify-center overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${heroForest})` }}
-            />
+      <PageHero 
+        title="Galeria"
+        description="   Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie"
+        backgroundImage={heroForest}
+      />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40" />
             <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">Galeria</h2>
