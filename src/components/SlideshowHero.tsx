@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import heroImage1 from "@/assets/1.jpg";
+import heroImage1 from "@/assets/1.png";
 import heroImage2 from "@/assets/herodron.jpg";
-import heroImage3 from "@/assets/2.jpg";
+import heroImage3 from "@/assets/2.png";
 
 const heroImages = [heroImage1, heroImage2, heroImage3];
 
