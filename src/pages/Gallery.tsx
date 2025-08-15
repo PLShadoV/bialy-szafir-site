@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Header from "@/components/Header";
+import PageHero from "@/components/PageHero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wifi, Car, Utensils } from "lucide-react";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
@@ -82,55 +83,50 @@ const Gallery: React.FC = () => {
   };
 
   return (
-   <div className="min-h-screen page-enter">
+    <div className="min-h-screen page-enter">
       <Header />
       <PageHero 
         title="Galeria"
-        description="   Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie"
+        description="Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie"
         backgroundImage={heroForest}
       />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40" />
-            <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">Galeria</h2>
-              <p className="text-lg opacity-90 max-w-2xl mx-auto drop-shadow-md">
-                Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie
+      
+      <main>
+        {/* Gallery Grid */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <h3 className="text-3xl font-bold text-primary text-center mb-12">Zdjęcia domków</h3>
+
+            {total === 0 ? (
+              <p className="text-center text-muted-foreground">
+                Dodaj zdjęcia do <code>src/assets/gallery/</code> (jpg/png/webp), aby wyświetlić galerię.
               </p>
-            </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
+                {galleryImages.map((image, i) => (
+                  <button
+                    key={image.id}
+                    className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-ocean transition-all duration-300 aspect-square"
+                    onClick={() => openAt(i)}
+                    aria-label={`Otwórz podgląd: ${image.alt}`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
 
-          {/* Gallery Grid */}
-          <section className="py-16 bg-background">
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold text-primary text-center mb-12">Zdjęcia domków</h3>
-
-              {total === 0 ? (
-                <p className="text-center text-muted-foreground">
-                  Dodaj zdjęcia do <code>src/assets/gallery/</code> (jpg/png/webp), aby wyświetlić galerię.
-                </p>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
-                  {galleryImages.map((image, i) => (
-                    <button
-                      key={image.id}
-                      className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-ocean transition-all duration-300 aspect-square"
-                      onClick={() => openAt(i)}
-                      aria-label={`Otwórz podgląd: ${image.alt}`}
-                    >
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-
-          {/* Features */}
-          <div className="mb-16">
+        {/* Features */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Nasze domki</h3>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Oferujemy komfortowe domki z pełnym wyposażeniem i dostępem do plaży w pięknej okolicy Rusinowa.
@@ -168,9 +164,11 @@ const Gallery: React.FC = () => {
               </Card>
             </div>
           </div>
+        </section>
 
-          {/* Videos (placeholdery) */}
-          <div className="mb-16">
+        {/* Videos */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Filmy promocyjne</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="feature-card rounded-xl overflow-hidden">
@@ -194,7 +192,7 @@ const Gallery: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Lightbox overlay */}
         {open && current && (
