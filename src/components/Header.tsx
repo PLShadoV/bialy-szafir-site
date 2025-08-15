@@ -20,8 +20,8 @@ const Header = () => {
   ];
 
   const centerLinks = [
-    { name: "Biała Perła", href: "https://bialaperlusinowo.pl" },
-    { name: "Biały Koral", href: "https://bialykoralrusinowo.pl" },
+    { name: "Biała Perła", href: "https://perlarusinowo.pl" },
+    { name: "Biały Koral", href: "https://koralrusinowo.pl" },
   ];
 
   return (
