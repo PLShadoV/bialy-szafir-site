@@ -96,7 +96,6 @@ const Gallery: React.FC = () => {
                 Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie
               </p>
             </div>
-          </section>
 
           {/* Gallery Grid */}
           <section className="py-16 bg-background">
