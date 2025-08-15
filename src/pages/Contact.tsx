@@ -30,6 +30,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      console.log('Sending form data:', formData);
+      
       const response = await fetch('https://uayyuyplstjgnrnnlgyk.supabase.co/functions/v1/send-email', {
         method: 'POST',
         headers: {
@@ -38,7 +40,10 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+      console.log('Response:', result);
+
+      if (response.ok && result.success) {
         setShowSuccessDialog(true);
         setFormData({
           name: '',
@@ -47,14 +52,18 @@ const Contact = () => {
           subject: '',
           message: ''
         });
+        toast({
+          title: "Sukces!",
+          description: "Wiadomość została wysłana pomyślnie.",
+        });
       } else {
-        throw new Error('Błąd podczas wysyłania');
+        throw new Error(result.error || 'Wystąpił błąd podczas wysyłania');
       }
     } catch (error) {
       console.error('Email sending error:', error);
       toast({
         title: "Błąd",
-        description: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.",
+        description: error instanceof Error ? error.message : "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.",
         variant: "destructive",
       });
     } finally {
