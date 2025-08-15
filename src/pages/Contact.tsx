@@ -32,7 +32,7 @@ const Contact = () => {
     try {
       console.log('Sending form data:', formData);
       
-      const response = await fetch('https://uayyuyplstjgnrnnlgyk.supabase.co/functions/v1/send-email', {
+      const response = await fetch('https://kmolgjwixpwiigwfayxz.supabase.co/functions/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
