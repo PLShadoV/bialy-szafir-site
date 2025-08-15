@@ -34,6 +34,7 @@ const Contact = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVheXl1eXBsc3RqZ25ybm5sZ3lrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUxOTA0NjAsImV4cCI6MjA3MDc2NjQ2MH0.M_t93ZWp25cux_Hpzkp07ffvWe4BTXfxMW4am6QTQUY`
         },
         body: JSON.stringify(formData),
       });
