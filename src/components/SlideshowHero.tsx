@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import heroImage1 from "@/assets/hero-cottages.jpg";
+import heroImage1 from "@/assets/herodron.jpg";
 import heroImage2 from "@/assets/hero-beach.jpg";
 import heroImage3 from "@/assets/hero-nature.jpg";
 
