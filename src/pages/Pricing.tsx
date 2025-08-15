@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Star, Calendar, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
   useScrollToTop();
+  const navigate = useNavigate();
   
   const pricingData = [
     { period: "12.04 - 31.05", price: "300", season: "Wiosna", popular: false },
@@ -30,16 +33,16 @@ const Pricing = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {pricingData.map((item, index) => (
-                <div key={index} className={`pricing-card ${item.popular ? 'ring-2 ring-primary' : ''}`}>
+                <Card key={index} className={`pricing-card relative ${item.popular ? 'ring-2 ring-primary' : ''}`}>
                   {item.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-primary text-primary-foreground px-4 py-1 rounded-full">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                      <Badge className="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">
                         <Star className="w-3 h-3 mr-1" />
                         Najpopularniejszy
                       </Badge>
                     </div>
                   )}
-                  <div className="text-center">
+                  <CardContent className="p-8 text-center">
                     <h3 className="text-sm font-medium text-muted-foreground mb-2">{item.season}</h3>
                     <div className="flex items-center justify-center mb-4">
                       <Calendar className="w-4 h-4 mr-2 text-primary" />
@@ -50,12 +53,19 @@ const Pricing = () => {
                       <span className="text-lg text-muted-foreground">zł</span>
                       <p className="text-sm text-muted-foreground mt-1">za dobę</p>
                     </div>
-                    <div className="flex items-center justify-center text-sm text-muted-foreground">
+                    <div className="flex items-center justify-center text-sm text-muted-foreground mb-6">
                       <Users className="w-4 h-4 mr-1" />
                       Do 5 osób
                     </div>
-                  </div>
-                </div>
+                    <Button 
+                      onClick={() => navigate('/rezerwacja')}
+                      className="w-full glow-effect"
+                      variant={item.popular ? "default" : "outline"}
+                    >
+                      Zarezerwuj
+                    </Button>
+                  </CardContent>
+                </Card>
               ))}
             </div>
             

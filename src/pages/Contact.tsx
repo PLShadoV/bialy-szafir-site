@@ -7,9 +7,59 @@ import { Textarea } from "@/components/ui/textarea";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import Map from "@/components/Map";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Contact = () => {
   useScrollToTop();
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success('Wiadomość została wysłana pomyślnie!');
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Błąd podczas wysyłania');
+      }
+    } catch (error) {
+      toast.error('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }));
+  };
   
   return (
     <div className="min-h-screen page-enter">
@@ -89,40 +139,76 @@ const Contact = () => {
                   Wyślij nam wiadomość, a skontaktujemy się z Tobą jak najszybciej
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="name">Imię i nazwisko</Label>
-                    <Input type="text" id="name" placeholder="Jan Kowalski" />
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="name">Imię i nazwisko</Label>
+                      <Input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Jan Kowalski"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone">Telefon</Label>
+                      <Input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="+48 123 456 789"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
+                  
                   <div>
-                    <Label htmlFor="phone">Telefon</Label>
-                    <Input type="tel" id="phone" placeholder="+48 123 456 789" />
+                    <Label htmlFor="email">Email</Label>
+                    <Input 
+                      type="email" 
+                      id="email" 
+                      placeholder="jan@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
-                </div>
-                
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input type="email" id="email" placeholder="jan@example.com" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="subject">Temat</Label>
-                  <Input type="text" id="subject" placeholder="Pytanie o rezerwację" />
-                </div>
-                
-                <div>
-                  <Label htmlFor="message">Wiadomość</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Twoja wiadomość..."
-                    className="min-h-[120px]"
-                  />
-                </div>
-                
-                <Button className="w-full glow-effect">
-                  Wyślij wiadomość
-                </Button>
+                  
+                  <div>
+                    <Label htmlFor="subject">Temat</Label>
+                    <Input 
+                      type="text" 
+                      id="subject" 
+                      placeholder="Pytanie o rezerwację"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="message">Wiadomość</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Twoja wiadomość..."
+                      className="min-h-[120px]"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full glow-effect"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
