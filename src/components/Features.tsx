@@ -9,8 +9,8 @@ const Features = () => {
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Pięcioosobowe domki",
-      description: "Komfortowe domki dla maksymalnie 5 osób z pełnym wyposażeniem"
+      title: "Sześcioosobowe domki",
+      description: "Komfortowe domki dla maksymalnie 6 osób z pełnym wyposażeniem"
     },
     {
       icon: <ChefHat className="h-8 w-8 text-primary" />,
