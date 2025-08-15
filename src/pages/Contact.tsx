@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import PageHero from "@/components/PageHero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,7 @@ import Map from "@/components/Map";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import heroCoastal from "@/assets/hero-coastal.jpg";
 
 const Contact = () => {
   useScrollToTop();
@@ -81,12 +83,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen page-enter">
       <Header />
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-5xl font-bold text-center mb-8 gradient-text">Kontakt</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
-            Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek.
-          </p>
+      <PageHero 
+        title="Kontakt"
+        description="Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek w Rusinowie"
+        backgroundImage={heroCoastal}
+      />
+      <main className="py-16">
+        <div className="container mx-auto px-4">
 
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">

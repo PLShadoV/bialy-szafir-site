@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
+import PageHero from "@/components/PageHero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { ExternalLink, MapPin, Phone, Mail, Star, Waves } from "lucide-react";
+import heroNature from "@/assets/hero-nature.jpg";
 
 const OurCenters = () => {
   useScrollToTop();
@@ -32,12 +34,13 @@ const OurCenters = () => {
   return (
     <div className="min-h-screen page-enter">
       <Header />
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold text-center mb-8 gradient-text">Nasze Ośrodki</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Oprócz Białego Szafiru oferujemy także pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie.
-          </p>
+      <PageHero 
+        title="Nasze Ośrodki"
+        description="Oprócz Białego Szafiru oferujemy także pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie"
+        backgroundImage={heroNature}
+      />
+      <main className="py-16">
+        <div className="container mx-auto px-4">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {centers.map((center, index) => (

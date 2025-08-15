@@ -1,10 +1,12 @@
 import Header from "@/components/Header";
+import PageHero from "@/components/PageHero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Star, Calendar, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import heroBeach from "@/assets/hero-beach.jpg";
 
 const Pricing = () => {
   useScrollToTop();
@@ -23,12 +25,13 @@ const Pricing = () => {
   return (
     <div className="min-h-screen page-enter">
       <Header />
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-5xl font-bold text-center mb-8 gradient-text">Cennik</h1>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
-            Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie.
-          </p>
+      <PageHero 
+        title="Cennik"
+        description="Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie"
+        backgroundImage={heroBeach}
+      />
+      <main className="py-16">
+        <div className="container mx-auto px-4">
           
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
