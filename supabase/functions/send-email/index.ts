@@ -63,7 +63,7 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     };
 
-    console.log("Sending email with payload:", JSON.stringify(emailPayload, null, 2));
+    console.log("Sending email with Resend API");
 
     const emailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
