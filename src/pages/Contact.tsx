@@ -30,7 +30,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/.netlify/functions/send-email', {
+      const response = await fetch('https://uayyuyplstjgnrnnlgyk.supabase.co/functions/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
