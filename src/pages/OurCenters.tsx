@@ -14,19 +14,19 @@ const OurCenters = () => {
     {
       name: "Biała Perła",
       description: "Nasz pierwszy ośrodek wypoczynkowy nad morzem",
-      address: "ul. Morska 15, 76-107 Rusinowo",
-      phone: "+48 123 456 789",
-      email: "info@bialaperlusinowo.pl",
-      website: "https://bialaperlusinowo.pl",
+      address: "ul. Sosnowa 23, 76-107 Rusinowo",
+      phone: "+48 519 662 166",
+      email: "info@perlarusinowo.pl",
+      website: "https://perlarusinowo.pl",
       features: ["Domki nad samym morzem", "Prywatna plaża", "Restauracja", "SPA"]
     },
     {
       name: "Biały Koral",
       description: "Drugi z naszych ośrodków w malowniczej lokalizacji",
-      address: "ul. Sosnowa 10, 76-107 Rusinowo", 
+      address: "ul. Sosnowa 9, 76-107 Rusinowo", 
       phone: "+48 123 456 790",
-      email: "info@bialykoralrusinowo.pl",
-      website: "https://bialykoralrusinowo.pl",
+      email: "info@koralrusinowo.pl",
+      website: "https://koralrusinowo.pl",
       features: ["Domki w lesie", "Blisko plaży", "Rowery do wypożyczenia", "Plac zabaw"]
     }
   ];

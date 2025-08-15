@@ -83,8 +83,8 @@ const Pricing = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Minimalne wynajęcie</h4>
-                      <p className="text-muted-foreground">3 doby</p>
+                      <h4 className="font-semibold text-sm">Minimalny pobyt</h4>
+                      <p className="text-muted-foreground">2 doby</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
                       <h4 className="font-semibold text-sm">Zameldowanie</h4>
@@ -92,11 +92,11 @@ const Pricing = () => {
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
                       <h4 className="font-semibold text-sm">Wymeldowanie</h4>
-                      <p className="text-muted-foreground">do 11:00</p>
+                      <p className="text-muted-foreground">do 10:00</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
                       <h4 className="font-semibold text-sm">Zwierzęta</h4>
-                      <p className="text-muted-foreground">+20zł/dobę</p>
+                      <p className="text-muted-foreground">15zł za dobę</p>
                     </div>
                   </div>
                 </CardContent>

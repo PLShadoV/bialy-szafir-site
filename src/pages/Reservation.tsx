@@ -63,7 +63,7 @@ const Reservation = () => {
                       <Phone className="h-4 w-4" />
                       Zadzwoń do nas
                     </h3>
-                    <p className="text-xl font-mono text-primary">+48 123 456 789</p>
+                    <p className="text-xl font-mono text-primary">+48 504 201 117</p>
                     <p className="text-sm text-muted-foreground">Dostępni codziennie 8:00 - 20:00</p>
                   </div>
                   
@@ -91,20 +91,16 @@ const Reservation = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Minimalne wynajęcie</h4>
+                      <h4 className="font-semibold text-sm">Minimalny czas wynajmu</h4>
                       <p className="text-muted-foreground">3 doby</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
                       <h4 className="font-semibold text-sm">Zadatek</h4>
-                      <p className="text-muted-foreground">30% wartości</p>
-                    </div>
-                    <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Anulowanie</h4>
-                      <p className="text-muted-foreground">Bezpłatne do 14 dni</p>
+                      <p className="text-muted-foreground">20% kwoty rezerwacji</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
                       <h4 className="font-semibold text-sm">Przyjazd z psem</h4>
-                      <p className="text-muted-foreground">+20zł/dobę</p>
+                      <p className="text-muted-foreground">15zł/dobę</p>
                     </div>
                   </div>
                 </CardContent>

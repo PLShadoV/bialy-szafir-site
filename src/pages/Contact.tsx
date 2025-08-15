@@ -103,10 +103,10 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <a 
-                      href="tel:+48797392903" 
+                      href="tel:+48504201117" 
                       className="text-lg font-mono text-primary hover:text-primary/80 transition-colors"
                     >
-                      +48 797 392 903
+                      +48 504 201 117
                     </a>
                     <p className="text-sm text-muted-foreground mt-2">
                       Dostępni codziennie 8:00 - 20:00
@@ -178,7 +178,7 @@ const Contact = () => {
                       <Input 
                         type="tel" 
                         id="phone" 
-                        placeholder="+48 123 456 789"
+                        placeholder="+48 504 201 117"
                         value={formData.phone}
                         onChange={handleChange}
                       />
