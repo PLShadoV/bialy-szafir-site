@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Map from "./Map";
 
 const Contact = () => {
   return (
@@ -7,21 +8,22 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Location section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">
-            Jak nas znaleźć
+          <h2 className="text-4xl font-bold mb-4 gradient-text">
+            Lokalizacja
           </h2>
-          <h3 className="text-2xl font-semibold mb-4 text-primary">
-            Biały Szafir - Domki letniskowe w Rusinowie
-          </h3>
-          <p className="text-xl text-muted-foreground">
-            ul. Sosnowa 19, 76-107 Rusinowo
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Znajdź nas w malowniczym Rusinowie nad Bałtykiem
           </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto mb-16">
+          <Map />
         </div>
 
         {/* Contact section */}
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">
+            <h2 className="text-4xl font-bold mb-4 gradient-text">
               Skontaktuj się z nami
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -78,8 +80,8 @@ const Contact = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg">
-              <a href="#rezerwacja">Zadaj pytanie</a>
+            <Button size="lg" className="glow-effect">
+              <a href="/kontakt">Zadaj pytanie</a>
             </Button>
           </div>
         </div>
