@@ -8,10 +8,12 @@ import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import Map from "@/components/Map";
 import { useState } from "react";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const Contact = () => {
   useScrollToTop();
+  const { toast } = useToast();
   
   const [formData, setFormData] = useState({
     name: '',
@@ -21,13 +23,14 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +39,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        toast.success('Wiadomość została wysłana pomyślnie!');
+        setShowSuccessDialog(true);
         setFormData({
           name: '',
           phone: '',
@@ -48,7 +51,12 @@ const Contact = () => {
         throw new Error('Błąd podczas wysyłania');
       }
     } catch (error) {
-      toast.error('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.');
+      console.error('Email sending error:', error);
+      toast({
+        title: "Błąd",
+        description: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -222,6 +230,25 @@ const Contact = () => {
           </div>
         </div>
       </main>
+      
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl text-primary">
+              ✓ Wiadomość wysłana!
+            </DialogTitle>
+            <DialogDescription className="text-center pt-4">
+              Dziękujemy za kontakt. Odpowiemy w ciągu 24 godzin.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center pt-4">
+            <Button onClick={() => setShowSuccessDialog(false)}>
+              Zamknij
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
