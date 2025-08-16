@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    /* Navy blue theme with warm yellow accents and sophisticated beiges */
-    --background: 45 20% 96%;
+    /* Navy blue theme with warm yellow accents and light grays */
+    --background: 210 20% 98%;
     --foreground: 252 65% 18%;
 
-    --card: 45 25% 97%;
+    --card: 210 25% 97%;
     --card-foreground: 252 65% 18%;
 
-    --popover: 45 25% 97%;
+    --popover: 210 25% 97%;
     --popover-foreground: 252 65% 18%;
 
     --primary: 252 65% 18%;
-    --primary-foreground: 45 25% 97%;
+    --primary-foreground: 210 25% 97%;
 
-    --secondary: 42 30% 88%;
+    --secondary: 210 25% 95%;
     --secondary-foreground: 252 65% 18%;
 
-    --muted: 45 20% 92%;
+    --muted: 210 20% 96%;
     --muted-foreground: 252 40% 35%;
 
     --accent: 45 85% 65%;
@@ -31,35 +31,35 @@
     --destructive: 0 70% 60%;
     --destructive-foreground: 45 25% 97%;
 
-    --border: 42 20% 85%;
-    --input: 42 20% 85%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
     --ring: 252 65% 18%;
 
-    /* Navy and gold design tokens */
-    --cozy-cream: 45 40% 96%;
-    --cozy-beige: 42 45% 90%;
+    /* Navy and gold design tokens with light grays */
+    --cozy-cream: 210 30% 98%;
+    --cozy-beige: 210 25% 95%;
     --cozy-sage: 120 15% 75%;
     --cozy-blue: 252 65% 18%;
     --cozy-peach: 35 60% 85%;
-    --cozy-warm: 42 50% 88%;
+    --cozy-warm: 210 30% 93%;
     --cozy-accent: 45 85% 65%;
     --cozy-text: 252 65% 18%;
 
     --radius: 0.875rem;
 
-    /* Enhanced navy and gold design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(252 65% 18%), hsl(45 85% 65%), hsl(42 35% 82%));
+    /* Enhanced navy and gold design tokens with light grays */
+    --hero-gradient: linear-gradient(135deg, hsl(252 65% 18%), hsl(45 85% 65%), hsl(210 25% 95%));
     --hero-overlay: linear-gradient(135deg, hsl(252 65% 18% / 0.7), hsl(45 85% 45% / 0.6));
-    --section-bg: hsl(45 20% 96%);
-    --feature-bg: hsl(42 35% 93%);
-    --text-overlay: hsl(45 25% 97%);
+    --section-bg: hsl(210 20% 98%);
+    --feature-bg: hsl(210 25% 96%);
+    --text-overlay: hsl(210 25% 97%);
     --shadow-soft: 0 4px 25px hsl(252 65% 18% / 0.08);
     --shadow-medium: 0 10px 40px hsl(252 65% 18% / 0.12);
     --shadow-hover: 0 15px 50px hsl(252 65% 18% / 0.15);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --glow-primary: 0 0 30px hsl(252 65% 18% / 0.3);
-    --glass-bg: hsl(45 25% 97% / 0.85);
-    --glass-border: hsl(42 20% 85% / 0.3);
+    --glass-bg: hsl(210 25% 97% / 0.85);
+    --glass-border: hsl(210 20% 90% / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -108,27 +108,27 @@
     --input: 252 20% 20%;
     --ring: 45 85% 70%;
 
-    /* Navy dark design tokens */
-    --cozy-cream: 252 20% 15%;
-    --cozy-beige: 42 25% 25%;
+    /* Navy dark design tokens with grays */
+    --cozy-cream: 210 15% 15%;
+    --cozy-beige: 210 20% 25%;
     --cozy-sage: 120 10% 35%;
     --cozy-blue: 252 65% 25%;
     --cozy-peach: 35 50% 45%;
-    --cozy-warm: 42 30% 40%;
+    --cozy-warm: 210 25% 30%;
     --cozy-accent: 45 85% 70%;
-    --cozy-text: 45 25% 85%;
+    --cozy-text: 210 25% 85%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(252 65% 15%), hsl(45 85% 35%), hsl(42 35% 25%));
+    --hero-gradient: linear-gradient(135deg, hsl(252 65% 15%), hsl(45 85% 35%), hsl(210 20% 25%));
     --hero-overlay: linear-gradient(135deg, hsl(252 65% 12% / 0.8), hsl(45 85% 25% / 0.7));
-    --section-bg: hsl(252 40% 10%);
-    --feature-bg: hsl(252 40% 12%);
-    --text-overlay: hsl(45 25% 95%);
+    --section-bg: hsl(210 20% 10%);
+    --feature-bg: hsl(210 20% 12%);
+    --text-overlay: hsl(210 25% 95%);
     --shadow-soft: 0 4px 25px hsl(0 0% 0% / 0.4);
     --shadow-medium: 0 10px 40px hsl(0 0% 0% / 0.5);
     --shadow-hover: 0 15px 50px hsl(0 0% 0% / 0.6);
     --glow-primary: 0 0 30px hsl(45 85% 70% / 0.4);
-    --glass-bg: hsl(252 40% 12% / 0.85);
-    --glass-border: hsl(45 25% 95% / 0.1);
+    --glass-bg: hsl(210 20% 12% / 0.85);
+    --glass-border: hsl(210 25% 95% / 0.1);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
