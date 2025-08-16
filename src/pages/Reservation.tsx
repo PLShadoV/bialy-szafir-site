@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
+import FloatingActions from "@/components/FloatingActions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Users, Phone, Mail } from "lucide-react";
@@ -9,14 +10,14 @@ const Reservation = () => {
   useScrollToTop();
   
   return (
-    <div className="min-h-screen page-enter">
+    <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
         title="Rezerwacja"
         description="Zarezerwuj swój pobyt w domkach letniskowych Biały Szafir już dziś!"
         backgroundImage={heroForest}
       />
-      <main className="py-16">
+      <main className="py-16 bg-cozy-cream">
         <div className="container mx-auto px-4">
           
           <div className="max-w-6xl mx-auto space-y-8">
@@ -163,6 +164,7 @@ const Reservation = () => {
           }
         `
       }} />
+      <FloatingActions />
     </div>
   );
 };

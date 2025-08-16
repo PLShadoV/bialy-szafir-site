@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 const FloatingActions = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const navigate = useNavigate();
 
   const actions = [
@@ -42,9 +42,9 @@ const FloatingActions = () => {
   ];
 
   return (
-    <div className="fixed right-6 bottom-6 z-50 flex flex-col items-end space-y-3">
+    <div className="fixed right-6 bottom-6 z-50 flex flex-col items-center space-y-3">
       {/* Action buttons */}
-      <div className={`flex flex-col space-y-3 transition-all duration-500 ease-in-out ${
+      <div className={`flex flex-col items-center space-y-3 transition-all duration-500 ease-in-out ${
         isExpanded 
           ? "opacity-100 translate-y-0 pointer-events-auto" 
           : "opacity-0 translate-y-4 pointer-events-none"
@@ -52,26 +52,15 @@ const FloatingActions = () => {
         {actions.map((action, index) => {
           const Icon = action.icon;
           return (
-            <div key={index} className="flex items-center space-x-3 group">
-              {/* Label */}
-              <div className={`px-3 py-2 bg-cozy-cream text-cozy-text rounded-lg shadow-lg text-sm font-medium whitespace-nowrap transition-all duration-300 ${
-                isExpanded 
-                  ? "opacity-100 translate-x-0" 
-                  : "opacity-0 translate-x-2"
-              }`} style={{ transitionDelay: `${index * 50}ms` }}>
-                {action.label}
-              </div>
-              
-              {/* Button */}
-              <Button
-                onClick={action.action}
-                size="icon"
-                className={`w-12 h-12 rounded-full shadow-lg text-white hover:scale-110 transition-all duration-300 ${action.bgColor}`}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
-                <Icon className="h-5 w-5" />
-              </Button>
-            </div>
+            <Button
+              key={index}
+              onClick={action.action}
+              size="icon"
+              className={`w-12 h-12 rounded-full shadow-lg text-white hover:scale-110 transition-all duration-300 ${action.bgColor}`}
+              style={{ transitionDelay: `${index * 50}ms` }}
+            >
+              <Icon className="h-5 w-5" />
+            </Button>
           );
         })}
       </div>

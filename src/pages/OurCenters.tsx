@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
+import FloatingActions from "@/components/FloatingActions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -32,14 +33,14 @@ const OurCenters = () => {
   ];
 
   return (
-    <div className="min-h-screen page-enter">
+    <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
         title="Nasze Ośrodki"
         description="Oprócz Białego Szafiru oferujemy także pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie"
         backgroundImage={heroNature}
       />
-      <main className="py-16">
+      <main className="py-16 bg-cozy-cream">
         <div className="container mx-auto px-4">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -85,6 +86,7 @@ const OurCenters = () => {
           </div>
         </div>
       </main>
+      <FloatingActions />
     </div>
   );
 };

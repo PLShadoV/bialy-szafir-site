@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
+import FloatingActions from "@/components/FloatingActions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -23,14 +24,14 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="min-h-screen page-enter">
+    <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
         title="Cennik"
         description="Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie"
         backgroundImage={heroBeach}
       />
-      <main className="py-16">
+      <main className="py-16 bg-cozy-beige">
         <div className="container mx-auto px-4">
           
           <div className="max-w-6xl mx-auto">
@@ -131,6 +132,7 @@ const Pricing = () => {
           </div>
         </div>
       </main>
+      <FloatingActions />
     </div>
   );
 };

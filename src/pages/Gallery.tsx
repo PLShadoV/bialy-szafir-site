@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
+import FloatingActions from "@/components/FloatingActions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wifi, Car, Utensils } from "lucide-react";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
@@ -83,7 +84,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen page-enter">
+    <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
         title="Galeria"
@@ -93,7 +94,7 @@ const Gallery: React.FC = () => {
       
       <main>
         {/* Gallery Grid */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-primary text-center mb-12">Zdjęcia domków</h3>
 
@@ -125,7 +126,7 @@ const Gallery: React.FC = () => {
         </section>
 
         {/* Features */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-cozy-cream">
           <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Nasze domki</h3>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -167,7 +168,7 @@ const Gallery: React.FC = () => {
         </section>
 
         {/* Videos */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Filmy promocyjne</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -247,6 +248,7 @@ const Gallery: React.FC = () => {
           </div>
         )}
       </main>
+      <FloatingActions />
     </div>
   );
 };

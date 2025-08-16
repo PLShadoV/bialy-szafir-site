@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
+import FloatingActions from "@/components/FloatingActions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -81,14 +82,14 @@ const Contact = () => {
   };
   
   return (
-    <div className="min-h-screen page-enter">
+    <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
         title="Kontakt"
         description="Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek w Rusinowie"
         backgroundImage={heroCoastal}
       />
-      <main className="py-16">
+      <main className="py-16 bg-cozy-cream">
         <div className="container mx-auto px-4">
 
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -261,6 +262,7 @@ const Contact = () => {
           </div>
         </DialogContent>
       </Dialog>
+      <FloatingActions />
     </div>
   );
 };
