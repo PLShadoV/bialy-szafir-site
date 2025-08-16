@@ -25,12 +25,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <header className="bg-primary/95 backdrop-blur-sm border-b border-primary/20 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/">
-              <h1 className="text-2xl font-bold gradient-text">Biały Szafir</h1>
+              <h1 className="text-2xl font-bold text-primary-foreground">Biały Szafir</h1>
             </Link>
           </div>
           
@@ -40,7 +40,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-primary-foreground/90 hover:text-accent transition-colors font-medium"
               >
                 {item.name}
               </Link>
@@ -48,7 +48,7 @@ const Header = () => {
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-1">
+                <Button variant="ghost" className="flex items-center gap-1 text-primary-foreground hover:text-accent hover:bg-primary-foreground/10">
                   Nasze ośrodki
                   <ChevronDown className="h-4 w-4" />
                 </Button>
@@ -69,7 +69,7 @@ const Header = () => {
             <Button variant="default" size="sm" className="glow-effect" asChild>
               <Link to="/rezerwacja">Rezerwacja</Link>
             </Button>
-            <select className="text-sm border-none bg-transparent">
+            <select className="text-sm border-none bg-transparent text-primary-foreground">
               <option>🇵🇱 PL</option>
             </select>
           </div>
@@ -78,6 +78,7 @@ const Header = () => {
           <div className="md:hidden">
             <Button
               variant="ghost"
+              className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -88,28 +89,28 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-primary-foreground/20">
             <nav className="flex flex-col space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-foreground hover:text-primary transition-colors py-2"
+                  className="text-primary-foreground/90 hover:text-accent transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               
-              <div className="pt-2 border-t border-border mt-4">
-                <p className="text-sm font-medium mb-2">Nasze ośrodki:</p>
+              <div className="pt-2 border-t border-primary-foreground/20 mt-4">
+                <p className="text-sm font-medium mb-2 text-primary-foreground">Nasze ośrodki:</p>
                 {centerLinks.map((center) => (
                   <a
                     key={center.name}
                     href={center.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors py-1 block pl-4"
+                    className="text-primary-foreground/70 hover:text-accent transition-colors py-1 block pl-4"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {center.name}
