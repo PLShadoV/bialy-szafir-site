@@ -14,16 +14,16 @@ const Equipment = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white font-quicksand">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">
+          <h2 className="text-4xl font-bold mb-4 text-cozy-charcoal">
             Wyposażenie domków letniskowych
           </h2>
-          <p className="text-lg text-muted-foreground mb-2">
+          <p className="text-lg text-cozy-charcoal/80 mb-2">
             Wszystko czego potrzebujesz na komfortowy wypoczynek nad morzem
           </p>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-cozy-charcoal/80 max-w-3xl mx-auto">
             Każdy domek jest w pełni wyposażony i przygotowany na pobyt do 5 osób. 
             Nowoczesne udogodnienia zapewniają komfort porównywalny z domowym.
           </p>
@@ -31,11 +31,11 @@ const Equipment = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
           {equipment.map((item, index) => (
-            <div key={index} className="feature-card rounded-lg p-6 text-center">
+            <div key={index} className="bg-cozy-beige rounded-lg p-6 text-center shadow-md">
               <div className="flex justify-center mb-3 text-primary">
                 {item.icon}
               </div>
-              <p className="text-sm text-foreground font-medium">
+              <p className="text-sm text-cozy-charcoal font-medium">
                 {item.name}
               </p>
             </div>

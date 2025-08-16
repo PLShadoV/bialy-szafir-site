@@ -4,7 +4,7 @@ import bikeForestImage from "@/assets/bike-forest.jpg";
 
 const Activities = () => {
   return (
-    <section className="py-20 section-bg">
+    <section className="py-20 bg-cozy-beige font-quicksand">
       <div className="container mx-auto px-4">
         {/* Pet-friendly section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
@@ -16,15 +16,15 @@ const Activities = () => {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <h3 className="text-3xl font-bold mb-4 text-foreground">
+            <h3 className="text-3xl font-bold mb-4 text-cozy-charcoal">
               Pobyt z czworonogiem
             </h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-cozy-charcoal/80 mb-4 leading-relaxed">
               Akceptujemy zwierzęta po wcześniejszym zgłoszeniu. Wasze pupile muszą znajdować się 
               pod stałym nadzorem podczas całego pobytu. Zapewniamy przyjazne środowisko dla całej 
               rodziny, w tym dla waszych czworonożnych przyjaciół.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-cozy-charcoal/80 leading-relaxed">
               Plaża w Rusinowie jest idealna dla spacerów z psami. Szeroki pas piasku pozwala na 
               swobodną zabawę, a czyste powietrze i morska bryza sprawią, że Twój pies będzie 
               zachwycony wakacjami nad Bałtykiem.
@@ -42,15 +42,15 @@ const Activities = () => {
             />
           </div>
           <div>
-            <h3 className="text-3xl font-bold mb-4 text-foreground">
+            <h3 className="text-3xl font-bold mb-4 text-cozy-charcoal">
               Rowerem nad morzem
             </h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-cozy-charcoal/80 mb-4 leading-relaxed">
               Odkryj malownicze trasy rowerowe w okolicy Rusinowa. Przejażdżki wśród sosnowych lasów, 
               ścieżki nadmorskie i malownicze trasy łączące nasze miasteczko z sąsiednimi kurortami 
               zapewnią niezapomniane wrażenia.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-cozy-charcoal/80 leading-relaxed">
               Region Słowińskiego Parku Narodowego oferuje kilometry bezpiecznych ścieżek rowerowych. 
               Możesz dotrzeć do Jarosławca, Wici czy Darłowa, podziwiając po drodze unikalne krajobrazy 
               wydm i nadmorskich łąk.
@@ -60,15 +60,15 @@ const Activities = () => {
 
         {/* Location section */}
         <div className="text-center max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold mb-6 text-foreground">
+          <h3 className="text-3xl font-bold mb-6 text-cozy-charcoal">
             Najbliższa okolica Rusinowa
           </h3>
-          <p className="text-muted-foreground mb-6 leading-relaxed">
+          <p className="text-cozy-charcoal/80 mb-6 leading-relaxed">
             Nasze domki położone są w cichym miejscu przy lesie, który zaprasza na spokojne spacery 
             i kontakt z naturą. Znajdujemy się w pobliżu Jarosławca i Wici, co zapewnia dostęp do 
             dodatkowych atrakcji turystycznych i gastronomicznych.
           </p>
-          <p className="text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-cozy-charcoal/80 mb-8 leading-relaxed">
             Rusinowo to małe, spokojne miasteczko na polskim wybrzeżu Bałtyku, położone między 
             Darłowem a Jarosławcem. Dzięki położeniu w sercu Słowińskiego Parku Narodowego, oferuje 
             niepowtarzalny kontakt z przyrodą. W okolicy znajdziecie ruchome wydmy, jeziora nadmorskie, 
