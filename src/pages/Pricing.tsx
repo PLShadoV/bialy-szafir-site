@@ -20,7 +20,7 @@ const Pricing = () => {
     { period: "07.07 - 12.07", price: "570", season: "Lipiec", popular: true },
     { period: "07.07 - 17.08", price: "650", season: "Sezon letni", popular: true },
     { period: "18.08 - 31.08", price: "520", season: "Sierpień", popular: false },
-    { period: "01.09 - 19.10", price: "350", season: "Jesień", popular: false },
+    { period: "01.09 - 19.10", price: "300", season: "Jesień", popular: false },
   ];
 
   return (
