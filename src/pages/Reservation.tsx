@@ -35,7 +35,7 @@ const Reservation = () => {
                     id="ra-reservation-form-v2-751544ca6f8eba6df4c409e0ed8e5fe4" 
                     style={{
                       width: '100%', 
-                      minHeight: '600px', 
+                      minHeight: '300px', 
                       border: 'none', 
                       padding: 0,
                       borderRadius: '12px',
