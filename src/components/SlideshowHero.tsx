@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroImage1 from "@/assets/1.png";
 import heroImage2 from "@/assets/herodron.jpg";
@@ -57,8 +58,8 @@ const SlideshowHero = () => {
           Odkryj idealne miejsce na wakacje w Rusinowie. Komfortowe domki w otoczeniu lasu, 
           zaledwie 600 metrów od plaży Bałtyku. Ciesz się spokojem natury i bliskością morza.
         </p>
-        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3">
-          Zarezerwuj teraz
+        <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3" asChild>
+          <Link to="/rezerwacja">Zarezerwuj teraz</Link>
         </Button>
       </div>
 
