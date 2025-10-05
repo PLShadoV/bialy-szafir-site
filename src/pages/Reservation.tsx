@@ -35,10 +35,11 @@ const Reservation = () => {
                     id="ra-reservation-form-v2-751544ca6f8eba6df4c409e0ed8e5fe4" 
                     style={{
                       width: '100%', 
-                      height: '600px', 
+                      minHeight: '600px', 
                       border: 'none', 
                       padding: 0,
-                      borderRadius: '12px'
+                      borderRadius: '12px',
+                      transition: 'height 0.3s ease'
                     }} 
                     src="https://roomadmin.pl/widget/reservation-v2/start?fh=3f055f5738d635391c4937700ced3d1e9d603395&style=%7B%22color_accent%22%3A%22%230088cc%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%223%22%7D&filter=%7B%22room_type_id_in%22%3A%5B%223%22%5D%7D&lang=pl"
                   />
