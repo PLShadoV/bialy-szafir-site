@@ -17,10 +17,10 @@ const Pricing = () => {
     { period: "11.04 - 31.05", price: "300", season: "Wiosna", popular: false },
     { period: "Majówka 29.04-03.05", price: "350", season: "Wiosna", popular: false },
     { period: "01.06 - 13.06", price: "350", season: "Początek lata", popular: false },
-    { period: "13.06 - 04.07", price: "400", season: "Czerwiec", popular: false },
-    { period: "04.07 - 11.07", price: "570", season: "Lipiec", popular: true },
-    { period: "11.07 - 15.08", price: "650", season: "Sezon letni", popular: true },
-    { period: "15.08 - 31.08", price: "520", season: "Sierpień", popular: false },
+    { period: "14.06 - 04.07", price: "400", season: "Czerwiec", popular: false },
+    { period: "05.07 - 11.07", price: "570", season: "Lipiec", popular: true },
+    { period: "12.07 - 15.08", price: "650", season: "Sezon letni", popular: true },
+    { period: "16.08 - 31.08", price: "520", season: "Sierpień", popular: false },
     { period: "01.09 - 19.10", price: "300", season: "Jesień", popular: false },
   ];
 
