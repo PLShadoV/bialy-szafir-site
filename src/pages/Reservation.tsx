@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
@@ -20,6 +21,77 @@ const SENDER_NAME =
 const Reservation = () => {
   useScrollToTop();
 
+  useEffect(() => {
+    const iframe = document.getElementById(
+      IFRAME_ID
+    ) as HTMLIFrameElement | null;
+
+    function raMessageReceiver(event: MessageEvent) {
+      if (!iframe) return;
+      if (!event.data || event.data.sender !== SENDER_NAME) return;
+
+      // auto height
+      if (event.data.height) {
+        iframe.style.height = event.data.height + 10 + "px";
+      }
+
+      // scroll request
+      if (event.data.event?.name === "widget.scrollup.requested") {
+        iframe.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      // reservation success → GA purchase
+      if (event.data.event?.name === "reservation.submit.success") {
+        const r = event.data.event.data.reservation;
+
+        // GA fallback (jak w działającym kodzie)
+        // @ts-ignore
+        window.gtag ||
+          ((window.dataLayer = window.dataLayer || []),
+          // @ts-ignore
+          (window.gtag = function () {
+            dataLayer.push(arguments);
+          }));
+
+        // @ts-ignore
+        gtag("event", "purchase", {
+          transaction_id: r.id,
+          value: r.moneyTotal / 100,
+          currency: "PLN",
+        });
+      }
+    }
+
+    window.addEventListener("message", raMessageReceiver);
+
+    function setup() {
+      try {
+        if (iframe?.contentWindow) {
+          iframe.contentWindow.postMessage(
+            {
+              location: window.location.toString(),
+              setup: {
+                autoHeight: true,
+                senderName: SENDER_NAME,
+              },
+            },
+            "*"
+          );
+        }
+      } catch {
+        // ignore
+      }
+    }
+
+    const interval = setInterval(setup, 1000);
+    iframe?.addEventListener("load", setup);
+
+    return () => {
+      window.removeEventListener("message", raMessageReceiver);
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen page-enter font-quicksand">
       <Header />
@@ -32,9 +104,9 @@ const Reservation = () => {
 
       <main className="py-16 bg-cozy-cream">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto space-y-8">
+          <div className="max-w-6xl mx-auto space-y-12">
 
-            {/* ✅ ROOMADMIN – CLEAN WRAPPER */}
+            {/* ===== ROOMADMIN ===== */}
             <div className="w-full">
               <div className="bg-white rounded-xl border border-primary/20 p-4 md:p-6">
                 <h2 className="text-2xl font-semibold text-center mb-4">
@@ -44,21 +116,23 @@ const Reservation = () => {
                   Sprawdź dostępność i zarezerwuj swój pobyt w kilku krokach
                 </p>
 
-                <iframe
-                  id={IFRAME_ID}
-                  title="Rezerwacja – widget RoomAdmin"
-                  src="https://roomadmin.pl/widget/reservation-v2/start?fh=3f055f5738d635391c4937700ced3d1e9d603395&style=%7B%22color_accent%22%3A%22%230088cc%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%223%22%7D&filter=%7B%22room_type_id_in%22%3A%5B%223%22%5D%7D&lang=pl"
-                  style={{
-                    width: "100%",
-                    minHeight: "320px",
-                    border: "none",
-                  }}
-                  scrolling="no"
-                />
+                <div className="w-full">
+                  <iframe
+                    id={IFRAME_ID}
+                    title="Rezerwacja – widget RoomAdmin"
+                    src="https://roomadmin.pl/widget/reservation-v2/start?fh=3f055f5738d635391c4937700ced3d1e9d603395&style=%7B%22color_accent%22%3A%22%230088cc%22%2C%22color_bg%22%3A%22%23FFFFFF%22%2C%22color_panel_header%22%3A%22%23FFFFFF%22%2C%22color_panel_body%22%3A%22%23FFFFFF%22%2C%22rounded_corners%22%3A%223%22%7D&filter=%7B%22room_type_id_in%22%3A%5B%223%22%5D%7D&lang=pl"
+                    style={{
+                      width: "100%",
+                      minHeight: "320px",
+                      border: "none",
+                    }}
+                    scrolling="no"
+                  />
+                </div>
               </div>
             </div>
 
-            {/* INFO SECTIONS */}
+            {/* ===== INFO SECTIONS ===== */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="glass-card">
                 <CardHeader>
@@ -80,7 +154,7 @@ const Reservation = () => {
                       +48 504 201 117
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Dostępni codziennie 8:00 - 20:00
+                      Dostępni codziennie 8:00 – 20:00
                     </p>
                   </div>
 
@@ -127,7 +201,7 @@ const Reservation = () => {
                       <h4 className="font-semibold text-sm">
                         Przyjazd z psem
                       </h4>
-                      <p className="text-muted-foreground">15zł / doba</p>
+                      <p className="text-muted-foreground">15 zł / doba</p>
                     </div>
                   </div>
                 </CardContent>
@@ -136,56 +210,6 @@ const Reservation = () => {
           </div>
         </div>
       </main>
-
-      {/* ✅ ROOMADMIN AUTOHEIGHT + ANALYTICS */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function () {
-              var iframe = document.getElementById("${IFRAME_ID}");
-              function raMessageReceiver(event) {
-                if (!event.data || event.data.sender !== "${SENDER_NAME}") return;
-
-                if (event.data.height && iframe) {
-                  iframe.style.height = (event.data.height + 10) + "px";
-                }
-
-                if (event.data.event?.name === "widget.scrollup.requested") {
-                  iframe.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-
-                if (event.data.event?.name === "reservation.submit.success") {
-                  var r = event.data.event.data.reservation;
-                  if (window.gtag) {
-                    gtag("event", "purchase", {
-                      transaction_id: r.id,
-                      value: r.moneyTotal / 100,
-                      currency: "PLN"
-                    });
-                  }
-                }
-              }
-
-              window.addEventListener("message", raMessageReceiver);
-
-              function setup() {
-                try {
-                  iframe.contentWindow.postMessage({
-                    location: window.location.toString(),
-                    setup: {
-                      autoHeight: true,
-                      senderName: "${SENDER_NAME}"
-                    }
-                  }, "*");
-                } catch {}
-              }
-
-              setInterval(setup, 1000);
-              iframe.addEventListener("load", setup);
-            })();
-          `,
-        }}
-      />
 
       <FloatingActions />
     </div>
