@@ -60,7 +60,7 @@ const Pricing = () => {
                     </div>
                     <div className="flex items-center justify-center text-sm text-muted-foreground mb-6">
                       <Users className="w-4 h-4 mr-1" />
-                      Do 5 osób
+                      Do 6 osób
                     </div>
                     <Button 
                       onClick={() => navigate('/rezerwacja')}
