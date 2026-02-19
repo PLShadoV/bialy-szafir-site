@@ -174,7 +174,7 @@ const Gallery: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="feature-card rounded-xl overflow-hidden">
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-blue-100 flex items-center justify-center relative">
-                  <span className="text-muted-foreground text-lg font-medium">Film promocyjny 1</span>
+                  <span className="text-muted-foreground text-lg font-medium"><iframe width="560" height="315" src="https://www.youtube.com/embed/jQCNl9kFRmc?si=8Ju1VBY-CN5SH3os" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold">Prezentacja domków</h4>
