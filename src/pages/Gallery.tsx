@@ -183,7 +183,7 @@ const Gallery: React.FC = () => {
                 { lang: "English", label: "Film w języku angielskim", url: "https://www.youtube.com/embed/xZh-FGzdwRU" },
                 { lang: "Deutsch", label: "Film w języku niemieckim", url: "https://www.youtube.com/embed/4PGKNfEpsaU" },
                 { lang: "Українська", label: "Film w języku ukraińskim", url: "https://www.youtube.com/embed/cXGtRpL3qJg" },
-                { lang: "Čeština", label: "Film w języku czeskim", url: "https://www.youtube.com/embed/TU_WPISZ_ID" }
+                { lang: "Čeština", label: "Film w języku czeskim", url: "https://www.youtube.com/embed/oTzryXOi2Y0" }
               ].map((item, idx) => (
                 <div key={idx} className="feature-card rounded-xl overflow-hidden bg-white shadow-md flex flex-col">
                   <div className="aspect-video bg-muted">
