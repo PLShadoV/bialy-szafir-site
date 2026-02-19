@@ -164,15 +164,15 @@ const Gallery: React.FC = () => {
                     width="100%" 
                     height="100%" 
                     src="https://www.youtube.com/embed/jQCNl9kFRmc" 
-                    title="Prezentacja domków" 
+                    title="Prezentacja ośrodka Biały Szafir" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowFullScreen
                   ></iframe>
                 </div>
-                <div className="p-6 bg-white">
-                  <h4 className="text-xl font-bold text-primary mb-2">Prezentacja główna</h4>
-                  <p className="text-muted-foreground">Poznaj nasze domki i zobacz jak wyglądają z bliska.</p>
+                <div className="p-8 bg-white text-center">
+                  <h4 className="text-2xl font-bold text-primary mb-3">Prezentacja ośrodka Biały Szafir</h4>
+                  <p className="text-muted-foreground text-lg">Poznaj nasze domki i zobacz jak wyglądają z bliska.</p>
                 </div>
               </div>
             </div>
@@ -186,8 +186,7 @@ const Gallery: React.FC = () => {
                 { lang: "Čeština", label: "Film w języku czeskim", url: "ADRES_YOUTUBE_CZ" }
               ].map((item, idx) => (
                 <div key={idx} className="feature-card rounded-xl overflow-hidden bg-white shadow-md flex flex-col">
-                  <div className="aspect-video bg-muted flex items-center justify-center relative group">
-                    {/* Placeholder dla iframe / miniatury */}
+                  <div className="aspect-video bg-muted flex items-center justify-center relative">
                     <iframe 
                       width="100%" 
                       height="100%" 
@@ -195,14 +194,14 @@ const Gallery: React.FC = () => {
                       title={item.label}
                       className="bg-primary/5"
                     ></iframe>
-                    {!item.url.includes("ADRES") ? null : (
+                    {item.url.includes("ADRES") && (
                       <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                         <Globe className="h-8 w-8 text-primary/40 mb-2" />
                         <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{item.lang}</span>
                       </div>
                     )}
                   </div>
-                  <div className="p-4 border-t border-gray-100 mt-auto">
+                  <div className="p-4 border-t border-gray-100 mt-auto text-center">
                     <h5 className="font-semibold text-sm mb-1">{item.label}</h5>
                     <p className="text-xs text-muted-foreground">Kliknij, aby obejrzeć</p>
                   </div>
