@@ -180,30 +180,30 @@ const Gallery: React.FC = () => {
             {/* Language Versions Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { lang: "English", label: "Film w języku angielskim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/xZh-FGzdwRU?si=D3Ll1Rkqe9XdnAe5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" },
-                { lang: "Deutsch", label: "Film w języku niemieckim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/4PGKNfEpsaU?si=orXYWe-HnNhPRpGH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" },
-                { lang: "Українська", label: "Film w języku ukraińskim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/cXGtRpL3qJg?si=mvGALKUGXZ_ZmEc9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" },
-                { lang: "Čeština", label: "Film w języku czeskim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/oTzryXOi2Y0?si=ebtWGuY2efjwe9AC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" }
+                { lang: "English", label: "Film w języku angielskim", url: "https://www.youtube.com/embed/xZh-FGzdwRU" },
+                { lang: "Deutsch", label: "Film w języku niemieckim", url: "https://www.youtube.com/embed/4PGKNfEpsaU" },
+                { lang: "Українська", label: "Film w języku ukraińskim", url: "https://www.youtube.com/embed/cXGtRpL3qJg" },
+                { lang: "Čeština", label: "Film w języku czeskim", url: "https://www.youtube.com/embed/TU_WPISZ_ID" }
               ].map((item, idx) => (
                 <div key={idx} className="feature-card rounded-xl overflow-hidden bg-white shadow-md flex flex-col">
-                  <div className="aspect-video bg-muted flex items-center justify-center relative">
+                  <div className="aspect-video bg-muted">
                     <iframe 
                       width="100%" 
                       height="100%" 
-                      src={item.url.includes("ADRES") ? "" : item.url} 
+                      src={item.url} 
                       title={item.label}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                       className="bg-primary/5"
                     ></iframe>
-                    {item.url.includes("ADRES") && (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-                        <Globe className="h-8 w-8 text-primary/40 mb-2" />
-                        <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{item.lang}</span>
-                      </div>
-                    )}
                   </div>
                   <div className="p-4 border-t border-gray-100 mt-auto text-center">
                     <h5 className="font-semibold text-sm mb-1">{item.label}</h5>
-                    <p className="text-xs text-muted-foreground">Kliknij, aby obejrzeć</p>
+                    <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground">
+                       <Globe className="h-3 w-3" />
+                       <span>{item.lang}</span>
+                    </div>
                   </div>
                 </div>
               ))}
