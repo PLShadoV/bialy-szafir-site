@@ -3,29 +3,26 @@ import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wifi, Car, Utensils } from "lucide-react";
+import { Wifi, Car, Utensils, Globe } from "lucide-react";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 
-// 👉 automatyczne wczytanie obrazów (poza komponentem!)
+// 👉 automatyczne wczytanie obrazów
 const modules = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", { eager: true });
 
 type ImgEntry = { id: number; src: string; alt: string };
 
 const galleryImages: ImgEntry[] = Object.entries(modules).map(([path, mod], idx) => {
-  // @ts-ignore – Vite daje default z URL-em
   const url = (mod as { default?: string }).default ?? (mod as unknown as string);
   const filename = path.split("/").pop() || `photo-${idx + 1}`;
   const name = filename.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ");
   return { id: idx + 1, src: url, alt: `Zdjęcie: ${name}` };
 });
 
-// Jeśli chcesz tło w hero – podmień ścieżkę na istniejący plik:
-import heroForest from "@/assets/hero-forest.jpg"; // lub usuń sekcję hero
+import heroForest from "@/assets/hero-forest.jpg";
 
 const Gallery: React.FC = () => {
   useScrollToTop();
 
-  // Lightbox
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const [scale, setScale] = useState(1);
@@ -71,7 +68,6 @@ const Gallery: React.FC = () => {
     setScale((s) => Math.min(3, Math.max(0.5, s + delta)));
   };
 
-  // swipe mobile
   const [touchX, setTouchX] = useState<number | null>(null);
   const onTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) =>
     setTouchX(e.touches[0].clientX);
@@ -100,7 +96,7 @@ const Gallery: React.FC = () => {
 
             {total === 0 ? (
               <p className="text-center text-muted-foreground">
-                Dodaj zdjęcia do <code>src/assets/gallery/</code> (jpg/png/webp), aby wyświetlić galerię.
+                Dodaj zdjęcia do <code>src/assets/gallery/</code>, aby wyświetlić galerię.
               </p>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
@@ -129,68 +125,89 @@ const Gallery: React.FC = () => {
         <section className="py-16 bg-cozy-cream">
           <div className="container mx-auto px-4">
             <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Nasze domki</h3>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Oferujemy komfortowe domki z pełnym wyposażeniem i dostępem do plaży w pięknej okolicy Rusinowa.
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card className="feature-card text-center">
                 <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <Wifi className="h-12 w-12 text-primary" />
-                  </div>
+                  <div className="flex justify-center mb-4"><Wifi className="h-12 w-12 text-primary" /></div>
                   <CardTitle>Szybki internet WiFi</CardTitle>
-                  <CardDescription>Bezpłatny dostęp do szybkiego internetu we wszystkich domkach</CardDescription>
+                  <CardDescription>Bezpłatny dostęp do sieci</CardDescription>
                 </CardHeader>
               </Card>
-
               <Card className="feature-card text-center">
                 <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <Car className="h-12 w-12 text-primary" />
-                  </div>
+                  <div className="flex justify-center mb-4"><Car className="h-12 w-12 text-primary" /></div>
                   <CardTitle>Parking prywatny</CardTitle>
-                  <CardDescription>Każdy domek posiada własne miejsce parkingowe</CardDescription>
+                  <CardDescription>Własne miejsce parkingowe</CardDescription>
                 </CardHeader>
               </Card>
-
               <Card className="feature-card text-center">
                 <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <Utensils className="h-12 w-12 text-primary" />
-                  </div>
+                  <div className="flex justify-center mb-4"><Utensils className="h-12 w-12 text-primary" /></div>
                   <CardTitle>Wyposażona kuchnia</CardTitle>
-                  <CardDescription>Pełne wyposażenie kuchenne do przygotowywania posiłków</CardDescription>
+                  <CardDescription>Pełne zaplecze kuchenne</CardDescription>
                 </CardHeader>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Videos */}
+        {/* Videos Section */}
         <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Filmy promocyjne</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="feature-card rounded-xl overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-blue-100 flex items-center justify-center relative">
-                  <span className="text-muted-foreground text-lg font-medium"><iframe width="560" height="315" src="https://www.youtube.com/embed/jQCNl9kFRmc?si=8Ju1VBY-CN5SH3os" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+            <h3 className="text-3xl font-bold text-center mb-12 gradient-text">Filmy promocyjne</h3>
+            
+            {/* Main Video - Large */}
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="feature-card rounded-2xl overflow-hidden shadow-xl">
+                <div className="aspect-video bg-black flex items-center justify-center">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/jQCNl9kFRmc" 
+                    title="Prezentacja domków" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <div className="p-4">
-                  <h4 className="font-semibold">Prezentacja domków</h4>
-                  <p className="text-sm text-muted-foreground">Sprawdź nasze piękne domki</p>
+                <div className="p-6 bg-white">
+                  <h4 className="text-xl font-bold text-primary mb-2">Prezentacja główna</h4>
+                  <p className="text-muted-foreground">Poznaj nasze domki i zobacz jak wyglądają z bliska.</p>
                 </div>
               </div>
+            </div>
 
-              <div className="feature-card rounded-xl overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-blue-100 flex items-center justify-center relative">
-                  <span className="text-muted-foreground text-lg font-medium">Film promocyjny 2</span>
+            {/* Language Versions Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { lang: "English", label: "Film w języku angielskim", url: "ADRES_YOUTUBE_EN" },
+                { lang: "Deutsch", label: "Film w języku niemieckim", url: "ADRES_YOUTUBE_DE" },
+                { lang: "Українська", label: "Film w języku ukraińskim", url: "ADRES_YOUTUBE_UA" },
+                { lang: "Čeština", label: "Film w języku czeskim", url: "ADRES_YOUTUBE_CZ" }
+              ].map((item, idx) => (
+                <div key={idx} className="feature-card rounded-xl overflow-hidden bg-white shadow-md flex flex-col">
+                  <div className="aspect-video bg-muted flex items-center justify-center relative group">
+                    {/* Placeholder dla iframe / miniatury */}
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src={item.url.includes("ADRES") ? "" : item.url} 
+                      title={item.label}
+                      className="bg-primary/5"
+                    ></iframe>
+                    {!item.url.includes("ADRES") ? null : (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                        <Globe className="h-8 w-8 text-primary/40 mb-2" />
+                        <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{item.lang}</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-4 border-t border-gray-100 mt-auto">
+                    <h5 className="font-semibold text-sm mb-1">{item.label}</h5>
+                    <p className="text-xs text-muted-foreground">Kliknij, aby obejrzeć</p>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h4 className="font-semibold">Okolica i atrakcje</h4>
-                  <p className="text-sm text-muted-foreground">Odkryj piękno Rusinowa</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -206,25 +223,8 @@ const Gallery: React.FC = () => {
             role="dialog"
             aria-modal="true"
           >
-            <button
-              className="absolute top-4 right-4 text-white/80 hover:text-white text-2xl"
-              onClick={close}
-              aria-label="Zamknij"
-            >
-              ×
-            </button>
-
-            <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-3xl"
-              onClick={(e) => {
-                e.stopPropagation();
-                prev();
-              }}
-              aria-label="Poprzednie zdjęcie"
-            >
-              ‹
-            </button>
-
+            <button className="absolute top-4 right-4 text-white/80 hover:text-white text-4xl" onClick={close}>&times;</button>
+            <button className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl" onClick={(e) => { e.stopPropagation(); prev(); }}>&#8249;</button>
             <div className="max-w-6xl max-h-[85vh]">
               <img
                 src={current.src}
@@ -234,17 +234,7 @@ const Gallery: React.FC = () => {
                 onClick={(e) => e.stopPropagation()}
               />
             </div>
-
-            <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-3xl"
-              onClick={(e) => {
-                e.stopPropagation();
-                next();
-              }}
-              aria-label="Następne zdjęcie"
-            >
-              ›
-            </button>
+            <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl" onClick={(e) => { e.stopPropagation(); next(); }}>&#8250;</button>
           </div>
         )}
       </main>
