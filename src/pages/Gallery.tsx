@@ -180,10 +180,10 @@ const Gallery: React.FC = () => {
             {/* Language Versions Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { lang: "English", label: "Film w języku angielskim", url: "ADRES_YOUTUBE_EN" },
-                { lang: "Deutsch", label: "Film w języku niemieckim", url: "ADRES_YOUTUBE_DE" },
-                { lang: "Українська", label: "Film w języku ukraińskim", url: "ADRES_YOUTUBE_UA" },
-                { lang: "Čeština", label: "Film w języku czeskim", url: "ADRES_YOUTUBE_CZ" }
+                { lang: "English", label: "Film w języku angielskim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/xZh-FGzdwRU?si=D3Ll1Rkqe9XdnAe5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" },
+                { lang: "Deutsch", label: "Film w języku niemieckim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/4PGKNfEpsaU?si=orXYWe-HnNhPRpGH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" },
+                { lang: "Українська", label: "Film w języku ukraińskim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/cXGtRpL3qJg?si=mvGALKUGXZ_ZmEc9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" },
+                { lang: "Čeština", label: "Film w języku czeskim", url: "<iframe width="560" height="315" src="https://www.youtube.com/embed/oTzryXOi2Y0?si=ebtWGuY2efjwe9AC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" }
               ].map((item, idx) => (
                 <div key={idx} className="feature-card rounded-xl overflow-hidden bg-white shadow-md flex flex-col">
                   <div className="aspect-video bg-muted flex items-center justify-center relative">
