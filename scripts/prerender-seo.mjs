@@ -4,6 +4,9 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const routes = JSON.parse(await readFile(new URL('../src/seo/routes.json', import.meta.url), 'utf8'));
 const dist = new URL('../dist/', import.meta.url);
 const template = await readFile(new URL('index.html', dist), 'utf8');
+if (!/<div id="root">[\s\S]*?<\/div>/.test(template)) {
+  throw new Error('Missing React root in the Vite HTML template.');
+}
 const escape = (text) => text.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 
 for (const route of routes) {
@@ -27,4 +30,9 @@ for (const route of routes) {
   await mkdir(directory, { recursive: true });
   await writeFile(new URL('index.html', directory), html);
 }
+// Keep the production sitemap aligned with the same route list used by React.
+await writeFile(new URL('sitemap.xml', dist), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes.map((route) => `  <url><loc>https://szafirrusinowo.pl${route.path}</loc></url>`).join('\n')}
+</urlset>\n`);
 console.log(`Generated SEO HTML for ${routes.length} routes.`);

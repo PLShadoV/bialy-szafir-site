@@ -1,3 +1,5 @@
+import imageDimensions from "@/seo/gallery-dimensions.json";
+import seoRoutes from "@/seo/routes.json";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -9,13 +11,12 @@ import { useScrollToTop } from "@/hooks/useScrollToTop";
 // 👉 automatyczne wczytanie obrazów
 const modules = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", { eager: true });
 
-type ImgEntry = { id: number; src: string; alt: string };
+type ImgEntry = { id: number; src: string; alt: string; width: number; height: number };
 
 const galleryImages: ImgEntry[] = Object.entries(modules).map(([path, mod], idx) => {
   const url = (mod as { default?: string }).default ?? (mod as unknown as string);
   const filename = path.split("/").pop() || `photo-${idx + 1}`;
-  const name = filename.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ");
-  return { id: idx + 1, src: url, alt: `Zdjęcie: ${name}` };
+  return { id: idx + 1, src: url, alt: `Biały Szafir w Rusinowie – zdjęcie ${idx + 1}`, ...imageDimensions[filename as keyof typeof imageDimensions] };
 });
 
 import heroForest from "@/assets/hero-forest.jpg";
@@ -83,7 +84,7 @@ const Gallery: React.FC = () => {
     <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
-        title="Galeria"
+        title={seoRoutes.find((route) => route.path === "/galeria")!.h1}
         description="Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie"
         backgroundImage={heroForest}
       />
@@ -92,7 +93,7 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-primary text-center mb-12">Zdjęcia domków</h3>
+            <h2 className="text-3xl font-bold text-primary text-center mb-12">Zdjęcia domków</h2>
 
             {total === 0 ? (
               <p className="text-center text-muted-foreground">
@@ -110,6 +111,7 @@ const Gallery: React.FC = () => {
                     <img
                       src={image.src}
                       alt={image.alt}
+                      width={image.width} height={image.height} decoding="async"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                     />
@@ -124,7 +126,7 @@ const Gallery: React.FC = () => {
         {/* Features */}
         <section className="py-16 bg-cozy-cream">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center mb-8 gradient-text">Nasze domki</h3>
+            <h2 className="text-3xl font-bold text-center mb-8 gradient-text">Nasze domki</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card className="feature-card text-center">
                 <CardHeader>
@@ -154,7 +156,7 @@ const Gallery: React.FC = () => {
         {/* Videos Section */}
         <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
-            <h3 className="text-3xl font-bold text-center mb-12 gradient-text">Filmy promocyjne</h3>
+            <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Filmy promocyjne</h2>
             
             {/* Main Video - Large */}
             <div className="max-w-4xl mx-auto mb-16">
@@ -171,7 +173,7 @@ const Gallery: React.FC = () => {
                   ></iframe>
                 </div>
                 <div className="p-8 bg-white text-center">
-                  <h4 className="text-2xl font-bold text-primary mb-3">Prezentacja ośrodka Biały Szafir</h4>
+                  <h3 className="text-2xl font-bold text-primary mb-3">Prezentacja ośrodka Biały Szafir</h3>
                   <p className="text-muted-foreground text-lg">Poznaj nasze domki i zobacz jak wyglądają z bliska.</p>
                 </div>
               </div>
@@ -199,7 +201,7 @@ const Gallery: React.FC = () => {
                     ></iframe>
                   </div>
                   <div className="p-4 border-t border-gray-100 mt-auto text-center">
-                    <h5 className="font-semibold text-sm mb-1">{item.label}</h5>
+                    <h3 className="font-semibold text-sm mb-1">{item.label}</h3>
                     <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground">
                        <Globe className="h-3 w-3" />
                        <span>{item.lang}</span>
@@ -228,6 +230,7 @@ const Gallery: React.FC = () => {
               <img
                 src={current.src}
                 alt={current.alt}
+                width={current.width} height={current.height}
                 className="object-contain transition-transform"
                 style={{ transform: `scale(${scale})` }}
                 onClick={(e) => e.stopPropagation()}

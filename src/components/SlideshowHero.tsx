@@ -1,3 +1,4 @@
+import seoRoutes from "@/seo/routes.json";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -49,7 +50,7 @@ const SlideshowHero = () => {
       
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          Biały Szafir
+          {seoRoutes.find((route) => route.path === "/")!.h1}
         </h1>
         <p className="text-xl md:text-2xl mb-4 text-white/90">
           Domki wczasowe nad morzem

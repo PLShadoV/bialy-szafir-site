@@ -1,3 +1,4 @@
+import seoRoutes from "@/seo/routes.json";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -97,7 +98,7 @@ const Reservation = () => {
       <Header />
 
       <PageHero
-        title="Rezerwacja"
+        title={seoRoutes.find((route) => route.path === "/rezerwacja")!.h1}
         description="Zarezerwuj swój pobyt w domkach letniskowych Biały Szafir już dziś!"
         backgroundImage={heroForest}
       />
@@ -136,7 +137,7 @@ const Reservation = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-xl">
+                  <CardTitle as="h2" className="flex items-center gap-2 text-xl">
                     <Phone className="h-6 w-6 text-primary" />
                     Kontakt bezpośredni
                   </CardTitle>
@@ -175,7 +176,7 @@ const Reservation = () => {
 
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-xl">
+                  <CardTitle as="h2" className="flex items-center gap-2 text-xl">
                     <Users className="h-6 w-6 text-primary" />
                     Informacje o rezerwacji
                   </CardTitle>
@@ -186,21 +187,21 @@ const Reservation = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">
+                      <h3 className="font-semibold text-sm">
                         Minimalny czas wynajmu
-                      </h4>
+                      </h3>
                       <p className="text-muted-foreground">3 doby</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Zadatek</h4>
+                      <h3 className="font-semibold text-sm">Zadatek</h3>
                       <p className="text-muted-foreground">
                         20% kwoty rezerwacji
                       </p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">
+                      <h3 className="font-semibold text-sm">
                         Przyjazd z psem
-                      </h4>
+                      </h3>
                       <p className="text-muted-foreground">15 zł / doba</p>
                     </div>
                   </div>

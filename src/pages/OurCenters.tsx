@@ -1,3 +1,4 @@
+import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
@@ -36,7 +37,7 @@ const OurCenters = () => {
     <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
-        title="Nasze Ośrodki"
+        title={seoRoutes.find((route) => route.path === "/nasze-osrodki")!.h1}
         description="Oprócz Białego Szafiru oferujemy także pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie"
         backgroundImage={heroNature}
       />
@@ -47,7 +48,7 @@ const OurCenters = () => {
             {centers.map((center, index) => (
               <Card key={index} className="feature-card">
                 <CardHeader>
-                  <CardTitle className="text-2xl gradient-text">{center.name}</CardTitle>
+                  <CardTitle as="h2" className="text-2xl gradient-text">{center.name}</CardTitle>
                   <CardDescription className="text-base">{center.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">

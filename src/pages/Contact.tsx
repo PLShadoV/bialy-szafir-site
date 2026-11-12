@@ -1,3 +1,4 @@
+import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
@@ -85,7 +86,7 @@ const Contact = () => {
     <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
-        title="Kontakt"
+        title={seoRoutes.find((route) => route.path === "/kontakt")!.h1}
         description="Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek w Rusinowie"
         backgroundImage={heroCoastal}
       />
@@ -100,7 +101,7 @@ const Contact = () => {
                     <div className="flex justify-center mb-2">
                       <Phone className="h-8 w-8 text-primary" />
                     </div>
-                    <CardTitle>Telefon</CardTitle>
+                    <CardTitle as="h2">Telefon</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <a 
@@ -120,7 +121,7 @@ const Contact = () => {
                     <div className="flex justify-center mb-2">
                       <Mail className="h-8 w-8 text-primary" />
                     </div>
-                    <CardTitle>E-mail</CardTitle>
+                    <CardTitle as="h2">E-mail</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <a 
@@ -140,7 +141,7 @@ const Contact = () => {
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <CardTitle>Adres</CardTitle>
+                    <CardTitle as="h2">Adres</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -155,7 +156,7 @@ const Contact = () => {
 
             <Card className="feature-card">
               <CardHeader>
-                <CardTitle>Napisz do nas</CardTitle>
+                <CardTitle as="h2">Napisz do nas</CardTitle>
                 <CardDescription>
                   Wyślij nam wiadomość, a skontaktujemy się z Tobą jak najszybciej
                 </CardDescription>

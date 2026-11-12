@@ -1,3 +1,4 @@
+import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
@@ -28,7 +29,7 @@ const Pricing = () => {
     <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
-        title="Cennik"
+        title={seoRoutes.find((route) => route.path === "/cennik")!.h1}
         description="Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie"
         backgroundImage={heroBeach}
       />
@@ -48,7 +49,7 @@ const Pricing = () => {
                     </div>
                   )}
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-sm font-medium text-muted-foreground mb-2">{item.season}</h3>
+                    <h2 className="text-sm font-medium text-muted-foreground mb-2">{item.season}</h2>
                     <div className="flex items-center justify-center mb-4">
                       <Calendar className="w-4 h-4 mr-2 text-primary" />
                       <span className="text-lg font-semibold">{item.period}</span>
@@ -77,7 +78,7 @@ const Pricing = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle as="h2" className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-primary" />
                     Warunki rezerwacji
                   </CardTitle>
@@ -85,19 +86,19 @@ const Pricing = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Minimalny pobyt</h4>
+                      <h3 className="font-semibold text-sm">Minimalny pobyt</h3>
                       <p className="text-muted-foreground">2 doby</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Zameldowanie</h4>
+                      <h3 className="font-semibold text-sm">Zameldowanie</h3>
                       <p className="text-muted-foreground">od 15:00</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Wymeldowanie</h4>
+                      <h3 className="font-semibold text-sm">Wymeldowanie</h3>
                       <p className="text-muted-foreground">do 10:00</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <h4 className="font-semibold text-sm">Zwierzęta</h4>
+                      <h3 className="font-semibold text-sm">Zwierzęta</h3>
                       <p className="text-muted-foreground">15zł za dobę</p>
                     </div>
                   </div>
@@ -106,7 +107,7 @@ const Pricing = () => {
               
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle as="h2" className="flex items-center gap-2">
                     <Star className="w-5 h-5 text-primary" />
                     W cenie
                   </CardTitle>

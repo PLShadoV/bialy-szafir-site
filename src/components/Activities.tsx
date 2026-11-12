@@ -9,8 +9,8 @@ const Activities = () => {
         {/* Pet-friendly section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
           <div className="order-2 lg:order-1">
-            <img 
-              src={dogBeachImage} 
+            <img
+              src={dogBeachImage} width={1200} height={800} loading="lazy" decoding="async"
               alt="Pies na plaży nad Bałtykiem - wakacje z czworonogiem w Rusinowie"
               className="rounded-lg shadow-lg w-full h-80 object-cover"
             />
@@ -20,13 +20,13 @@ const Activities = () => {
               Pobyt z czworonogiem
             </h3>
             <p className="text-cozy-charcoal/80 mb-4 leading-relaxed">
-              Akceptujemy zwierzęta po wcześniejszym zgłoszeniu. Wasze pupile muszą znajdować się 
-              pod stałym nadzorem podczas całego pobytu. Zapewniamy przyjazne środowisko dla całej 
+              Akceptujemy zwierzęta po wcześniejszym zgłoszeniu. Wasze pupile muszą znajdować się
+              pod stałym nadzorem podczas całego pobytu. Zapewniamy przyjazne środowisko dla całej
               rodziny, w tym dla waszych czworonożnych przyjaciół.
             </p>
             <p className="text-cozy-charcoal/80 leading-relaxed">
-              Plaża w Rusinowie jest idealna dla spacerów z psami. Szeroki pas piasku pozwala na 
-              swobodną zabawę, a czyste powietrze i morska bryza sprawią, że Twój pies będzie 
+              Plaża w Rusinowie jest idealna dla spacerów z psami. Szeroki pas piasku pozwala na
+              swobodną zabawę, a czyste powietrze i morska bryza sprawią, że Twój pies będzie
               zachwycony wakacjami nad Bałtykiem.
             </p>
           </div>
@@ -35,8 +35,8 @@ const Activities = () => {
         {/* Cycling section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
           <div>
-            <img 
-              src={bikeForestImage} 
+            <img
+              src={bikeForestImage} width={1200} height={800} loading="lazy" decoding="async"
               alt="Trasy rowerowe przez lasy w okolicy Rusinowa - aktywny wypoczynek"
               className="rounded-lg shadow-lg w-full h-80 object-cover"
             />
@@ -46,13 +46,13 @@ const Activities = () => {
               Rowerem nad morzem
             </h3>
             <p className="text-cozy-charcoal/80 mb-4 leading-relaxed">
-              Odkryj malownicze trasy rowerowe w okolicy Rusinowa. Przejażdżki wśród sosnowych lasów, 
-              ścieżki nadmorskie i malownicze trasy łączące nasze miasteczko z sąsiednimi kurortami 
+              Odkryj malownicze trasy rowerowe w okolicy Rusinowa. Przejażdżki wśród sosnowych lasów,
+              ścieżki nadmorskie i malownicze trasy łączące nasze miasteczko z sąsiednimi kurortami
               zapewnią niezapomniane wrażenia.
             </p>
             <p className="text-cozy-charcoal/80 leading-relaxed">
-              Region Słowińskiego Parku Narodowego oferuje kilometry bezpiecznych ścieżek rowerowych. 
-              Możesz dotrzeć do Jarosławca, Wici czy Darłowa, podziwiając po drodze unikalne krajobrazy 
+              Region Słowińskiego Parku Narodowego oferuje kilometry bezpiecznych ścieżek rowerowych.
+              Możesz dotrzeć do Jarosławca, Wici czy Darłowa, podziwiając po drodze unikalne krajobrazy
               wydm i nadmorskich łąk.
             </p>
           </div>
@@ -64,14 +64,14 @@ const Activities = () => {
             Najbliższa okolica Rusinowa
           </h3>
           <p className="text-cozy-charcoal/80 mb-6 leading-relaxed">
-            Nasze domki położone są w cichym miejscu przy lesie, który zaprasza na spokojne spacery 
-            i kontakt z naturą. Znajdujemy się w pobliżu Jarosławca i Wici, co zapewnia dostęp do 
+            Nasze domki położone są w cichym miejscu przy lesie, który zaprasza na spokojne spacery
+            i kontakt z naturą. Znajdujemy się w pobliżu Jarosławca i Wici, co zapewnia dostęp do
             dodatkowych atrakcji turystycznych i gastronomicznych.
           </p>
           <p className="text-cozy-charcoal/80 mb-8 leading-relaxed">
-            Rusinowo to małe, spokojne miasteczko na polskim wybrzeżu Bałtyku, położone między 
-            Darłowem a Jarosławcem. Dzięki położeniu w sercu Słowińskiego Parku Narodowego, oferuje 
-            niepowtarzalny kontakt z przyrodą. W okolicy znajdziecie ruchome wydmy, jeziora nadmorskie, 
+            Rusinowo to małe, spokojne miasteczko na polskim wybrzeżu Bałtyku, położone między
+            Darłowem a Jarosławcem. Dzięki położeniu w sercu Słowińskiego Parku Narodowego, oferuje
+            niepowtarzalny kontakt z przyrodą. W okolicy znajdziecie ruchome wydmy, jeziora nadmorskie,
             latarnię morską w Darłowie oraz liczne szlaki piesze i rowerowe.
           </p>
           <Button variant="outline" size="lg">
