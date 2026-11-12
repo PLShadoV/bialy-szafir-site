@@ -1,6 +1,6 @@
+import PageContent from "@/seo/PageContent";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Features from "@/components/Features";
 import Activities from "@/components/Activities";
 import Equipment from "@/components/Equipment";
@@ -16,7 +16,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <About />
+        <PageContent path="/" />
         <Features />
         <Activities />
         <Equipment />

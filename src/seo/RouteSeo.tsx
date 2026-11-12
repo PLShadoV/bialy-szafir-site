@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import routes from "./routes.json";
+import business from "./business.json";
+import { pageSchema } from "./schema.js";
 
 export default function RouteSeo() {
   const { pathname } = useLocation();
@@ -23,6 +25,18 @@ export default function RouteSeo() {
     meta("name", "robots", route ? "index,follow" : "noindex,follow");
     meta("property", "og:title", title);
     meta("property", "og:description", description);
+    meta("property", "og:image", "https://szafirrusinowo.pl/og-image.jpg");
+    meta("name", "twitter:image", "https://szafirrusinowo.pl/og-image.jpg");
+    meta("name", "twitter:title", title);
+    meta("name", "twitter:description", description);
+    document.head.querySelector('meta[name="twitter:site"]')?.remove();
+    document.head.querySelectorAll('script[type="application/ld+json"]').forEach((element) => element.remove());
+    if (route) {
+      const schema = document.createElement("script");
+      schema.type = "application/ld+json";
+      schema.textContent = JSON.stringify(pageSchema(route, business));
+      document.head.appendChild(schema);
+    }
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (route) {
       const url = `https://szafirrusinowo.pl${route.path}`;

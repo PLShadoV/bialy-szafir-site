@@ -1,66 +1,98 @@
 {
-  "1.png": {
+  "1.jpg": {
     "width": 1536,
-    "height": 1024
+    "height": 1024,
+    "alt": "Plac zabaw i trawnik między domkami Biały Szafir w Rusinowie",
+    "group": "Otoczenie i tarasy"
   },
-  "2.png": {
+  "2.jpg": {
     "width": 1024,
-    "height": 1024
+    "height": 1024,
+    "alt": "Domek z tarasem i huśtawką na tle lasu w Rusinowie",
+    "group": "Otoczenie i tarasy"
   },
   "untitled (1 of 56)-min.jpg": {
-    "width": 8307,
-    "height": 5956
+    "width": 1920,
+    "height": 1377,
+    "alt": "Salon ze stołem, telewizorem i aneksem kuchennym",
+    "group": "Wnętrza domków"
   },
   "untitled (12 of 56)-min.jpg": {
     "width": 6000,
-    "height": 4000
+    "height": 4000,
+    "alt": "Ręczniki ułożone na łóżku w domku Biały Szafir",
+    "group": "Wnętrza domków"
   },
   "untitled (2 of 56)-min.jpg": {
     "width": 6000,
-    "height": 4000
+    "height": 4000,
+    "alt": "Aneks kuchenny z lodówką, ekspresem i stołem",
+    "group": "Wnętrza domków"
   },
   "untitled (20 of 56)-min.jpg": {
     "width": 5413,
-    "height": 3609
+    "height": 3609,
+    "alt": "Dwa pojedyncze łóżka i szafka w sypialni",
+    "group": "Wnętrza domków"
   },
   "untitled (23 of 37)-min.jpg": {
     "width": 4032,
-    "height": 3024
+    "height": 3024,
+    "alt": "Sypialnia z podwójnym łóżkiem i lampkami nocnymi",
+    "group": "Wnętrza domków"
   },
   "untitled (24 of 37)-min.jpg": {
     "width": 3024,
-    "height": 4032
+    "height": 4032,
+    "alt": "Umywalka, lustro i szafka w łazience",
+    "group": "Wnętrza domków"
   },
   "untitled (25 of 37)-min.jpg": {
     "width": 3024,
-    "height": 4032
+    "height": 4032,
+    "alt": "Łazienka z kabiną prysznicową i toaletą",
+    "group": "Wnętrza domków"
   },
   "untitled (3 of 56)-min.jpg": {
     "width": 5014,
-    "height": 6000
+    "height": 6000,
+    "alt": "Salon z klimatyzacją nad drzwiami wejściowymi",
+    "group": "Wnętrza domków"
   },
   "untitled (32 of 56)-min.jpg": {
-    "width": 6000,
-    "height": 4000
+    "width": 1920,
+    "height": 1280,
+    "alt": "Stół, krzesła i grill na zadaszonym tarasie",
+    "group": "Otoczenie i tarasy"
   },
   "untitled (35 of 56)-min.jpg": {
-    "width": 6000,
-    "height": 4000
+    "width": 1920,
+    "height": 1280,
+    "alt": "Biały domek z tarasem przy drzewach",
+    "group": "Otoczenie i tarasy"
   },
   "untitled (36 of 56)-min.jpg": {
-    "width": 6000,
-    "height": 4000
+    "width": 1920,
+    "height": 1280,
+    "alt": "Front domku z ławką i białą balustradą",
+    "group": "Otoczenie i tarasy"
   },
   "untitled (39 of 56)-min.jpg": {
-    "width": 7721,
-    "height": 5847
+    "width": 1920,
+    "height": 1454,
+    "alt": "Domki przy lesie, huśtawka i trawnik",
+    "group": "Otoczenie i tarasy"
   },
   "untitled (4 of 56)-min.jpg": {
-    "width": 6000,
-    "height": 4000
+    "width": 1920,
+    "height": 1280,
+    "alt": "Stół z filiżankami i kwiatami w aneksie kuchennym",
+    "group": "Wnętrza domków"
   },
   "untitled (41 of 56)-min.jpg": {
-    "width": 6000,
-    "height": 4000
+    "width": 1920,
+    "height": 1280,
+    "alt": "Plac zabaw ze ścianką wspinaczkową i zjeżdżalnią",
+    "group": "Otoczenie i tarasy"
   }
 }

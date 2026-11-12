@@ -25,7 +25,7 @@ const Equipment = () => {
             Wszystko czego potrzebujesz na komfortowy wypoczynek nad morzem
           </p>
           <p className="text-cozy-charcoal/80 max-w-3xl mx-auto">
-            Każdy domek jest w pełni wyposażony i przygotowany na pobyt do 5 osób. 
+            Każdy domek jest w pełni wyposażony i przygotowany na pobyt do 6 osób.
             Nowoczesne udogodnienia zapewniają komfort porównywalny z domowym.
           </p>
         </div>

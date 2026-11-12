@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "@id": "https://szafirrusinowo.pl/#lodging",
+  "name": "Biały Szafir",
+  "url": "https://szafirrusinowo.pl/",
+  "description": "Domki letniskowe w Rusinowie dla maksymalnie 6 osób, położone przy lesie, 600 metrów od plaży.",
+  "telephone": "+48504201117",
+  "email": "info@szafirrusinowo.pl",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Sosnowa 19",
+    "postalCode": "76-107",
+    "addressLocality": "Rusinowo"
+  },
+  "checkinTime": "15:00",
+  "checkoutTime": "10:00",
+  "petsAllowed": "Zwierzęta akceptowane po wcześniejszym zgłoszeniu.",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "WiFi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Prywatny parking",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Aneks kuchenny z lodówką, zmywarką, płytą indukcyjną i ekspresem",
+      "value": true
+    }
+  ]
+}

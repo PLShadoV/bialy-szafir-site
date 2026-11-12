@@ -10,15 +10,15 @@ const Activities = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
           <div className="order-2 lg:order-1">
             <img
-              src={dogBeachImage} width={1200} height={800} loading="lazy" decoding="async"
+              src="/media/dog-beach-720.webp" srcSet="/media/dog-beach-720.webp 720w, /media/dog-beach-1440.webp 1440w" sizes="(min-width: 1024px) 50vw, 100vw" width={1200} height={800} loading="lazy" decoding="async"
               alt="Pies na plaży nad Bałtykiem - wakacje z czworonogiem w Rusinowie"
               className="rounded-lg shadow-lg w-full h-80 object-cover"
             />
           </div>
           <div className="order-1 lg:order-2">
-            <h3 className="text-3xl font-bold mb-4 text-cozy-charcoal">
+            <h2 className="text-3xl font-bold mb-4 text-cozy-charcoal">
               Pobyt z czworonogiem
-            </h3>
+            </h2>
             <p className="text-cozy-charcoal/80 mb-4 leading-relaxed">
               Akceptujemy zwierzęta po wcześniejszym zgłoszeniu. Wasze pupile muszą znajdować się
               pod stałym nadzorem podczas całego pobytu. Zapewniamy przyjazne środowisko dla całej
@@ -36,43 +36,38 @@ const Activities = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
           <div>
             <img
-              src={bikeForestImage} width={1200} height={800} loading="lazy" decoding="async"
+              src="/media/bike-forest-720.webp" srcSet="/media/bike-forest-720.webp 720w, /media/bike-forest-1440.webp 1440w" sizes="(min-width: 1024px) 50vw, 100vw" width={1200} height={800} loading="lazy" decoding="async"
               alt="Trasy rowerowe przez lasy w okolicy Rusinowa - aktywny wypoczynek"
               className="rounded-lg shadow-lg w-full h-80 object-cover"
             />
           </div>
           <div>
-            <h3 className="text-3xl font-bold mb-4 text-cozy-charcoal">
+            <h2 className="text-3xl font-bold mb-4 text-cozy-charcoal">
               Rowerem nad morzem
-            </h3>
+            </h2>
             <p className="text-cozy-charcoal/80 mb-4 leading-relaxed">
               Odkryj malownicze trasy rowerowe w okolicy Rusinowa. Przejażdżki wśród sosnowych lasów,
               ścieżki nadmorskie i malownicze trasy łączące nasze miasteczko z sąsiednimi kurortami
               zapewnią niezapomniane wrażenia.
             </p>
             <p className="text-cozy-charcoal/80 leading-relaxed">
-              Region Słowińskiego Parku Narodowego oferuje kilometry bezpiecznych ścieżek rowerowych.
-              Możesz dotrzeć do Jarosławca, Wici czy Darłowa, podziwiając po drodze unikalne krajobrazy
-              wydm i nadmorskich łąk.
+              Przed wycieczką zapytaj nas o wskazówki dotyczące okolicy i zaplanuj trasę odpowiednią do swoich potrzeb.
             </p>
           </div>
         </div>
 
         {/* Location section */}
         <div className="text-center max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold mb-6 text-cozy-charcoal">
+          <h2 className="text-3xl font-bold mb-6 text-cozy-charcoal">
             Najbliższa okolica Rusinowa
-          </h3>
+          </h2>
           <p className="text-cozy-charcoal/80 mb-6 leading-relaxed">
             Nasze domki położone są w cichym miejscu przy lesie, który zaprasza na spokojne spacery
             i kontakt z naturą. Znajdujemy się w pobliżu Jarosławca i Wici, co zapewnia dostęp do
             dodatkowych atrakcji turystycznych i gastronomicznych.
           </p>
           <p className="text-cozy-charcoal/80 mb-8 leading-relaxed">
-            Rusinowo to małe, spokojne miasteczko na polskim wybrzeżu Bałtyku, położone między
-            Darłowem a Jarosławcem. Dzięki położeniu w sercu Słowińskiego Parku Narodowego, oferuje
-            niepowtarzalny kontakt z przyrodą. W okolicy znajdziecie ruchome wydmy, jeziora nadmorskie,
-            latarnię morską w Darłowie oraz liczne szlaki piesze i rowerowe.
+            Biały Szafir znajduje się przy ul. Sosnowej 19 w Rusinowie. Skontaktuj się z nami, jeśli potrzebujesz wskazówek dojazdu lub dojścia do plaży.
           </p>
           <Button variant="outline" size="lg">
             <a href="#kontakt">Dowiedz się więcej</a>

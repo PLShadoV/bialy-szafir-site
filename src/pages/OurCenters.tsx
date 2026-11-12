@@ -1,3 +1,4 @@
+import PageContent from "@/seo/PageContent";
 import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -38,7 +39,7 @@ const OurCenters = () => {
       <Header />
       <PageHero 
         title={seoRoutes.find((route) => route.path === "/nasze-osrodki")!.h1}
-        description="Oprócz Białego Szafiru oferujemy także pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie"
+        description={seoRoutes.find((route) => route.path === "/nasze-osrodki")!.paragraphs[0]}
         backgroundImage={heroNature}
       />
       <main className="py-16 bg-cozy-cream">
@@ -86,6 +87,7 @@ const OurCenters = () => {
             ))}
           </div>
         </div>
+        <PageContent path="/nasze-osrodki" />
       </main>
       <FloatingActions />
     </div>
