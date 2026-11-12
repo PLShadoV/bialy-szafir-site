@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Tv, Wifi, ChefHat, Snowflake, Shirt, UtensilsCrossed, Flame, WifiIcon } from "lucide-react";
 
@@ -43,8 +44,8 @@ const Equipment = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline">
-            <a href="#galeria">Zobacz galerię</a>
+          <Button size="lg" variant="outline" asChild>
+            <Link to="/galeria">Zobacz galerię</Link>
           </Button>
         </div>
       </div>
