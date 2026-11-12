@@ -21,7 +21,7 @@ const OurCenters = () => {
       phone: "+48 519 662 166",
       email: "info@perlarusinowo.pl",
       website: "https://perlarusinowo.pl",
-      features: [] as string[]
+      features: ["Domki w lesie", "Blisko plaży", "Rowery do wypożyczenia", "Plac zabaw"]
     },
     {
       name: "Biały Koral",
