@@ -21,13 +21,13 @@ const OurCenters = () => {
       phone: "+48 519 662 166",
       email: "info@perlarusinowo.pl",
       website: "https://perlarusinowo.pl",
-      features: ["Domki nad samym morzem", "Prywatna plaża", "Restauracja", "SPA"]
+      features: [] as string[]
     },
     {
       name: "Biały Koral",
       description: "Drugi z naszych ośrodków w malowniczej lokalizacji",
       address: "ul. Sosnowa 9, 76-107 Rusinowo", 
-      phone: "+48 123 456 790",
+      phone: "+48 797 392 903",
       email: "info@koralrusinowo.pl",
       website: "https://koralrusinowo.pl",
       features: ["Domki w lesie", "Blisko plaży", "Rowery do wypożyczenia", "Plac zabaw"]
@@ -68,14 +68,14 @@ const OurCenters = () => {
                     </div>
                   </div>
                   
-                  <div>
+                  {center.features.length > 0 && <div>
                     <h3 className="font-semibold mb-2">Udogodnienia:</h3>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       {center.features.map((feature, idx) => (
                         <li key={idx}>• {feature}</li>
                       ))}
                     </ul>
-                  </div>
+                  </div>}
                   
                   <Button className="w-full" asChild>
                     <a href={center.website} target="_blank" rel="noopener noreferrer">
