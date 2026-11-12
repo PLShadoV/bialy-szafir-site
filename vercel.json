@@ -15,7 +15,7 @@
   "rewrites": [
     {
       "source": "/:page(galeria|cennik|kontakt|nasze-osrodki|rezerwacja)",
-      "destination": "/:page/index.html"
+      "destination": "/:page.html"
     }
   ],
   "headers": [

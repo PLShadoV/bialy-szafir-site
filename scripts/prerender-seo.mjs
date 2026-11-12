@@ -54,11 +54,9 @@ for (const route of routes) {
   const hero = `<section class="relative ${route.path === '/' ? 'min-h-screen' : 'h-96'} flex items-center justify-center overflow-hidden"><img src="${image}" srcset="${imageSet}" sizes="100vw" width="${route.hero.width}" height="${route.hero.height}" fetchpriority="high" alt="" class="absolute inset-0 w-full h-full object-cover" /><div class="absolute inset-0 bg-black/40"></div><div class="relative z-10 text-center text-white px-4 max-w-4xl"><h1 class="${route.path === '/' ? 'text-5xl md:text-7xl' : 'text-4xl md:text-5xl'} font-bold mb-6">${escape(route.h1)}</h1>${p(route.paragraphs[0])}</div></section>`;
   const body = `<header class="bg-primary text-primary-foreground h-16 flex items-center px-4"><a class="text-2xl font-bold" href="/">Biały Szafir</a></header><main>${hero}${content(route)}${extra}</main>`;
   const html = cleanTemplate.replace('</head>', `${head}\n</head>`).replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${body}</div>`);
-  const directory = new URL(route.path === '/' ? './' : `${route.path.slice(1)}/`, dist);
-  await mkdir(directory, { recursive: true });
-  await writeFile(new URL('index.html', directory), html);
-  // Cloudflare Pages serves /galeria.html at /galeria (no trailing-slash redirect); Vercel keeps using /galeria/index.html
-  if (route.path !== '/') await writeFile(new URL(`${route.path.slice(1)}.html`, dist), html);
+  // one file per route: /galeria -> galeria.html. Cloudflare Pages serves it at /galeria with no trailing-slash
+  // redirect (a galeria/ folder would force /galeria -> /galeria/); vercel.json rewrites to the same file.
+  await writeFile(new URL(route.path === '/' ? 'index.html' : `${route.path.slice(1)}.html`, dist), html);
 }
 
 const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Warsaw', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
