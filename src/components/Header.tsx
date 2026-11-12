@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/">
-              <h1 className="text-2xl font-bold text-primary-foreground">Biały Szafir</h1>
+              <div className="text-2xl font-bold text-primary-foreground">Biały Szafir</div>
             </Link>
           </div>
           
@@ -54,6 +54,9 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link to="/nasze-osrodki">Nasze ośrodki</Link>
+                </DropdownMenuItem>
                 {centerLinks.map((center) => (
                   <DropdownMenuItem key={center.name} asChild>
                     <a href={center.href} target="_blank" rel="noopener noreferrer">
@@ -103,7 +106,7 @@ const Header = () => {
               ))}
               
               <div className="pt-2 border-t border-primary-foreground/20 mt-4">
-                <p className="text-sm font-medium mb-2 text-primary-foreground">Nasze ośrodki:</p>
+                <Link to="/nasze-osrodki" className="text-sm font-medium mb-2 text-primary-foreground block" onClick={() => setIsMenuOpen(false)}>Nasze ośrodki</Link>
                 {centerLinks.map((center) => (
                   <a
                     key={center.name}
