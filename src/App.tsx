@@ -11,6 +11,8 @@ import OurCenters from "./pages/OurCenters";
 import Reservation from "./pages/Reservation";
 import NotFound from "./pages/NotFound";
 
+import RouteSeo from "./seo/RouteSeo";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -19,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <RouteSeo />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/galeria" element={<Gallery />} />
