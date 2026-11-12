@@ -16,10 +16,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <PageContent path="/" />
         <Features />
         <Activities />
         <Equipment />
+        <PageContent path="/" />
         <Contact />
       </main>
       <FloatingActions />
