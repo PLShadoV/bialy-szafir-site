@@ -1,3 +1,4 @@
+import PageContent from "@/seo/PageContent";
 import seoRoutes from "@/seo/routes.json";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -99,7 +100,7 @@ const Reservation = () => {
 
       <PageHero
         title={seoRoutes.find((route) => route.path === "/rezerwacja")!.h1}
-        description="Zarezerwuj swój pobyt w domkach letniskowych Biały Szafir już dziś!"
+        description={seoRoutes.find((route) => route.path === "/rezerwacja")!.paragraphs[0]}
         backgroundImage={heroForest}
       />
 
@@ -210,6 +211,7 @@ const Reservation = () => {
             </div>
           </div>
         </div>
+        <PageContent path="/rezerwacja" />
       </main>
 
       <FloatingActions />

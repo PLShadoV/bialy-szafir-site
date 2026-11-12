@@ -1,6 +1,8 @@
+import variants from "@/seo/image-variants.json";
+import PageContent from "@/seo/PageContent";
 import imageDimensions from "@/seo/gallery-dimensions.json";
 import seoRoutes from "@/seo/routes.json";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
@@ -11,15 +13,36 @@ import { useScrollToTop } from "@/hooks/useScrollToTop";
 // 👉 automatyczne wczytanie obrazów
 const modules = import.meta.glob("@/assets/gallery/*.{jpg,jpeg,png,webp}", { eager: true });
 
-type ImgEntry = { id: number; src: string; alt: string; width: number; height: number };
+type ImgEntry = { id: number; src: string; alt: string; width: number; height: number; group: string; small: string; large: string };
 
 const galleryImages: ImgEntry[] = Object.entries(modules).map(([path, mod], idx) => {
   const url = (mod as { default?: string }).default ?? (mod as unknown as string);
   const filename = path.split("/").pop() || `photo-${idx + 1}`;
-  return { id: idx + 1, src: url, alt: `Biały Szafir w Rusinowie – zdjęcie ${idx + 1}`, ...imageDimensions[filename as keyof typeof imageDimensions] };
+  const sizes = variants[filename as keyof typeof variants];
+  return { id: idx + 1, src: url, small: sizes["360"], large: sizes["720"], ...imageDimensions[filename as keyof typeof imageDimensions] };
 });
 
 import heroForest from "@/assets/hero-forest.jpg";
+
+// Start below-the-fold requests close to the viewport instead of the browser's
+// generous native lazy-loading threshold. Full files are never prefetched for the lightbox.
+function GalleryPhoto({ image }: { image: ImgEntry }) {
+  const ref = useRef<HTMLImageElement>(null);
+  const [visible, setVisible] = useState(image.id === 1);
+  useEffect(() => {
+    if (visible || !ref.current) return;
+    if (!("IntersectionObserver" in window)) { setVisible(true); return; }
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setVisible(true); observer.disconnect(); }
+    }, { rootMargin: "200px" });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [visible]);
+  return <img ref={ref} src={visible ? image.small : undefined} srcSet={visible ? `${image.small} 360w, ${image.large} 720w` : undefined} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw" alt={image.alt}
+    width={image.width} height={image.height} decoding="async"
+    loading={image.id === 1 ? "eager" : "lazy"}
+    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />;
+}
 
 const Gallery: React.FC = () => {
   useScrollToTop();
@@ -85,7 +108,7 @@ const Gallery: React.FC = () => {
       <Header />
       <PageHero 
         title={seoRoutes.find((route) => route.path === "/galeria")!.h1}
-        description="Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie"
+        description={seoRoutes.find((route) => route.path === "/galeria")!.paragraphs[0]}
         backgroundImage={heroForest}
       />
       
@@ -100,24 +123,25 @@ const Gallery: React.FC = () => {
                 Dodaj zdjęcia do <code>src/assets/gallery/</code>, aby wyświetlić galerię.
               </p>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
-                {galleryImages.map((image, i) => (
+              <div className="space-y-12 mb-16">
+                {["Otoczenie i tarasy", "Wnętrza domków"].map((group) => <section key={group}>
+                <h3 className="text-2xl font-semibold text-primary mb-6">{group}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {galleryImages.filter((image) => image.group === group).map((image) => (
+                  <figure key={image.id}>
                   <button
                     key={image.id}
-                    className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-ocean transition-all duration-300 aspect-square"
-                    onClick={() => openAt(i)}
+                    className="group relative w-full overflow-hidden rounded-lg shadow-soft hover:shadow-ocean transition-all duration-300 aspect-square"
+                    onClick={() => openAt(galleryImages.indexOf(image))}
                     aria-label={`Otwórz podgląd: ${image.alt}`}
                   >
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      width={image.width} height={image.height} decoding="async"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                    />
+                    <GalleryPhoto image={image} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </button>
+                  <figcaption className="text-sm text-muted-foreground mt-2">{image.alt}</figcaption>
+                  </figure>
                 ))}
+                </div></section>)}
               </div>
             )}
           </div>
@@ -162,7 +186,7 @@ const Gallery: React.FC = () => {
             <div className="max-w-4xl mx-auto mb-16">
               <div className="feature-card rounded-2xl overflow-hidden shadow-xl">
                 <div className="aspect-video bg-black flex items-center justify-center">
-                  <iframe 
+                  <iframe loading="lazy"
                     width="100%" 
                     height="100%" 
                     src="https://www.youtube.com/embed/jQCNl9kFRmc" 
@@ -174,7 +198,7 @@ const Gallery: React.FC = () => {
                 </div>
                 <div className="p-8 bg-white text-center">
                   <h3 className="text-2xl font-bold text-primary mb-3">Prezentacja ośrodka Biały Szafir</h3>
-                  <p className="text-muted-foreground text-lg">Poznaj nasze domki i zobacz jak wyglądają z bliska.</p>
+                  <p className="text-muted-foreground text-lg">Poznaj nasze domki i zobacz, jak wyglądają z bliska.</p>
                 </div>
               </div>
             </div>
@@ -189,7 +213,7 @@ const Gallery: React.FC = () => {
               ].map((item, idx) => (
                 <div key={idx} className="feature-card rounded-xl overflow-hidden bg-white shadow-md flex flex-col">
                   <div className="aspect-video bg-muted">
-                    <iframe 
+                    <iframe loading="lazy"
                       width="100%" 
                       height="100%" 
                       src={item.url} 
@@ -231,6 +255,7 @@ const Gallery: React.FC = () => {
                 src={current.src}
                 alt={current.alt}
                 width={current.width} height={current.height}
+                decoding="async"
                 className="object-contain transition-transform"
                 style={{ transform: `scale(${scale})` }}
                 onClick={(e) => e.stopPropagation()}
@@ -239,6 +264,7 @@ const Gallery: React.FC = () => {
             <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl" onClick={(e) => { e.stopPropagation(); next(); }}>&#8250;</button>
           </div>
         )}
+        <PageContent path="/galeria" />
       </main>
       <FloatingActions />
     </div>

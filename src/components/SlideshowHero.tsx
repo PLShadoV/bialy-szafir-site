@@ -2,15 +2,20 @@ import seoRoutes from "@/seo/routes.json";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage1 from "@/assets/1.png";
+import heroImage1 from "@/assets/1.jpg";
 import heroImage2 from "@/assets/herodron.jpg";
-import heroImage3 from "@/assets/2.png";
+import heroImage3 from "@/assets/2.jpg";
 
 const heroImages = [heroImage1, heroImage2, heroImage3];
 
 const SlideshowHero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [visited, setVisited] = useState([0]);
+
+  useEffect(() => {
+    setVisited((previous) => previous.includes(currentIndex) ? previous : [...previous, currentIndex]);
+  }, [currentIndex]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,8 +47,9 @@ const SlideshowHero = () => {
           className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
-          style={{ backgroundImage: `url(${image})` }}
         >
+          {visited.includes(index) && <img src={`/media/${["1", "herodron", "2"][index]}-1440.webp`} srcSet={`/media/${["1", "herodron", "2"][index]}-720.webp 720w, /media/${["1", "herodron", "2"][index]}-1440.webp 1440w`} sizes="100vw" alt="" width={[1536, 1920, 1024][index]} height={[1024, 653, 1024][index]}
+            fetchPriority={index === 0 ? "high" : "low"} className="absolute inset-0 w-full h-full object-cover" />}
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
       ))}
@@ -56,8 +62,7 @@ const SlideshowHero = () => {
           Domki wczasowe nad morzem
         </p>
         <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-white/80">
-          Odkryj idealne miejsce na wakacje w Rusinowie. Komfortowe domki w otoczeniu lasu, 
-          zaledwie 600 metrów od plaży Bałtyku. Ciesz się spokojem natury i bliskością morza.
+          {seoRoutes[0].paragraphs[0]}
         </p>
         <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3" asChild>
           <Link to="/rezerwacja">Zarezerwuj teraz</Link>

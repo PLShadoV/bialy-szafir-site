@@ -1,3 +1,5 @@
+import pricingData from "@/seo/pricing.json";
+import PageContent from "@/seo/PageContent";
 import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -14,29 +16,30 @@ const Pricing = () => {
   useScrollToTop();
   const navigate = useNavigate();
   
-  const pricingData = [
-    { period: "11.04 - 31.05", price: "300", season: "Wiosna", popular: false },
-    { period: "Majówka 29.04-03.05", price: "350", season: "Wiosna", popular: false },
-    { period: "01.06 - 13.06", price: "350", season: "Początek lata", popular: false },
-    { period: "14.06 - 04.07", price: "400", season: "Czerwiec", popular: false },
-    { period: "05.07 - 11.07", price: "570", season: "Lipiec", popular: true },
-    { period: "12.07 - 15.08", price: "650", season: "Sezon letni", popular: true },
-    { period: "16.08 - 31.08", price: "520", season: "Sierpień", popular: false },
-    { period: "01.09 - 19.10", price: "300", season: "Jesień", popular: false },
-  ];
+
 
   return (
     <div className="min-h-screen page-enter font-quicksand">
       <Header />
       <PageHero 
         title={seoRoutes.find((route) => route.path === "/cennik")!.h1}
-        description="Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie"
+        description={seoRoutes.find((route) => route.path === "/cennik")!.paragraphs[0]}
         backgroundImage={heroBeach}
       />
       <main className="py-16 bg-cozy-beige">
         <div className="container mx-auto px-4">
           
           <div className="max-w-6xl mx-auto">
+            <details className="glass-card p-6 mb-10">
+              <summary className="text-xl font-semibold cursor-pointer text-primary">Porównaj ceny za domek za dobę dla maksymalnie 6 osób</summary>
+              <div className="overflow-x-auto mt-4">
+                <table className="w-full text-left">
+                  <caption className="text-left text-sm text-muted-foreground mb-3">Ceny według terminów</caption>
+                  <thead><tr><th scope="col" className="p-3">Termin</th><th scope="col" className="p-3">Cena za dobę</th></tr></thead>
+                  <tbody>{pricingData.map((item) => <tr key={item.period} className="border-t"><th scope="row" className="p-3 font-medium">{item.period}</th><td className="p-3 whitespace-nowrap">{item.price} zł</td></tr>)}</tbody>
+                </table>
+              </div>
+            </details>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {pricingData.map((item, index) => (
                 <Card key={index} className={`pricing-card relative ${item.popular ? 'ring-2 ring-primary' : ''}`}>
@@ -133,6 +136,7 @@ const Pricing = () => {
             </div>
           </div>
         </div>
+        <PageContent path="/cennik" />
       </main>
       <FloatingActions />
     </div>

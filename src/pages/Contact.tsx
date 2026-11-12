@@ -1,3 +1,4 @@
+import PageContent from "@/seo/PageContent";
 import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -87,7 +88,7 @@ const Contact = () => {
       <Header />
       <PageHero 
         title={seoRoutes.find((route) => route.path === "/kontakt")!.h1}
-        description="Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek w Rusinowie"
+        description={seoRoutes.find((route) => route.path === "/kontakt")!.paragraphs[0]}
         backgroundImage={heroCoastal}
       />
       <main className="py-16 bg-cozy-cream">
@@ -243,6 +244,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <PageContent path="/kontakt" />
       </main>
       
       {/* Success Dialog */}
