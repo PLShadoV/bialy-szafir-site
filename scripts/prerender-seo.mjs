@@ -57,6 +57,8 @@ for (const route of routes) {
   const directory = new URL(route.path === '/' ? './' : `${route.path.slice(1)}/`, dist);
   await mkdir(directory, { recursive: true });
   await writeFile(new URL('index.html', directory), html);
+  // Cloudflare Pages serves /galeria.html at /galeria (no trailing-slash redirect); Vercel keeps using /galeria/index.html
+  if (route.path !== '/') await writeFile(new URL(`${route.path.slice(1)}.html`, dist), html);
 }
 
 const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Warsaw', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
