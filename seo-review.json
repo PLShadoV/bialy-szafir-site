@@ -1,0 +1,170 @@
+{
+  "issues": [
+    {
+      "area": "Warunki oferty",
+      "problem": "Strona rezerwacji podaje minimum 3 doby, natomiast tekst cennika wskazuje 2 doby. Treść dodatkowo opisuje tę sprzeczność i odsyła gościa do kontaktu zamiast podać jednoznaczny warunek. To utrudnia decyzję o zakupie.",
+      "status": "częściowo",
+      "review": "W kodzie minimum 3 doby; ustawienia zewnętrznego RoomAdmin wymagają sprawdzenia przez właściciela."
+    },
+    {
+      "area": "Technika",
+      "problem": "Wariant http://szafirrusinowo.pl kończy się odpowiedzią 200 pod adresem HTTP. Nie jest przekierowywany na HTTPS. Powstaje drugi dostępny wariant serwisu, a użytkownik może pozostać na niezabezpieczonym połączeniu.",
+      "status": "hosting",
+      "review": "HTTP→HTTPS i www/apex są regułami domeny Cloudflare, poza repozytorium."
+    },
+    {
+      "area": "Kontakt i linki",
+      "problem": "Odnośnik /cdn-cgi/l/email-protection zwraca 404. W próbkach tekstu adresy e-mail są miejscami zastąpione przez [email protected]. Crawl potwierdza wadliwy odnośnik, choć nie rozstrzyga, czy skrypt ochronny naprawia kontakt w przeglądarce.",
+      "status": "naprawione",
+      "review": "Zwykłe mailto w React i HTML; własne adresy pozostałych ośrodków zgodne z wcześniejszym kodem. Prerender chroniony komentarzami email_off. Existing home Contact component uses +48 797 392 903; /kontakt and schema use +48 504 201 117. Left unchanged because contact data changes are prohibited; owner confirmation required."
+    },
+    {
+      "area": "Szybkość",
+      "problem": "Główne zdjęcie pojawia się zbyt późno: LCP galerii wynosi 4,060 s, czyli przekracza próg 4 s. Strona główna osiąga 3,788 s, rezerwacja 3,584 s, kontakt 3,124 s, a nasze ośrodki 2,520 s. Celem jest mniej niż 2,5 s. Elementy LCP to odpowiednio /media/hero-forest-1440.webp, /media/1-1440.webp, /media/hero-forest-1440.webp, /media/hero-coastal-1440.webp i /media/hero-nature-1440.webp.",
+      "status": "częściowo",
+      "review": "Obrazy w początkowym HTML, zgodny preload, mobilne źródło 720px i wysoki priorytet tylko głównego zdjęcia. Zmniejszono transfer; wynik LCP poniżej 2,5 s wymaga ponownego pomiaru na hostingu."
+    },
+    {
+      "area": "Szybkość",
+      "problem": "Plik https://szafirrusinowo.pl/media/1-1440.webp waży 297 KB i przekracza wskazany próg 200 KB. To element LCP i około 60% całego transferu strony głównej, wynoszącego 498 KB.",
+      "status": "naprawione",
+      "review": "Główne zdjęcie: mobilne 58 414 bajtów; desktop 189 416 bajtów, poniżej 200 KB. Zachowano kadrowanie i wymiary."
+    },
+    {
+      "area": "Treść i zasady właściciela",
+      "problem": "Każda podstrona zawiera nagłówek „Najczęstsze pytania” i znacznik FAQPage. To istniejące elementy sprzeczne z obowiązkowym zakazem FAQ zapisanym przez właściciela.",
+      "status": "naprawione",
+      "review": "Brak FAQ i FAQPage, tablice faq są puste."
+    },
+    {
+      "area": "Cennik i aktualność",
+      "problem": "Próbka treści wprost informuje, że tabela nie określa roku obowiązywania cen, a daty majówki nakładają się na przedział wiosenny. Gość nie może jednoznacznie ustalić właściwej stawki.",
+      "status": "naprawione",
+      "review": "Rok 2026 podany przy cenniku; wiosna rozdzielona na 11.04–28.04 i 04.05–31.05, osobna majówka 29.04–03.05. Wszystkie stawki bez zmian."
+    },
+    {
+      "area": "Treść",
+      "problem": "W każdej próbce text_sample akapit wprowadzający występuje dwa razy bezpośrednio po sobie. Może to wynikać z podwójnego renderowania, powielenia wariantów widoku lub sposobu ekstrakcji. Nie jest to dowód na powielenie całych podstron.",
+      "status": "naprawione",
+      "review": "Jeden wstęp na stronę w React i prerenderze; 24 widoki sprawdzone."
+    },
+    {
+      "area": "Treść i rezerwacja",
+      "problem": "Podano zadatek 20%, lecz tekst odsyła do kontaktu po termin płatności, rozliczenie pozostałej kwoty, potwierdzenie rezerwacji oraz warunki zmiany lub rezygnacji. Liczne zdania „zapytaj” zastępują informacje potrzebne do rezerwacji.",
+      "status": "brak danych",
+      "review": "Zadatek 20% zachowany. Brak potwierdzonych terminów płatności, sposobu potwierdzenia i regulaminu; nie wymyślono zasad."
+    },
+    {
+      "area": "Szybkość",
+      "problem": "Galeria pobiera 734 KB, z czego obrazy stanowią 573 KB, czyli około 78%. Poza głównym /media/hero-forest-1440.webp o wadze 185 KB największe są /media/gallery-14-720.webp — 139 KB, /media/gallery-16-720.webp — 84 KB i /media/gallery-1-720.webp — 75 KB.",
+      "status": "naprawione",
+      "review": "Miniatury mają srcset/sizes, wymiary i lazy loading. Pełne pliki dopiero po otwarciu; gallery-14 zmniejszone ze 142 208 do 117 170 bajtów."
+    },
+    {
+      "area": "Treść oferty",
+      "problem": "Przy 438 słowach strona wymienia wiele udogodnień, ale sama odsyła do kontaktu po układ pomieszczeń. Nie wyjaśnia jasno, które elementy są w każdym domku, a które wspólne dla ośrodka. Powtarzające się porady o planowaniu pobytu zajmują miejsce na konkretne informacje.",
+      "status": "częściowo",
+      "review": "4 domki, takie samo wyposażenie, do 6 osób, prywatne wyposażenie i wspólny teren opisane w kartach. Dodano widoczny na zdjęciach układ sypialni; pełny rozkład 6 miejsc do spania i metraż wymagają potwierdzenia."
+    },
+    {
+      "area": "Dojazd i lokalizacja",
+      "problem": "Adres i odległość 600 metrów od plaży są podane, ale opis dojścia ponownie każe kontaktować się z ośrodkiem. Brakuje konkretnej instrukcji ostatniego odcinka dojazdu i wyjaśnienia, jak liczono odległość do plaży.",
+      "status": "brak danych",
+      "review": "Adres, parking, mapa i przycisk nawigacji są; brak potwierdzenia wjazdu i przebiegu dojścia oraz sposobu pomiaru 600 m."
+    },
+    {
+      "area": "Treść i architektura",
+      "problem": "Strona ma 303 słowa i poprawnie rozdziela nazwy oraz adresy innych obiektów, ale zawiera głównie dane kontaktowe i ogólne wezwanie do porównania ofert. Nie przedstawia konkretnych, potwierdzonych różnic ułatwiających wybór.",
+      "status": "częściowo",
+      "review": "Dwie karty, oryginalne adresy i kontakty, bezpośrednie strony ośrodków. Brak potwierdzonych zdjęć i wyróżników pozwalających porównać obiekty."
+    },
+    {
+      "area": "Szybkość",
+      "problem": "W home_headers pole content-encoding jest puste. Zapis nie potwierdza kompresji HTML, ale bez informacji o nagłówkach żądania nie pozwala przesądzić, że kompresja jest wyłączona dla wszystkich użytkowników.",
+      "status": "hosting",
+      "review": "Kompresja Brotli/gzip zależy od Cloudflare; lokalny build nie potwierdza nagłówków produkcyjnych."
+    },
+    {
+      "area": "Szybkość",
+      "problem": "HTML strony głównej ma cache-control: public, max-age=0, must-revalidate. To wymusza ponowną weryfikację świeżości, ale nie oznacza całkowitego wyłączenia pamięci podręcznej. Crawl nie zawiera nagłówków zdjęć, CSS i JavaScriptu, więc nie można ocenić ich buforowania.",
+      "status": "naprawione",
+      "review": "public/_headers: assets rok z immutable, media 7 dni. Po podmianie zdjęć należy wyczyścić cache /media/* w Cloudflare."
+    },
+    {
+      "area": "Technika i bezpieczeństwo",
+      "problem": "W nagłówkach strony głównej nie zapisano HSTS, Content-Security-Policy ani X-Frame-Options. To kwestia zabezpieczenia przeglądarki, nie dowód na bezpośrednią przyczynę słabych pozycji.",
+      "status": "częściowo",
+      "review": "Dodano X-Frame-Options SAMEORIGIN i CSP Report-Only w public/_headers. HSTS dopiero po potwierdzeniu wymuszenia HTTPS; CSP wymaga obserwacji po wdrożeniu."
+    },
+    {
+      "area": "Opis w wynikach wyszukiwania",
+      "problem": "Opis galerii proponuje „poznanie WiFi”, choć zdjęcia nie pokazują działania tej usługi. Lepiej wykorzystać miejsce na rzeczywiście przedstawione wnętrza, tarasy i teren. Długość tytułu i opisu oraz obecny H1 są prawidłowe.",
+      "status": "naprawione",
+      "review": "Opis galerii dotyczy wnętrz, tarasów, placu zabaw i filmów."
+    },
+    {
+      "area": "Dane uporządkowane",
+      "problem": "Crawl pokazuje typy LodgingBusiness, BreadcrumbList i FAQPage, ale nie zawiera pełnych właściwości JSON-LD. Nie pozwala to ocenić zgodności adresów, identyfikatorów, telefonów i powiązań między obiektami.",
+      "status": "naprawione lokalnie",
+      "review": "JSON parsuje się na 6 trasach z JS i bez JS. Jeden LodgingBusiness o stałym @id, zgodny adres/telefon/e-mail; BreadcrumbList podstron odpowiada nawigacji. Zewnętrzny walidator Schema.org nie był uruchamiany."
+    },
+    {
+      "area": "Obrazy i dostępność",
+      "problem": "Każda właściwa strona ma jeden obraz z pustym tekstem alternatywnym; pomiary wskazują głównie duże zdjęcia nagłówkowe. Pusty alt może być prawidłowy dla dekoracji i sam w sobie nie stanowi potwierdzonego błędu.",
+      "status": "sprawdzone",
+      "review": "Zdjęcia hero pełnią rolę dekoracyjnego tła pod nagłówkiem: pusty alt pozostawiony. Galeria ma konkretne podpisy i opisy."
+    }
+  ],
+  "content_fixes": [
+    {
+      "url": "https://szafirrusinowo.pl/",
+      "review": "Trzy karty ze zdjęciami i CTA. Cztery jednakowo wyposażone domki opisane wprost. Brak pełnego rozkładu miejsc do spania; nie uzupełniono niepotwierdzonych danych.",
+      "faq": []
+    },
+    {
+      "url": "https://szafirrusinowo.pl/cennik",
+      "review": "Cennik 2026, brak nakładania dat, jednostka ceny, minimum 3 doby, dopłata za zwierzę i zasady pobytu. Tabela desktop i karty mobilne również bez JS. Usunięto sugestię prywatnej plaży.",
+      "faq": []
+    },
+    {
+      "url": "https://szafirrusinowo.pl/galeria",
+      "review": "Jeden wstęp, dwie grupy fotografii i podpisy; opis i przycisk przy zdjęciach oraz przy filmach. Prerender uzupełniony o pięć rzeczywistych filmów. Brak FAQ i końcowych kart powtarzających sekcje.",
+      "faq": []
+    },
+    {
+      "url": "https://szafirrusinowo.pl/kontakt",
+      "review": "Karty kontaktowe, niezmieniony formularz, mapa, nawigacja oraz karty lokalizacji. Brak potwierdzonych instrukcji wjazdu i dojścia do plaży.",
+      "faq": []
+    },
+    {
+      "url": "https://szafirrusinowo.pl/rezerwacja",
+      "review": "System bezpośrednio po wstępie, trzy karty i zwykłe mailto/tel. Bez zmian integracji rezerwacji i analityki. Brak potwierdzonych warunków płatności i anulowania.",
+      "faq": []
+    },
+    {
+      "url": "https://szafirrusinowo.pl/nasze-osrodki",
+      "review": "Jedna sekcja z dwiema kartami i CTA. Brak potwierdzonych zdjęć właściwych obiektów i różnic; pozostawiono krótsze faktyczne opisy.",
+      "faq": []
+    }
+  ],
+  "verification": {
+    "views_checked": 24,
+    "widths": [
+      390,
+      1366
+    ],
+    "javascript": [
+      false,
+      true
+    ],
+    "one_h1": true,
+    "valid_jsonld": true,
+    "no_faq": true,
+    "no_overflow": true,
+    "local_404": true,
+    "visual_review": "Desktop and mobile screenshots inspected; external map/video/booking services blocked during local checks, forms not submitted.",
+    "vercel_json": "Valid, unchanged",
+    "build": "npm.cmd run build passed",
+    "static_navigation": "Explicit flex gap applied after visual review to prevent concatenated links when Tailwind does not emit prerender-only utilities."
+  }
+}

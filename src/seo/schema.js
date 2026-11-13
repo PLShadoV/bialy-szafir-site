@@ -11,9 +11,6 @@ export function pageSchema(route, business) {
           { "@type": "ListItem", position: 2, name: route.h1, item: url },
         ],
       }]),
-      { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: route.faq.map(({ q, a }) => ({
-        "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a },
-      })) },
     ],
   };
 }

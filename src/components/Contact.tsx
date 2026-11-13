@@ -57,10 +57,10 @@ const Contact = () => {
                 Telefon
               </h3>
               <a 
-                href="tel:+48797392903" 
+                href="tel:+48504201117" 
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                +48 797 392 903
+                +48 504 201 117
               </a>
             </div>
 

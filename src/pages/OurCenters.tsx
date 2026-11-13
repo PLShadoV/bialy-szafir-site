@@ -3,36 +3,12 @@ import seoRoutes from "@/seo/routes.json";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
-import { ExternalLink, MapPin, Phone, Mail, Star, Waves } from "lucide-react";
 import heroNature from "@/assets/hero-nature.jpg";
 
 const OurCenters = () => {
   useScrollToTop();
   
-  const centers = [
-    {
-      name: "Biała Perła",
-      description: "Nasz pierwszy ośrodek wypoczynkowy nad morzem",
-      address: "ul. Sosnowa 23, 76-107 Rusinowo",
-      phone: "+48 519 662 166",
-      email: "info@perlarusinowo.pl",
-      website: "https://perlarusinowo.pl",
-      features: ["Domki w lesie", "Blisko plaży", "Rowery do wypożyczenia", "Plac zabaw"]
-    },
-    {
-      name: "Biały Koral",
-      description: "Drugi z naszych ośrodków w malowniczej lokalizacji",
-      address: "ul. Sosnowa 9, 76-107 Rusinowo", 
-      phone: "+48 797 392 903",
-      email: "info@koralrusinowo.pl",
-      website: "https://koralrusinowo.pl",
-      features: ["Domki w lesie", "Blisko plaży", "Rowery do wypożyczenia", "Plac zabaw"]
-    }
-  ];
 
   return (
     <div className="min-h-screen page-enter font-quicksand">
@@ -43,50 +19,6 @@ const OurCenters = () => {
         backgroundImage={heroNature}
       />
       <main className="py-16 bg-cozy-cream">
-        <div className="container mx-auto px-4">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {centers.map((center, index) => (
-              <Card key={index} className="feature-card">
-                <CardHeader>
-                  <CardTitle as="h2" className="text-2xl gradient-text">{center.name}</CardTitle>
-                  <CardDescription className="text-base">{center.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm">
-                      <MapPin className="h-4 w-4 text-primary" />
-                      <span>{center.address}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Phone className="h-4 w-4 text-primary" />
-                      <span>{center.phone}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Mail className="h-4 w-4 text-primary" />
-                      <span>{center.email}</span>
-                    </div>
-                  </div>
-                  
-                  {center.features.length > 0 && <div>
-                    <h3 className="font-semibold mb-2">Udogodnienia:</h3>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      {center.features.map((feature, idx) => (
-                        <li key={idx}>• {feature}</li>
-                      ))}
-                    </ul>
-                  </div>}
-                  
-                  <Button className="w-full" asChild>
-                    <a href={center.website} target="_blank" rel="noopener noreferrer">
-                      Odwiedź stronę <ExternalLink className="h-4 w-4 ml-2" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
         <PageContent path="/nasze-osrodki" />
       </main>
       <FloatingActions />
