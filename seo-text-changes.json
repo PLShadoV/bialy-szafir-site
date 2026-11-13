@@ -1,200 +1,86 @@
 [
   {
     "page": "/",
-    "where": "Wspólna treść React i statycznego HTML: wstęp, sekcje H2, linki i FAQ",
-    "before": "Komfortowe domki dla maksymalnie 6 osób położone są przy lesie, 600 metrów od plaży w Rusinowie.\n\nNa terenie ośrodka dostępne jest WiFi. Domki mają wyposażony aneks kuchenny z lodówką, zmywarką, płytą indukcyjną i ekspresem.\n\nAkceptujemy zwierzęta po wcześniejszym zgłoszeniu. Kontakt: +48 504 201 117, info@szafirrusinowo.pl, ul. Sosnowa 19, 76-107 Rusinowo.",
-    "after": "Biały Szafir to domki letniskowe w Rusinowie dla maksymalnie sześciu osób, położone przy lesie, 600 metrów od plaży. Zaplanuj pobyt nad morzem z własnym aneksem kuchennym, WiFi i prywatnym parkingiem.\n\nWyposażenie domków w Rusinowie\nW aneksie kuchennym znajdziesz lodówkę, zmywarkę, płytę indukcyjną i ekspres. Możesz przygotować śniadanie przed wyjściem na plażę i zaplanować posiłki we własnym rytmie. Lodówka pozwala przechować zakupy, a zmywarka ułatwia sprzątanie po wspólnym obiedzie.\nNa terenie ośrodka dostępne jest WiFi i prywatny parking. W wyposażeniu wymieniamy też telewizję satelitarną, klimatyzację, pralkę i grill. Przed wyborem terminu obejrzyj zdjęcia, aby przyjrzeć się domkom i ich otoczeniu.\nObejrzyj wnętrza i otoczenie domków (/galeria)\n\nDomki nad morzem dla maksymalnie sześciu osób\nBiały Szafir to propozycja pobytu w Rusinowie dla rodziny lub grupy do sześciu osób. Wspólny aneks kuchenny daje możliwość samodzielnego przygotowania posiłków podczas urlopu.\nZanim wybierzesz domek, zapoznaj się z wyposażeniem i stawkami dla poszczególnych terminów. Jeśli potrzebujesz szczegółów dotyczących układu pomieszczeń lub przygotowania pobytu dla swojej grupy, skontaktuj się z nami.\nZobacz cennik domków dla sześciu osób (/cennik)\n\nPobyt ze zwierzętami\nDo Białego Szafiru możesz przyjechać ze zwierzęciem po wcześniejszym zgłoszeniu. Poinformuj nas o pupilu podczas ustalania pobytu. Zwierzęta powinny pozostawać pod stałym nadzorem opiekunów.\nW cenniku podana jest opłata 15 zł za dobę za zwierzę. Jeżeli planujesz przyjazd z kilkoma pupilami, zapytaj nas o szczegóły przed rezerwacją.\nUstal szczegóły pobytu ze zwierzęciem (/kontakt)\n\nPlaża i otoczenie\nDomki stoją przy lesie, 600 metrów od plaży w Rusinowie. Bliskość lasu i morza pozwala połączyć wypoczynek w domku z czasem spędzanym na zewnątrz.\nAdres ośrodka to ul. Sosnowa 19, 76-107 Rusinowo. Na stronie kontaktowej znajdziesz mapę oraz telefon i e-mail, pod którymi możesz zapytać o dojazd i dojście do plaży.\nSprawdź adres i lokalizację Białego Szafiru (/kontakt)\n\nJak sprawdzić termin\nDostępność domków sprawdzisz na stronie rezerwacji w systemie online. Przy wyborze pobytu zajrzyj także do cennika, gdzie znajdziesz stawki sezonowe i informacje o tym, co obejmuje cena.\nWolisz porozmawiać? Zadzwoń pod +48 504 201 117 lub napisz na info@szafirrusinowo.pl. Telefon odbieramy codziennie od 8:00 do 20:00.\nSprawdź dostępność domków (/rezerwacja)\n\nNajczęstsze pytania\nDla ilu osób przeznaczone są domki?\nDomki są przeznaczone dla maksymalnie sześciu osób.\n\nJak daleko jest do plaży?\nDomki znajdują się 600 metrów od plaży w Rusinowie.\n\nCo znajduje się w aneksie kuchennym?\nW aneksie są lodówka, zmywarka, płyta indukcyjna i ekspres.\n\nCzy można przyjechać ze zwierzęciem?\nZwierzęta są akceptowane po wcześniejszym zgłoszeniu.\n\nCzy na terenie ośrodka jest internet?\nNa terenie ośrodka dostępne jest WiFi."
+    "where": "Wstęp",
+    "before": "Biały Szafir to domki letniskowe w Rusinowie dla maksymalnie sześciu osób, położone przy lesie, 600 metrów od plaży. Zaplanuj pobyt nad morzem z własnym aneksem kuchennym, WiFi i prywatnym parkingiem.",
+    "after": "Biały Szafir to 4 domki letniskowe w Rusinowie, każdy dla maksymalnie 6 osób. Wypocznij przy lesie, 600 metrów od plaży, z własnym aneksem kuchennym i tarasem. Wyposażenie jest takie samo w każdym domku."
+  },
+  {
+    "page": "/",
+    "where": "Sekcje treści",
+    "before": "Wyposażenie domków w Rusinowie\nW aneksie kuchennym znajdziesz lodówkę, zmywarkę, płytę indukcyjną i ekspres. Możesz przygotować śniadanie przed wyjściem na plażę i zaplanować posiłki we własnym rytmie. Lodówka pozwala przechować zakupy, a zmywarka ułatwia sprzątanie po wspólnym obiedzie.\n\nNa terenie ośrodka dostępne jest WiFi i prywatny parking. W wyposażeniu wymieniamy też telewizję satelitarną, klimatyzację, pralkę i grill. Przed wyborem terminu obejrzyj zdjęcia, aby przyjrzeć się domkom i ich otoczeniu.\n\nDomki nad morzem dla maksymalnie sześciu osób\nBiały Szafir to propozycja pobytu w Rusinowie dla rodziny lub grupy do sześciu osób. Wspólny aneks kuchenny daje możliwość samodzielnego przygotowania posiłków podczas urlopu.\n\nZanim wybierzesz domek, zapoznaj się z wyposażeniem i stawkami dla poszczególnych terminów. Jeśli potrzebujesz szczegółów dotyczących układu pomieszczeń lub przygotowania pobytu dla swojej grupy, skontaktuj się z nami.\n\nPobyt ze zwierzętami\nDo Białego Szafiru możesz przyjechać ze zwierzęciem po wcześniejszym zgłoszeniu. Poinformuj nas o pupilu podczas ustalania pobytu. Zwierzęta powinny pozostawać pod stałym nadzorem opiekunów.\n\nW cenniku podana jest opłata 15 zł za dobę za zwierzę. Jeżeli planujesz przyjazd z kilkoma pupilami, zapytaj nas o szczegóły przed rezerwacją.\n\nPlaża i otoczenie\nDomki stoją przy lesie, 600 metrów od plaży w Rusinowie. Bliskość lasu i morza pozwala połączyć wypoczynek w domku z czasem spędzanym na zewnątrz.\n\nAdres ośrodka to ul. Sosnowa 19, 76-107 Rusinowo. Na stronie kontaktowej znajdziesz mapę oraz telefon i e-mail, pod którymi możesz zapytać o dojazd i dojście do plaży.\n\nJak sprawdzić termin\nDostępność domków sprawdzisz na stronie rezerwacji w systemie online. Przy wyborze pobytu zajrzyj także do cennika, gdzie znajdziesz stawki sezonowe i informacje o tym, co obejmuje cena.\n\nWolisz porozmawiać? Zadzwoń pod +48 504 201 117 lub napisz na info@szafirrusinowo.pl. Telefon odbieramy codziennie od 8:00 do 20:00.",
+    "after": "Twój domek w Rusinowie\nNa działce są 4 domki, każdy dla maksymalnie 6 osób. Wyposażenie jest takie samo w każdym domku, więc niezależnie od wyboru korzystasz z tych samych udogodnień.\n\nW aneksie kuchennym są lodówka z zamrażalnikiem, płyta indukcyjna, ekspres, czajnik i zmywarka. Śniadanie możesz przygotować przed plażą, a po powrocie zjeść wspólny obiad przy stole.\n\nW każdym domku znajdziesz także telewizję satelitarną, klimatyzację, pralkę i grill. Na zdjęciach obejrzysz salon, sypialnie, łazienkę i taras.\n\nNa terenie ośrodka\nNa terenie Białego Szafiru dostępne są bezpłatne WiFi ze światłowodem i prywatny parking. Między domkami znajduje się trawnik oraz plac zabaw.\n\nMożesz przyjechać ze zwierzęciem po wcześniejszym zgłoszeniu. Przez cały pobyt pupil powinien pozostawać pod nadzorem opiekuna. Opłata za zwierzę wynosi 15 zł za dobę.\n\nPobyt trwa minimum 3 doby. W cenie otrzymujesz pościel i ręczniki, miejsce parkingowe, korzystanie z grilla oraz sprzątanie końcowe. Stawki na poszczególne terminy znajdziesz w cenniku na 2026 rok.\n\nPlaża i otoczenie\nNasze domki nad morzem w Rusinowie stoją przy lesie, 600 metrów od plaży. Możesz spędzić dzień nad Bałtykiem, a po powrocie odpocząć na tarasie.\n\nBiały Szafir mieści się przy ul. Sosnowej 19. Mapę i dane do zaplanowania podróży znajdziesz na stronie kontaktowej.\n\nNa urlop z rodziną lub grupą do sześciu osób wybierz termin w systemie rezerwacji online. Jeśli wolisz porozmawiać o pobycie, zadzwoń pod +48 504 201 117."
   },
   {
     "page": "/galeria",
-    "where": "Wspólna treść React i statycznego HTML: wstęp, sekcje H2, linki i FAQ",
-    "before": "Zobacz zdjęcia domków letniskowych Biały Szafir i ich otoczenia w Rusinowie.\n\nOśrodek oferuje WiFi, prywatny parking i wyposażoną kuchnię. Na stronie znajdziesz filmy prezentujące ośrodek, także w języku angielskim, niemieckim, ukraińskim i czeskim.",
-    "after": "Zobacz zdjęcia domków Biały Szafir w Rusinowie i ich otoczenia. Galeria oraz filmy pomogą Ci przyjrzeć się ośrodkowi przed zaplanowaniem pobytu nad morzem.\n\nGaleria domków Biały Szafir\nZdjęcia pozwalają przyjrzeć się domkom i ich otoczeniu w Rusinowie przed wyborem pobytu. Otwórz fotografię, aby zobaczyć ją w większym rozmiarze. W podglądzie możesz przechodzić do kolejnych ujęć i powiększać obraz.\nPrzy porównywaniu zdjęć z planami urlopowymi zajrzyj także do opisu wyposażenia. Znajdziesz tam informacje o aneksie kuchennym, WiFi i pozostałych udogodnieniach wymienionych w ofercie Białego Szafiru.\nPoznaj wyposażenie domków Biały Szafir (/)\n\nFilmy o ośrodku i wersje językowe\nPrezentacja filmowa uzupełnia fotografie domków. Materiały dotyczą Białego Szafiru w Rusinowie i pozwalają obejrzeć ośrodek przed przyjazdem.\nPoniżej galerii dostępny jest główny film oraz wersje w językach angielskim, niemieckim, ukraińskim i czeskim. Każda wersja ma osobno opisany odtwarzacz, dzięki czemu możesz wybrać język prezentacji.\n\nOd zdjęć do planu pobytu\nPo obejrzeniu galerii porównaj stawki w cenniku dla interesującego Cię terminu. Dostępność sprawdzisz osobno w systemie rezerwacji online.\nJeżeli chcesz dopytać o szczegóły widoczne na zdjęciu, skontaktuj się z nami przed rezerwacją. Pomożemy ustalić informacje potrzebne do wyboru domku.\nPorównaj ceny pobytu w domkach (/cennik)\nSprawdź wolne terminy (/rezerwacja)\nZapytaj o szczegóły domku (/kontakt)\n\nNajczęstsze pytania\nCo przedstawia galeria Białego Szafiru?\nGaleria przedstawia domki letniskowe Biały Szafir i ich otoczenie w Rusinowie.\n\nCzy na stronie są również filmy o ośrodku?\nTak, na stronie są filmy prezentujące ośrodek Biały Szafir.\n\nW jakich obcych językach dostępne są filmy?\nDostępne są wersje angielska, niemiecka, ukraińska i czeska."
+    "where": "Wstęp",
+    "before": "Zobacz zdjęcia domków Biały Szafir w Rusinowie i ich otoczenia. Galeria oraz filmy pomogą Ci przyjrzeć się ośrodkowi przed zaplanowaniem pobytu nad morzem.",
+    "after": "Obejrzyj zdjęcia Białego Szafiru w Rusinowie: wnętrza domków, zadaszone tarasy i teren przy lesie. Fotografie pokazują miejsca do wspólnego odpoczynku, aneksy kuchenne oraz sypialnie. Otwórz wybrane ujęcie, aby zobaczyć szczegóły, lub obejrzyj filmy z ośrodka."
+  },
+  {
+    "page": "/galeria",
+    "where": "Sekcje treści",
+    "before": "Galeria domków Biały Szafir\nZdjęcia pozwalają przyjrzeć się domkom i ich otoczeniu w Rusinowie przed wyborem pobytu. Otwórz fotografię, aby zobaczyć ją w większym rozmiarze. W podglądzie możesz przechodzić do kolejnych ujęć i powiększać obraz.\n\nPrzy porównywaniu zdjęć z planami urlopowymi zajrzyj także do opisu wyposażenia. Znajdziesz tam informacje o aneksie kuchennym, WiFi i pozostałych udogodnieniach wymienionych w ofercie Białego Szafiru.\n\nFilmy o ośrodku i wersje językowe\nPrezentacja filmowa uzupełnia fotografie domków. Materiały dotyczą Białego Szafiru w Rusinowie i pozwalają obejrzeć ośrodek przed przyjazdem.\n\nPoniżej galerii dostępny jest główny film oraz wersje w językach angielskim, niemieckim, ukraińskim i czeskim. Każda wersja ma osobno opisany odtwarzacz, dzięki czemu możesz wybrać język prezentacji.\n\nOd zdjęć do planu pobytu\nPo obejrzeniu galerii porównaj stawki w cenniku dla interesującego Cię terminu. Dostępność sprawdzisz osobno w systemie rezerwacji online.\n\nJeżeli chcesz dopytać o szczegóły widoczne na zdjęciu, skontaktuj się z nami przed rezerwacją. Pomożemy ustalić informacje potrzebne do wyboru domku.",
+    "after": "Zdjęcia domków Biały Szafir\nW grupie „Otoczenie i tarasy” zobaczysz domki przy lesie, zadaszone tarasy ze stołem i krzesłami oraz trawnik z placem zabaw.\n\nZdjęcia wnętrz pokazują salon z telewizorem i aneksem kuchennym, sypialnię z podwójnym łóżkiem, pokój z dwoma pojedynczymi łóżkami oraz łazienkę z prysznicem. Wszystkie 4 domki mają takie samo wyposażenie.\n\nFilmy z ośrodka\nGłówny film prezentuje Biały Szafir i uzupełnia fotografie domków. Dostępne są również osobno opisane wersje angielska, niemiecka, ukraińska i czeska.\n\nPo obejrzeniu wnętrz i otoczenia wybierz daty pobytu w systemie online. Domki są przeznaczone dla maksymalnie 6 osób."
+  },
+  {
+    "page": "/galeria",
+    "where": "Tytuł SEO",
+    "before": "Galeria domków i otoczenia | Biały Szafir w Rusinowie",
+    "after": "Galeria domków w Rusinowie: wnętrza i teren | Biały Szafir"
+  },
+  {
+    "page": "/galeria",
+    "where": "Opis SEO",
+    "before": "Zobacz zdjęcia domków letniskowych Biały Szafir w Rusinowie i ich otoczenia. Poznaj kuchnię, parking oraz WiFi i obejrzyj filmy prezentujące ośrodek.",
+    "after": "Obejrzyj zdjęcia domków Biały Szafir w Rusinowie: salonu, sypialni, aneksu kuchennego, tarasów i placu zabaw. Zobacz filmy i zaplanuj pobyt nad morzem."
   },
   {
     "page": "/cennik",
-    "where": "Wspólna treść React i statycznego HTML: wstęp, sekcje H2, linki i FAQ",
-    "before": "Ceny za dobę dla maksymalnie 6 osób: 11.04–31.05: 300 zł; majówka 29.04–03.05: 350 zł; 01.06–13.06: 350 zł; 14.06–04.07: 400 zł; 05.07–11.07: 570 zł; 12.07–15.08: 650 zł; 16.08–31.08: 520 zł; 01.09–19.10: 300 zł.\n\nWarunki podane w cenniku: minimalny pobyt 2 doby, zameldowanie od 15:00, wymeldowanie do 10:00. Zwierzęta: 15 zł za dobę.\n\nW cenie: pościel i ręczniki, WiFi, miejsce parkingowe, korzystanie z grilla, sprzątanie końcowe i dostęp do plaży.",
-    "after": "Poznaj cennik domków Biały Szafir w Rusinowie. Podane ceny dotyczą domku za dobę dla maksymalnie sześciu osób. Sprawdź terminy, świadczenia w cenie i informacje o przyjeździe.\n\nCeny według terminów\nCennik Białego Szafiru w Rusinowie podaje stawki za domek za dobę dla maksymalnie sześciu osób. Wybierz interesujący Cię przedział dat i porównaj cenę z planowaną długością wypoczynku.\nTabela nie określa roku obowiązywania stawek. Przed rezerwacją potwierdź z nami cenę dla wybranego terminu. Zapytaj również o pobyt poza wymienionymi datami oraz o stawkę na majówkę, której daty nakładają się na przedział wiosenny.\nSprawdź dostępność domków w wybranym terminie (/rezerwacja)\n\nCo obejmuje cena pobytu\nW cenie wymieniono pościel i ręczniki, WiFi, miejsce parkingowe, korzystanie z grilla oraz sprzątanie końcowe. To elementy, które możesz uwzględnić podczas planowania kosztów wyjazdu.\nCennik wymienia także dostęp do plaży. Ośrodek jest położony 600 metrów od plaży w Rusinowie. O szczegóły dojścia możesz zapytać przed przyjazdem.\nObejrzyj domki przed wyborem pobytu (/galeria)\n\nDopłaty i pobyt ze zwierzęciem\nPodana w cenniku opłata za zwierzę wynosi 15 zł za dobę. Przyjazd z pupilem należy zgłosić wcześniej.\nPrzed dokonaniem rezerwacji zapytaj o pełny koszt swojego pobytu, w tym ewentualne dodatkowe opłaty. Podaj termin, liczbę gości i informację o zwierzęciu, aby omówić szczegóły dotyczące Twojego wyjazdu.\nZapytaj o koszt planowanego pobytu (/kontakt)\n\nDługość pobytu i godziny przyjazdu\nZameldowanie odbywa się od 15:00, a wymeldowanie do 10:00. Uwzględnij te godziny, planując podróż do Rusinowa i powrót.\nW cenniku widnieje minimum 2 dób, natomiast strona rezerwacji podaje 3 doby. Przed wyborem terminu potwierdź wymagany minimalny pobyt bezpośrednio z ośrodkiem.\nPrzejdź do informacji i systemu rezerwacji (/rezerwacja)\n\nNajczęstsze pytania\nDla ilu osób podano ceny w cenniku?\nCennik podaje ceny za dobę dla maksymalnie sześciu osób.\n\nCo według cennika obejmuje cena pobytu?\nWymieniono pościel i ręczniki, WiFi, miejsce parkingowe, korzystanie z grilla, sprzątanie końcowe oraz dostęp do plaży.\n\nJaka opłata za zwierzę jest podana na stronie?\nCennik podaje 15 zł za dobę za zwierzę; strona rezerwacji również podaje 15 zł za dobę za psa.\n\nO której można się zameldować i do której trzeba wyjechać?\nCennik podaje zameldowanie od 15:00 i wymeldowanie do 10:00."
-  },
-  {
-    "page": "/kontakt",
-    "where": "Wspólna treść React i statycznego HTML: wstęp, sekcje H2, linki i FAQ",
-    "before": "Biały Szafir, ul. Sosnowa 19, 76-107 Rusinowo.\n\nTelefon: +48 504 201 117. Kontakt telefoniczny codziennie 8:00–20:00. E-mail: info@szafirrusinowo.pl. Odpowiadamy w ciągu 24h.\n\nMożesz również skorzystać z formularza kontaktowego na tej stronie.",
-    "after": "Szukasz kontaktu do Białego Szafiru w Rusinowie? Zadzwoń, napisz lub skorzystaj z formularza. Znajdziesz nas przy ul. Sosnowej 19, 76-107 Rusinowo.\n\nDane kontaktowe Białego Szafiru\nBiały Szafir znajduje się przy ul. Sosnowej 19, 76-107 Rusinowo. W sprawie pobytu zadzwoń pod +48 504 201 117 lub napisz na info@szafirrusinowo.pl.\nMożesz również skorzystać z formularza kontaktowego na tej stronie. W wiadomości podaj planowany termin, liczbę gości i pytania o pobyt. Te informacje ułatwią rozmowę o Twoim wyjeździe.\nSprawdź dostępność i rezerwację online (/rezerwacja)\n\nGodziny kontaktu\nTelefon odbieramy codziennie od 8:00 do 20:00. Na wiadomości odpowiadamy w ciągu 24 godzin.\nGodziny kontaktu telefonicznego dotyczą rozmów z ośrodkiem. W cenniku znajdziesz osobno godziny zameldowania od 15:00 i wymeldowania do 10:00.\nZobacz ceny i informacje o przyjeździe (/cennik)\n\nDojazd i parking\nPlanując dojazd do Białego Szafiru w Rusinowie, skorzystaj z adresu ul. Sosnowa 19 oraz mapy na tej stronie. Ośrodek oferuje prywatny parking.\nJeżeli potrzebujesz wskazówek dotyczących wjazdu lub przyjeżdżasz z kilkoma samochodami, zapytaj nas o szczegóły przed podróżą.\n\nDojście do plaży\nDomki są położone przy lesie, 600 metrów od plaży. Jeśli chcesz zaplanować spacer nad morze, skontaktuj się z nami w sprawie wskazówek dojścia.\nZdjęcia domków i ich otoczenia znajdziesz w galerii. Możesz ją obejrzeć przed wyjazdem i wrócić do nas z pytaniami dotyczącymi lokalizacji.\nZobacz zdjęcia Białego Szafiru i otoczenia (/galeria)\n\nNajczęstsze pytania\nJaki jest adres Białego Szafiru?\nBiały Szafir znajduje się przy ul. Sosnowej 19, 76-107 Rusinowo.\n\nPod jaki numer można zadzwonić?\nNumer kontaktowy to +48 504 201 117.\n\nW jakich godzinach można kontaktować się telefonicznie?\nStrona podaje kontakt telefoniczny codziennie od 8:00 do 20:00.\n\nNa jaki adres e-mail można napisać?\nAdres e-mail to info@szafirrusinowo.pl.\n\nJak szybko ośrodek odpowiada na wiadomości?\nNa stronie kontaktowej zadeklarowano odpowiedź w ciągu 24 godzin."
-  },
-  {
-    "page": "/nasze-osrodki",
-    "where": "Wspólna treść React i statycznego HTML: wstęp, sekcje H2, linki i FAQ",
-    "before": "Oprócz Białego Szafiru oferujemy pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie: Biała Perła i Biały Koral.\n\nNa tej podstronie znajdziesz dane kontaktowe, adresy oraz linki do stron obu ośrodków.",
-    "after": "Biała Perła i Biały Koral w Rusinowie to pozostałe ośrodki, które przedstawiamy obok Białego Szafiru. Poznaj ich dane i przejdź do stron z ofertami poszczególnych obiektów.\n\nBiała Perła w Rusinowie\nBiała Perła to jeden z pozostałych ośrodków, które przedstawiamy obok Białego Szafiru. Znajduje się przy ul. Sosnowej 23, 76-107 Rusinowo.\nDane kontaktowe podane w ofercie to +48 519 662 166 oraz info@perlarusinowo.pl. Opis obiektu i szczegóły pobytu sprawdzisz na jego stronie.\nPoznaj ofertę ośrodka Biała Perła (https://perlarusinowo.pl)\n\nBiały Koral w Rusinowie\nBiały Koral to kolejny z naszych ośrodków w Rusinowie. W danych obiektu podany jest adres ul. Sosnowa 9, 76-107 Rusinowo oraz e-mail info@koralrusinowo.pl.\nPrzed wyborem pobytu odwiedź stronę Białego Koralu, aby zapoznać się z jego ofertą. Dostępność i warunki dla tego obiektu sprawdzaj w jego własnych informacjach rezerwacyjnych.\nPoznaj ofertę ośrodka Biały Koral (https://koralrusinowo.pl)\n\nJak wybrać ośrodek na swój pobyt\nPorównując Białą Perłę, Biały Koral i Biały Szafir, zwróć uwagę na wyposażenie, położenie oraz warunki rezerwacji każdego obiektu. Na tej stronie znajdziesz oddzielne karty z danymi i odsyłaczami do pozostałych ośrodków.\nOfertę Białego Szafiru opisujemy na stronie głównej: domki mieszczą do sześciu osób i stoją przy lesie, 600 metrów od plaży. Jeśli zastanawiasz się nad wyborem, skontaktuj się z nami i opowiedz o planowanym wyjeździe.\nPrzeczytaj ofertę domków Biały Szafir (/)\nZapytaj o wybór ośrodka (/kontakt)\n\nNajczęstsze pytania\nJakie pozostałe ośrodki wymienia strona?\nStrona wymienia Białą Perłę i Biały Koral.\n\nW jakiej miejscowości znajdują się te ośrodki?\nBiała Perła i Biały Koral znajdują się w Rusinowie.\n\nCzy podstrona zawiera linki do tych obiektów?\nTak, na tej stronie znajdziesz linki do stron Białej Perły i Białego Koralu."
-  },
-  {
-    "page": "/rezerwacja",
-    "where": "Wspólna treść React i statycznego HTML: wstęp, sekcje H2, linki i FAQ",
-    "before": "Sprawdź dostępność i zarezerwuj pobyt w domkach Biały Szafir w Rusinowie przez system rezerwacji online.\n\nKontakt bezpośredni: +48 504 201 117 (codziennie 8:00–20:00), info@szafirrusinowo.pl.\n\nInformacje podane na stronie rezerwacji: minimalny czas wynajmu 3 doby, zadatek 20% kwoty rezerwacji, przyjazd z psem 15 zł za dobę.",
-    "after": "Rezerwacja domku Biały Szafir w Rusinowie jest dostępna przez system online na tej stronie. Sprawdź dostępność domków lub skontaktuj się z nami telefonicznie pod +48 504 201 117 i e-mailem: info@szafirrusinowo.pl.\n\nJak zarezerwować pobyt w Białym Szafirze\nDostępność domków w Rusinowie sprawdzisz w systemie rezerwacji online na tej stronie. Wybierz planowany termin i zapoznaj się z informacjami wyświetlanymi przez system.\nPrzed wyborem pobytu obejrzyj zdjęcia i sprawdź cennik. Jeśli potrzebujesz pomocy z terminem lub chcesz omówić potrzeby swojej grupy, zadzwoń pod +48 504 201 117 albo napisz na info@szafirrusinowo.pl.\nPoznaj ceny pobytu (/cennik)\nObejrzyj domki przed rezerwacją (/galeria)\n\nZadatek i potwierdzenie rezerwacji\nNa stronie podany jest zadatek w wysokości 20% kwoty rezerwacji. Przed wpłatą ustal z ośrodkiem termin płatności, sposób rozliczenia pozostałej kwoty i zasady potwierdzenia pobytu.\nJeżeli potrzebujesz informacji o zmianie terminu lub rezygnacji, skontaktuj się z nami przed dokonaniem rezerwacji. Pomożemy wyjaśnić warunki dotyczące Twojego pobytu.\nZapytaj o płatność i potwierdzenie pobytu (/kontakt)\n\nDługość pobytu\nInformacje rezerwacyjne na tej stronie podają minimum 3 dób. W cenniku widnieją 2 doby, dlatego wymagane minimum dla wybranego terminu należy potwierdzić bezpośrednio z ośrodkiem.\nDomki są przeznaczone dla maksymalnie sześciu osób. Przy ustalaniu pobytu podaj liczbę gości i daty, które Cię interesują.\n\nPrzyjazd ze zwierzęciem\nZwierzęta akceptujemy po wcześniejszym zgłoszeniu. Przy rezerwacji podana jest opłata za psa wynosząca 15 zł za dobę.\nPoinformuj nas o przyjeździe z pupilem przed pobytem. Jeśli planujesz zabrać kilka zwierząt lub potrzebujesz dodatkowych ustaleń, omów je z nami podczas kontaktu.\nUstal pobyt z pupilem (/kontakt)\n\nNajczęstsze pytania\nCzy można zarezerwować pobyt online?\nTak, dostępność i rezerwację pobytu obsługuje system online na tej stronie.\n\nJaki zadatek podano na stronie rezerwacji?\nPodano zadatek wynoszący 20% kwoty rezerwacji.\n\nJak można skontaktować się bezpośrednio w sprawie rezerwacji?\nMożna zadzwonić pod +48 504 201 117 lub napisać na info@szafirrusinowo.pl.\n\nJaka opłata za przyjazd z psem jest podana przy rezerwacji?\nStrona rezerwacji podaje 15 zł za dobę."
-  },
-  {
-    "page": "/",
-    "where": "Akapit w src/components/SlideshowHero.tsx",
-    "before": "Odkryj idealne miejsce na wakacje w Rusinowie. Komfortowe domki w otoczeniu lasu, zaledwie 600 metrów od plaży Bałtyku. Ciesz się spokojem natury i bliskością morza.",
-    "after": "Biały Szafir to domki letniskowe w Rusinowie dla maksymalnie sześciu osób, położone przy lesie, 600 metrów od plaży. Zaplanuj pobyt nad morzem z własnym aneksem kuchennym, WiFi i prywatnym parkingiem."
-  },
-  {
-    "page": "/",
-    "where": "Akapit w src/components/Equipment.tsx",
-    "before": "Każdy domek jest w pełni wyposażony i przygotowany na pobyt do 5 osób. Nowoczesne udogodnienia zapewniają komfort porównywalny z domowym.",
-    "after": "Każdy domek jest w pełni wyposażony i przygotowany na pobyt do 6 osób. Nowoczesne udogodnienia zapewniają komfort porównywalny z domowym."
-  },
-  {
-    "page": "/",
-    "where": "Akapit w src/components/Activities.tsx",
-    "before": "Region Słowińskiego Parku Narodowego oferuje kilometry bezpiecznych ścieżek rowerowych. Możesz dotrzeć do Jarosławca, Wici czy Darłowa, podziwiając po drodze unikalne krajobrazy wydm i nadmorskich łąk.",
-    "after": "Przed wycieczką zapytaj nas o wskazówki dotyczące okolicy i zaplanuj trasę odpowiednią do swoich potrzeb."
-  },
-  {
-    "page": "/",
-    "where": "Akapit w src/components/Activities.tsx",
-    "before": "Rusinowo to małe, spokojne miasteczko na polskim wybrzeżu Bałtyku, położone między Darłowem a Jarosławcem. Dzięki położeniu w sercu Słowińskiego Parku Narodowego, oferuje niepowtarzalny kontakt z przyrodą. W okolicy znajdziecie ruchome wydmy, jeziora nadmorskie, latarnię morską w Darłowie oraz liczne szlaki piesze i rowerowe.",
-    "after": "Biały Szafir znajduje się przy ul. Sosnowej 19 w Rusinowie. Skontaktuj się z nami, jeśli potrzebujesz wskazówek dojazdu lub dojścia do plaży."
-  },
-  {
-    "page": "/galeria",
-    "where": "Opis w hero",
-    "before": "Zobacz nasze komfortowe domki letniskowe i piękne otoczenie w Rusinowie",
-    "after": "Zobacz zdjęcia domków Biały Szafir w Rusinowie i ich otoczenia. Galeria oraz filmy pomogą Ci przyjrzeć się ośrodkowi przed zaplanowaniem pobytu nad morzem."
+    "where": "Wstęp",
+    "before": "Poznaj cennik domków Biały Szafir w Rusinowie. Podane ceny dotyczą domku za dobę dla maksymalnie sześciu osób. Sprawdź terminy, świadczenia w cenie i informacje o przyjeździe.",
+    "after": "Poznaj cennik domków Biały Szafir w Rusinowie na 2026 rok. Ceny dotyczą całego domku za dobę dla maksymalnie 6 osób. Minimalny pobyt wynosi 3 doby."
   },
   {
     "page": "/cennik",
-    "where": "Opis w hero",
-    "before": "Sprawdź nasze konkurencyjne ceny za noclegi w domkach letniskowych Biały Szafir w Rusinowie",
-    "after": "Poznaj cennik domków Biały Szafir w Rusinowie. Podane ceny dotyczą domku za dobę dla maksymalnie sześciu osób. Sprawdź terminy, świadczenia w cenie i informacje o przyjeździe."
+    "where": "Sekcje treści",
+    "before": "Ceny według terminów\nCennik Białego Szafiru w Rusinowie podaje stawki za domek za dobę dla maksymalnie sześciu osób. Wybierz interesujący Cię przedział dat i porównaj cenę z planowaną długością wypoczynku.\n\nTabela nie określa roku obowiązywania stawek. Przed rezerwacją potwierdź z nami cenę dla wybranego terminu. Zapytaj również o pobyt poza wymienionymi datami oraz o stawkę na majówkę, której daty nakładają się na przedział wiosenny.\n\nCo obejmuje cena pobytu\nW cenie wymieniono pościel i ręczniki, WiFi, miejsce parkingowe, korzystanie z grilla oraz sprzątanie końcowe. To elementy, które możesz uwzględnić podczas planowania kosztów wyjazdu.\n\nCennik wymienia także dostęp do plaży. Ośrodek jest położony 600 metrów od plaży w Rusinowie. O szczegóły dojścia możesz zapytać przed przyjazdem.\n\nDopłaty i pobyt ze zwierzęciem\nPodana w cenniku opłata za zwierzę wynosi 15 zł za dobę. Przyjazd z pupilem należy zgłosić wcześniej.\n\nPrzed dokonaniem rezerwacji zapytaj o pełny koszt swojego pobytu, w tym ewentualne dodatkowe opłaty. Podaj termin, liczbę gości i informację o zwierzęciu, aby omówić szczegóły dotyczące Twojego wyjazdu.\n\nDługość pobytu i godziny przyjazdu\nZameldowanie odbywa się od 15:00, a wymeldowanie do 10:00. Uwzględnij te godziny, planując podróż do Rusinowa i powrót.\n\nW cenniku widnieje minimum 2 dób, natomiast strona rezerwacji podaje 3 doby. Przed wyborem terminu potwierdź wymagany minimalny pobyt bezpośrednio z ośrodkiem.",
+    "after": "W cenie pobytu\nCeny obowiązują w 2026 roku i dotyczą całego domku za dobę dla maksymalnie 6 osób. Na działce są 4 jednakowo wyposażone domki.\n\nCena obejmuje pościel i ręczniki, WiFi, miejsce parkingowe, korzystanie z grilla i sprzątanie końcowe. Aneks kuchenny w każdym domku pozwala samodzielnie przygotowywać posiłki.\n\nPobyt ze zwierzęciem\nOpłata za zwierzę wynosi 15 zł za dobę. Przyjazd z pupilem zgłoś przed pobytem i zapewnij mu stały nadzór opiekuna.\n\nWybierając termin, uwzględnij liczbę gości i pobyt zwierzęcia. Dostępność domków sprawdzisz w systemie rezerwacji online.\n\nZasady pobytu\nMinimalny pobyt wynosi 3 doby. Zameldowanie jest możliwe od 15:00, a wymeldowanie odbywa się do 10:00.\n\nZadatek wynosi 20% kwoty rezerwacji. Informacje o rezerwacji oraz system wyboru terminu znajdziesz na stronie rezerwacji.\n\nDomki znajdują się przy lesie, 600 metrów od plaży w Rusinowie."
   },
   {
     "page": "/kontakt",
-    "where": "Opis w hero",
-    "before": "Masz pytania? Chętnie pomożemy Ci zaplanować idealny wypoczynek w Rusinowie",
-    "after": "Szukasz kontaktu do Białego Szafiru w Rusinowie? Zadzwoń, napisz lub skorzystaj z formularza. Znajdziesz nas przy ul. Sosnowej 19, 76-107 Rusinowo."
+    "where": "Sekcje treści",
+    "before": "Dane kontaktowe Białego Szafiru\nBiały Szafir znajduje się przy ul. Sosnowej 19, 76-107 Rusinowo. W sprawie pobytu zadzwoń pod +48 504 201 117 lub napisz na info@szafirrusinowo.pl.\n\nMożesz również skorzystać z formularza kontaktowego na tej stronie. W wiadomości podaj planowany termin, liczbę gości i pytania o pobyt. Te informacje ułatwią rozmowę o Twoim wyjeździe.\n\nGodziny kontaktu\nTelefon odbieramy codziennie od 8:00 do 20:00. Na wiadomości odpowiadamy w ciągu 24 godzin.\n\nGodziny kontaktu telefonicznego dotyczą rozmów z ośrodkiem. W cenniku znajdziesz osobno godziny zameldowania od 15:00 i wymeldowania do 10:00.\n\nDojazd i parking\nPlanując dojazd do Białego Szafiru w Rusinowie, skorzystaj z adresu ul. Sosnowa 19 oraz mapy na tej stronie. Ośrodek oferuje prywatny parking.\n\nJeżeli potrzebujesz wskazówek dotyczących wjazdu lub przyjeżdżasz z kilkoma samochodami, zapytaj nas o szczegóły przed podróżą.\n\nDojście do plaży\nDomki są położone przy lesie, 600 metrów od plaży. Jeśli chcesz zaplanować spacer nad morze, skontaktuj się z nami w sprawie wskazówek dojścia.\n\nZdjęcia domków i ich otoczenia znajdziesz w galerii. Możesz ją obejrzeć przed wyjazdem i wrócić do nas z pytaniami dotyczącymi lokalizacji.",
+    "after": "Dojazd na Sosnową 19\nW nawigacji wpisz: Biały Szafir, ul. Sosnowa 19, 76-107 Rusinowo. Na miejscu dostępny jest prywatny parking.\n\nMapa na tej stronie pomoże zaplanować podróż do ośrodka. W sprawie przyjazdu możesz zadzwonić pod +48 504 201 117.\n\nPobyt przy lesie i morzu\nDomki znajdują się przy lesie, 600 metrów od plaży w Rusinowie. Zdjęcia tarasów, wnętrz i terenu ośrodka obejrzysz w galerii.\n\nTermin możesz wybrać w systemie rezerwacji online i sprawdzić w nim dostępność domków. W wiadomości do nas podaj daty pobytu, liczbę gości oraz informację o przyjeździe ze zwierzęciem."
   },
   {
     "page": "/nasze-osrodki",
-    "where": "Opis w hero",
-    "before": "Oprócz Białego Szafiru oferujemy także pobyt w naszych innych ośrodkach wypoczynkowych w Rusinowie",
-    "after": "Biała Perła i Biały Koral w Rusinowie to pozostałe ośrodki, które przedstawiamy obok Białego Szafiru. Poznaj ich dane i przejdź do stron z ofertami poszczególnych obiektów."
+    "where": "Sekcje treści",
+    "before": "Biała Perła w Rusinowie\nBiała Perła to jeden z pozostałych ośrodków, które przedstawiamy obok Białego Szafiru. Znajduje się przy ul. Sosnowej 23, 76-107 Rusinowo.\n\nDane kontaktowe podane w ofercie to +48 519 662 166 oraz info@perlarusinowo.pl. Opis obiektu i szczegóły pobytu sprawdzisz na jego stronie.\n\nBiały Koral w Rusinowie\nBiały Koral to kolejny z naszych ośrodków w Rusinowie. W danych obiektu podany jest adres ul. Sosnowa 9, 76-107 Rusinowo oraz e-mail info@koralrusinowo.pl.\n\nPrzed wyborem pobytu odwiedź stronę Białego Koralu, aby zapoznać się z jego ofertą. Dostępność i warunki dla tego obiektu sprawdzaj w jego własnych informacjach rezerwacyjnych.\n\nJak wybrać ośrodek na swój pobyt\nPorównując Białą Perłę, Biały Koral i Biały Szafir, zwróć uwagę na wyposażenie, położenie oraz warunki rezerwacji każdego obiektu. Na tej stronie znajdziesz oddzielne karty z danymi i odsyłaczami do pozostałych ośrodków.\n\nOfertę Białego Szafiru opisujemy na stronie głównej: domki mieszczą do sześciu osób i stoją przy lesie, 600 metrów od plaży. Jeśli zastanawiasz się nad wyborem, skontaktuj się z nami i opowiedz o planowanym wyjeździe.",
+    "after": "Biała Perła w Rusinowie\nBiała Perła znajduje się przy ul. Sosnowej 23, 76-107 Rusinowo. To nasz pierwszy ośrodek wypoczynkowy nad morzem.\n\nW ofercie są domki w lesie, plac zabaw i rowery do wypożyczenia. Wyposażenie, ceny i dostępność sprawdzisz na stronie Białej Perły.\n\nZadzwoń: +48 519 662 166. Napisz: info@perlarusinowo.pl.\n\nBiały Koral w Rusinowie\nBiały Koral mieści się przy ul. Sosnowej 9, 76-107 Rusinowo. Jest drugim z naszych ośrodków.\n\nW ofercie są domki w lesie, plac zabaw i rowery do wypożyczenia. Szczegóły pobytu i warunki rezerwacji znajdziesz na stronie Białego Koralu.\n\nZadzwoń: +48 797 392 903. Napisz: info@koralrusinowo.pl."
   },
   {
     "page": "/rezerwacja",
-    "where": "Opis w hero",
-    "before": "Zarezerwuj swój pobyt w domkach letniskowych Biały Szafir już dziś!",
-    "after": "Rezerwacja domku Biały Szafir w Rusinowie jest dostępna przez system online na tej stronie. Sprawdź dostępność domków lub skontaktuj się z nami telefonicznie pod +48 504 201 117 i e-mailem: info@szafirrusinowo.pl."
+    "where": "Sekcje treści",
+    "before": "Jak zarezerwować pobyt w Białym Szafirze\nDostępność domków w Rusinowie sprawdzisz w systemie rezerwacji online na tej stronie. Wybierz planowany termin i zapoznaj się z informacjami wyświetlanymi przez system.\n\nPrzed wyborem pobytu obejrzyj zdjęcia i sprawdź cennik. Jeśli potrzebujesz pomocy z terminem lub chcesz omówić potrzeby swojej grupy, zadzwoń pod +48 504 201 117 albo napisz na info@szafirrusinowo.pl.\n\nZadatek i potwierdzenie rezerwacji\nNa stronie podany jest zadatek w wysokości 20% kwoty rezerwacji. Przed wpłatą ustal z ośrodkiem termin płatności, sposób rozliczenia pozostałej kwoty i zasady potwierdzenia pobytu.\n\nJeżeli potrzebujesz informacji o zmianie terminu lub rezygnacji, skontaktuj się z nami przed dokonaniem rezerwacji. Pomożemy wyjaśnić warunki dotyczące Twojego pobytu.\n\nDługość pobytu\nInformacje rezerwacyjne na tej stronie podają minimum 3 dób. W cenniku widnieją 2 doby, dlatego wymagane minimum dla wybranego terminu należy potwierdzić bezpośrednio z ośrodkiem.\n\nDomki są przeznaczone dla maksymalnie sześciu osób. Przy ustalaniu pobytu podaj liczbę gości i daty, które Cię interesują.\n\nPrzyjazd ze zwierzęciem\nZwierzęta akceptujemy po wcześniejszym zgłoszeniu. Przy rezerwacji podana jest opłata za psa wynosząca 15 zł za dobę.\n\nPoinformuj nas o przyjeździe z pupilem przed pobytem. Jeśli planujesz zabrać kilka zwierząt lub potrzebujesz dodatkowych ustaleń, omów je z nami podczas kontaktu.",
+    "after": "1. Wybierz termin\nSprawdź wolne terminy Białego Szafiru w systemie online powyżej. Wybierz daty i podaj liczbę gości. Każdy z 4 domków mieści maksymalnie 6 osób i ma takie samo wyposażenie.\n\nMinimalny pobyt wynosi 3 doby. Cennik na 2026 rok podaje stawki za cały domek za dobę.\n\n2. Zaplanuj płatność\nZadatek wynosi 20% kwoty rezerwacji. Przed wpłatą sprawdź informacje o płatności przekazane przy rezerwacji.\n\nJeśli potrzebujesz wyjaśnienia warunków płatności, zadzwoń pod +48 504 201 117.\n\n3. Ustal szczegóły przyjazdu\nZameldowanie odbywa się od 15:00, a wymeldowanie do 10:00. Przyjazd ze zwierzęciem zgłoś wcześniej. Opłata wynosi 15 zł za dobę.\n\nW sprawie szczegółów rezerwacji napisz na info@szafirrusinowo.pl. Telefon odbieramy codziennie od 8:00 do 20:00, a na wiadomości odpowiadamy w ciągu 24 godzin."
   },
   {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: 1.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 1",
-    "after": "Plac zabaw i trawnik między domkami Biały Szafir w Rusinowie"
+    "page": "/cennik",
+    "where": "Nagłówek cennika",
+    "before": "Porównaj ceny za domek za dobę dla maksymalnie 6 osób",
+    "after": "Cennik domków na 2026 rok\nZł za domek za dobę, maksymalnie 6 osób. Minimalny pobyt: 3 doby."
   },
   {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: 2.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 2",
-    "after": "Domek z tarasem i huśtawką na tle lasu w Rusinowie"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (1 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 3",
-    "after": "Salon ze stołem, telewizorem i aneksem kuchennym"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (12 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 4",
-    "after": "Ręczniki ułożone na łóżku w domku Biały Szafir"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (2 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 5",
-    "after": "Aneks kuchenny z lodówką, ekspresem i stołem"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (20 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 6",
-    "after": "Dwa pojedyncze łóżka i szafka w sypialni"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (23 of 37)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 7",
-    "after": "Sypialnia z podwójnym łóżkiem i lampkami nocnymi"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (24 of 37)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 8",
-    "after": "Umywalka, lustro i szafka w łazience"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (25 of 37)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 9",
-    "after": "Łazienka z kabiną prysznicową i toaletą"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (3 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 10",
-    "after": "Salon z klimatyzacją nad drzwiami wejściowymi"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (32 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 11",
-    "after": "Stół, krzesła i grill na zadaszonym tarasie"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (35 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 12",
-    "after": "Biały domek z tarasem przy drzewach"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (36 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 13",
-    "after": "Front domku z ławką i białą balustradą"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (39 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 14",
-    "after": "Domki przy lesie, huśtawka i trawnik"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (4 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 15",
-    "after": "Stół z filiżankami i kwiatami w aneksie kuchennym"
-  },
-  {
-    "page": "/galeria",
-    "where": "Alt i nowy podpis: untitled (41 of 56)-min.jpg",
-    "before": "Biały Szafir w Rusinowie – zdjęcie 16",
-    "after": "Plac zabaw ze ścianką wspinaczkową i zjeżdżalnią"
+    "page": "/cennik",
+    "where": "Tabela i karty terminów",
+    "before": "11.04 - 31.05",
+    "after": "11.04–28.04 i 04.05–31.05"
   },
   {
     "page": "/",
-    "where": "Sekcja About zastąpiona wspólną rozbudowaną treścią",
-    "before": "Biały Szafir — Domki letniskowe nad morzem\nZapraszamy do naszych komfortowych domków letniskowych w Rusinowie. Idealne miejsce na rodzinny wypoczynek w otoczeniu pięknej przyrody, z łatwym dostępem do plaży i licznych atrakcji turystycznych.",
-    "after": "Biały Szafir to domki letniskowe w Rusinowie dla maksymalnie sześciu osób, położone przy lesie, 600 metrów od plaży. Zaplanuj pobyt nad morzem z własnym aneksem kuchennym, WiFi i prywatnym parkingiem.\n\nWyposażenie domków w Rusinowie\nW aneksie kuchennym znajdziesz lodówkę, zmywarkę, płytę indukcyjną i ekspres. Możesz przygotować śniadanie przed wyjściem na plażę i zaplanować posiłki we własnym rytmie. Lodówka pozwala przechować zakupy, a zmywarka ułatwia sprzątanie po wspólnym obiedzie.\nNa terenie ośrodka dostępne jest WiFi i prywatny parking. W wyposażeniu wymieniamy też telewizję satelitarną, klimatyzację, pralkę i grill. Przed wyborem terminu obejrzyj zdjęcia, aby przyjrzeć się domkom i ich otoczeniu.\nObejrzyj wnętrza i otoczenie domków (/galeria)\n\nDomki nad morzem dla maksymalnie sześciu osób\nBiały Szafir to propozycja pobytu w Rusinowie dla rodziny lub grupy do sześciu osób. Wspólny aneks kuchenny daje możliwość samodzielnego przygotowania posiłków podczas urlopu.\nZanim wybierzesz domek, zapoznaj się z wyposażeniem i stawkami dla poszczególnych terminów. Jeśli potrzebujesz szczegółów dotyczących układu pomieszczeń lub przygotowania pobytu dla swojej grupy, skontaktuj się z nami.\nZobacz cennik domków dla sześciu osób (/cennik)\n\nPobyt ze zwierzętami\nDo Białego Szafiru możesz przyjechać ze zwierzęciem po wcześniejszym zgłoszeniu. Poinformuj nas o pupilu podczas ustalania pobytu. Zwierzęta powinny pozostawać pod stałym nadzorem opiekunów.\nW cenniku podana jest opłata 15 zł za dobę za zwierzę. Jeżeli planujesz przyjazd z kilkoma pupilami, zapytaj nas o szczegóły przed rezerwacją.\nUstal szczegóły pobytu ze zwierzęciem (/kontakt)\n\nPlaża i otoczenie\nDomki stoją przy lesie, 600 metrów od plaży w Rusinowie. Bliskość lasu i morza pozwala połączyć wypoczynek w domku z czasem spędzanym na zewnątrz.\nAdres ośrodka to ul. Sosnowa 19, 76-107 Rusinowo. Na stronie kontaktowej znajdziesz mapę oraz telefon i e-mail, pod którymi możesz zapytać o dojazd i dojście do plaży.\nSprawdź adres i lokalizację Białego Szafiru (/kontakt)\n\nJak sprawdzić termin\nDostępność domków sprawdzisz na stronie rezerwacji w systemie online. Przy wyborze pobytu zajrzyj także do cennika, gdzie znajdziesz stawki sezonowe i informacje o tym, co obejmuje cena.\nWolisz porozmawiać? Zadzwoń pod +48 504 201 117 lub napisz na info@szafirrusinowo.pl. Telefon odbieramy codziennie od 8:00 do 20:00.\nSprawdź dostępność domków (/rezerwacja)\n\nNajczęstsze pytania\nDla ilu osób przeznaczone są domki?\nDomki są przeznaczone dla maksymalnie sześciu osób.\n\nJak daleko jest do plaży?\nDomki znajdują się 600 metrów od plaży w Rusinowie.\n\nCo znajduje się w aneksie kuchennym?\nW aneksie są lodówka, zmywarka, płyta indukcyjna i ekspres.\n\nCzy można przyjechać ze zwierzęciem?\nZwierzęta są akceptowane po wcześniejszym zgłoszeniu.\n\nCzy na terenie ośrodka jest internet?\nNa terenie ośrodka dostępne jest WiFi."
-  },
-  {
-    "page": "/*",
-    "where": "Strona NotFound",
-    "before": "Oops! Page not found\nReturn to Home",
-    "after": "Nie znaleziono strony\nWróć na stronę główną"
+    "where": "Karta „Twój domek w Rusinowie”",
+    "before": "W każdym domku znajdziesz także telewizję satelitarną, klimatyzację, pralkę i grill. Na zdjęciach obejrzysz salon, sypialnie, łazienkę i taras.",
+    "after": "W każdym domku znajdziesz także telewizję satelitarną, klimatyzację, pralkę i grill. Na zdjęciach obejrzysz salon z aneksem kuchennym, sypialnię z podwójnym łóżkiem, pokój z dwoma pojedynczymi łóżkami, łazienkę i taras."
   }
 ]

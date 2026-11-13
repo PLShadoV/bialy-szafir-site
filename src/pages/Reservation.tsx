@@ -4,15 +4,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
-import { Users, Phone, Mail } from "lucide-react";
 import heroForest from "@/assets/hero-forest.jpg";
 
 const IFRAME_ID =
@@ -134,81 +126,6 @@ const Reservation = () => {
               </div>
             </div>
 
-            {/* ===== INFO SECTIONS ===== */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card className="glass-card">
-                <CardHeader>
-                  <CardTitle as="h2" className="flex items-center gap-2 text-xl">
-                    <Phone className="h-6 w-6 text-primary" />
-                    Kontakt bezpośredni
-                  </CardTitle>
-                  <CardDescription>
-                    Potrzebujesz pomocy? Skontaktuj się z nami bezpośrednio
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <Phone className="h-4 w-4" />
-                      Zadzwoń do nas
-                    </h3>
-                    <p className="text-xl font-mono text-primary">
-                      +48 504 201 117
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Dostępni codziennie 8:00 – 20:00
-                    </p>
-                  </div>
-
-                  <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <h3 className="font-semibold mb-2 flex items-center gap-2">
-                      <Mail className="h-4 w-4" />
-                      Napisz do nas
-                    </h3>
-                    <p className="text-lg text-primary">
-                      info@szafirrusinowo.pl
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Odpowiadamy w ciągu 24h
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="glass-card">
-                <CardHeader>
-                  <CardTitle as="h2" className="flex items-center gap-2 text-xl">
-                    <Users className="h-6 w-6 text-primary" />
-                    Informacje o rezerwacji
-                  </CardTitle>
-                  <CardDescription>
-                    Ważne informacje dotyczące rezerwacji i pobytu
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="p-4 bg-muted/50 rounded-lg">
-                      <h3 className="font-semibold text-sm">
-                        Minimalny czas wynajmu
-                      </h3>
-                      <p className="text-muted-foreground">3 doby</p>
-                    </div>
-                    <div className="p-4 bg-muted/50 rounded-lg">
-                      <h3 className="font-semibold text-sm">Zadatek</h3>
-                      <p className="text-muted-foreground">
-                        20% kwoty rezerwacji
-                      </p>
-                    </div>
-                    <div className="p-4 bg-muted/50 rounded-lg">
-                      <h3 className="font-semibold text-sm">
-                        Przyjazd z psem
-                      </h3>
-                      <p className="text-muted-foreground">15 zł / doba</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
         <PageContent path="/rezerwacja" />

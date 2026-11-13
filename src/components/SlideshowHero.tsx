@@ -48,8 +48,8 @@ const SlideshowHero = () => {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          {visited.includes(index) && <img src={`/media/${["1", "herodron", "2"][index]}-1440.webp`} srcSet={`/media/${["1", "herodron", "2"][index]}-720.webp 720w, /media/${["1", "herodron", "2"][index]}-1440.webp 1440w`} sizes="100vw" alt="" width={[1536, 1920, 1024][index]} height={[1024, 653, 1024][index]}
-            fetchPriority={index === 0 ? "high" : "low"} className="absolute inset-0 w-full h-full object-cover" />}
+          {visited.includes(index) && <picture><source media="(max-width: 767px)" srcSet={`/media/${["1", "herodron", "2"][index]}-720.webp`} /><img src={`/media/${["1", "herodron", "2"][index]}-1440.webp`} srcSet={`/media/${["1", "herodron", "2"][index]}-720.webp 720w, /media/${["1", "herodron", "2"][index]}-1440.webp 1440w`} sizes="100vw" alt="" width={[1536, 1920, 1024][index]} height={[1024, 653, 1024][index]}
+            fetchPriority={index === 0 ? "high" : "low"} className="absolute inset-0 w-full h-full object-cover" /></picture>}
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
       ))}

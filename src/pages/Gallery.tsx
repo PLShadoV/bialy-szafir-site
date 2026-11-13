@@ -6,8 +6,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import FloatingActions from "@/components/FloatingActions";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wifi, Car, Utensils, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 // 👉 automatyczne wczytanie obrazów
@@ -28,7 +27,7 @@ import heroForest from "@/assets/hero-forest.jpg";
 // generous native lazy-loading threshold. Full files are never prefetched for the lightbox.
 function GalleryPhoto({ image }: { image: ImgEntry }) {
   const ref = useRef<HTMLImageElement>(null);
-  const [visible, setVisible] = useState(image.id === 1);
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
     if (visible || !ref.current) return;
     if (!("IntersectionObserver" in window)) { setVisible(true); return; }
@@ -38,9 +37,9 @@ function GalleryPhoto({ image }: { image: ImgEntry }) {
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, [visible]);
-  return <img ref={ref} src={visible ? image.small : undefined} srcSet={visible ? `${image.small} 360w, ${image.large} 720w` : undefined} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw" alt={image.alt}
+  return <img ref={ref} src={visible ? image.small : undefined} srcSet={visible ? `${image.small} 360w, ${image.large} 720w` : undefined} sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw" alt={image.alt}
     width={image.width} height={image.height} decoding="async"
-    loading={image.id === 1 ? "eager" : "lazy"}
+    loading="lazy"
     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />;
 }
 
@@ -117,6 +116,7 @@ const Gallery: React.FC = () => {
         <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-primary text-center mb-12">Zdjęcia domków</h2>
+            <PageContent path="/galeria" sectionIndex={0} />
 
             {total === 0 ? (
               <p className="text-center text-muted-foreground">
@@ -126,7 +126,7 @@ const Gallery: React.FC = () => {
               <div className="space-y-12 mb-16">
                 {["Otoczenie i tarasy", "Wnętrza domków"].map((group) => <section key={group}>
                 <h3 className="text-2xl font-semibold text-primary mb-6">{group}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                 {galleryImages.filter((image) => image.group === group).map((image) => (
                   <figure key={image.id}>
                   <button
@@ -147,40 +147,11 @@ const Gallery: React.FC = () => {
           </div>
         </section>
 
-        {/* Features */}
-        <section className="py-16 bg-cozy-cream">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8 gradient-text">Nasze domki</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="feature-card text-center">
-                <CardHeader>
-                  <div className="flex justify-center mb-4"><Wifi className="h-12 w-12 text-primary" /></div>
-                  <CardTitle>Szybki internet WiFi</CardTitle>
-                  <CardDescription>Bezpłatny dostęp do sieci</CardDescription>
-                </CardHeader>
-              </Card>
-              <Card className="feature-card text-center">
-                <CardHeader>
-                  <div className="flex justify-center mb-4"><Car className="h-12 w-12 text-primary" /></div>
-                  <CardTitle>Parking prywatny</CardTitle>
-                  <CardDescription>Własne miejsce parkingowe</CardDescription>
-                </CardHeader>
-              </Card>
-              <Card className="feature-card text-center">
-                <CardHeader>
-                  <div className="flex justify-center mb-4"><Utensils className="h-12 w-12 text-primary" /></div>
-                  <CardTitle>Wyposażona kuchnia</CardTitle>
-                  <CardDescription>Pełne zaplecze kuchenne</CardDescription>
-                </CardHeader>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Videos Section */}
         <section className="py-16 bg-cozy-beige">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Filmy promocyjne</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 gradient-text">Filmy z ośrodka</h2>
+            <PageContent path="/galeria" sectionIndex={1} />
             
             {/* Main Video - Large */}
             <div className="max-w-4xl mx-auto mb-16">
@@ -204,7 +175,7 @@ const Gallery: React.FC = () => {
             </div>
 
             {/* Language Versions Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { lang: "English", label: "Film w języku angielskim", url: "https://www.youtube.com/embed/xZh-FGzdwRU" },
                 { lang: "Deutsch", label: "Film w języku niemieckim", url: "https://www.youtube.com/embed/4PGKNfEpsaU" },
@@ -264,7 +235,6 @@ const Gallery: React.FC = () => {
             <button className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl" onClick={(e) => { e.stopPropagation(); next(); }}>&#8250;</button>
           </div>
         )}
-        <PageContent path="/galeria" />
       </main>
       <FloatingActions />
     </div>

@@ -4,14 +4,15 @@
   "@id": "https://szafirrusinowo.pl/#lodging",
   "name": "Biały Szafir",
   "url": "https://szafirrusinowo.pl/",
-  "description": "Domki letniskowe w Rusinowie dla maksymalnie 6 osób, położone przy lesie, 600 metrów od plaży.",
+  "description": "4 jednakowo wyposażone domki letniskowe w Rusinowie, każdy dla maksymalnie 6 osób, przy lesie, 600 metrów od plaży.",
   "telephone": "+48504201117",
   "email": "info@szafirrusinowo.pl",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ul. Sosnowa 19",
     "postalCode": "76-107",
-    "addressLocality": "Rusinowo"
+    "addressLocality": "Rusinowo",
+    "addressCountry": "PL"
   },
   "checkinTime": "15:00",
   "checkoutTime": "10:00",
@@ -32,5 +33,6 @@
       "name": "Aneks kuchenny z lodówką, zmywarką, płytą indukcyjną i ekspresem",
       "value": true
     }
-  ]
+  ],
+  "image": "https://szafirrusinowo.pl/og-image.jpg"
 }
