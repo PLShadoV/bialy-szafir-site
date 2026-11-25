@@ -16,6 +16,7 @@ const Header = () => {
     { name: "Strona główna", href: "/" },
     { name: "Galeria", href: "/galeria" },
     { name: "Cennik", href: "/cennik" },
+    { name: "Okolica", href: "/okolica" },
     { name: "Kontakt", href: "/kontakt" },
   ];
 

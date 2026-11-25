@@ -9,6 +9,7 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import OurCenters from "./pages/OurCenters";
 import Reservation from "./pages/Reservation";
+import Okolica from "./pages/Okolica";
 import NotFound from "./pages/NotFound";
 
 import RouteSeo from "./seo/RouteSeo";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/galeria" element={<Gallery />} />
           <Route path="/cennik" element={<Pricing />} />
+          <Route path="/okolica" element={<Okolica />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/nasze-osrodki" element={<OurCenters />} />
           <Route path="/rezerwacja" element={<Reservation />} />

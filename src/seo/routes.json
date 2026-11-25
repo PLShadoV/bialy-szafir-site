@@ -1,8 +1,8 @@
 [
   {
     "path": "/",
-    "title": "Domki letniskowe nad morzem w Rusinowie | Biały Szafir",
-    "description": "Wypocznij w domkach Biały Szafir w Rusinowie, 600 metrów od plaży. Poznaj wyposażenie domków dla 6 osób, zobacz zdjęcia i zarezerwuj pobyt nad morzem.",
+    "title": "Domki Rusinowo 600 m od plaży — wakacje nad morzem | Biały Szafir",
+    "description": "Komfortowe domki letniskowe w Rusinowie dla 6 osób, 600 m od plaży. Klimatyzacja, zmywarka, pralka, Wi-Fi światłowód i plac zabaw. Zobacz zdjęcia i cennik!",
     "h1": "Biały Szafir – domki letniskowe w Rusinowie",
     "paragraphs": [
       "Biały Szafir to 4 domki letniskowe w Rusinowie, każdy dla maksymalnie 6 osób. Wypocznij przy lesie, 600 metrów od plaży, z własnym aneksem kuchennym i tarasem. Wyposażenie jest takie samo w każdym domku."
@@ -49,6 +49,10 @@
         ],
         "icon": "map",
         "links": [
+          {
+            "href": "/okolica",
+            "label": "Poznaj Rusinowo i okolicę"
+          },
           {
             "href": "/rezerwacja",
             "label": "Sprawdź termin"
@@ -340,6 +344,68 @@
     "faq": [],
     "hero": {
       "file": "hero-forest.jpg",
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  {
+    "path": "/okolica",
+    "title": "Wakacje Rusinowo i okolica — plaża, las, wycieczki | Biały Szafir",
+    "description": "Zaplanuj wakacje w Rusinowie nad morzem: szeroka plaża 600 m od domków Biały Szafir, sosnowy las, szlak rowerowy Velo Baltica oraz wycieczki do Jarosławca i Darłowa.",
+    "h1": "Wakacje w Rusinowie i atrakcje okolicy",
+    "paragraphs": [
+      "Rusinowo to spokojna miejscowość nad Bałtykiem otoczona sosnowym lasem. Domki Biały Szafir przy ul. Sosnowej 19 dzieli około 600 metrów od szerokiej piaszczystej plaży, a w zasięgu krótkiej wycieczki czekają Jarosławiec, Darłowo i Ustka."
+    ],
+    "sections": [
+      {
+        "heading": "Szeroka plaża w Rusinowie (600 m)",
+        "paragraphs": [
+          "Na plażę prowadzi spokojna ścieżka przez sosnowy las. Szeroki brzeg w Rusinowie daje komfort rodzinom z dziećmi oraz gościom szukającym ciszy z dala od zatłoczonych kurortów.",
+          "Po dniu nad morzem wracasz do klimatyzowanego domku z zadaszonym tarasem i miejscem na grilla."
+        ],
+        "icon": "map",
+        "links": [
+          {
+            "href": "/galeria",
+            "label": "Zobacz zdjęcia domków"
+          }
+        ],
+        "image": "/media/hero-beach-720.webp"
+      },
+      {
+        "heading": "Jarosławiec, Darłowo i Ustka",
+        "paragraphs": [
+          "Do Jarosławca dojedziesz w kilka minut (ok. 4 km) — czeka tam latarnia morska, klif, przystań rybacka i aquapark.",
+          "W odległości ok. 16 km leży Darłowo z Zamkiem Książąt Pomorskich i portem w Darłówku, a ok. 29 km dalej Ustka z promenadą i molem."
+        ],
+        "icon": "home",
+        "links": [
+          {
+            "href": "/cennik",
+            "label": "Sprawdź cennik 2026"
+          }
+        ],
+        "image": "/media/hero-forest-720.webp"
+      },
+      {
+        "heading": "Rowerem i z psem nad Bałtykiem",
+        "paragraphs": [
+          "W pobliżu Rusinowa biegnie nadmorska trasa rowerowa R-10 (Velo Baltica), idealna na rodzinne wycieczki między Jarosławcem a Darłówkiem.",
+          "Do Białego Szafiru możesz przyjechać ze zwierzęciem (15 zł/doba po wcześniejszym zgłoszeniu) — leśne otoczenie przy ul. Sosnowej sprzyja codziennym spacerom."
+        ],
+        "icon": "users",
+        "links": [
+          {
+            "href": "/rezerwacja",
+            "label": "Zarezerwuj termin online"
+          }
+        ],
+        "image": "/media/gallery-1-720.webp"
+      }
+    ],
+    "faq": [],
+    "hero": {
+      "file": "hero-coastal.jpg",
       "width": 1920,
       "height": 1080
     }
